@@ -1,0 +1,9 @@
+# hidden folder
+__pycache__/
+.vscode/
+.idea/
+
+# compiled files
+*.py[cod]
+*$py.class
+
