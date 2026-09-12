@@ -1,0 +1,161 @@
+{
+  "score_method": "paper_mad_sum",
+  "mad_event": {
+    "median": 0.1357421875,
+    "mad": 0.06640625
+  },
+  "mad_latency": {
+    "median": 0.66796875,
+    "mad": 0.140625
+  },
+  "splits": {
+    "valid_id": {
+      "count": 197476,
+      "mean": 0.907921084862384,
+      "median": 0.19199346405228757,
+      "std": 4.169043349356899,
+      "min": -6.528553283292483,
+      "max": 215.02287581699346,
+      "split": "valid_id",
+      "label": "normal"
+    },
+    "test_id": {
+      "count": 197044,
+      "mean": 0.7509636657872182,
+      "median": 0.13725490196078433,
+      "std": 3.147998476762567,
+      "min": -6.528065002042483,
+      "max": 130.34313725490196,
+      "split": "test_id",
+      "label": "normal"
+    },
+    "valid_ood_cpu": {
+      "count": 186473,
+      "mean": 3.5183375439007807,
+      "median": 2.9526143790849675,
+      "std": 5.292049413694896,
+      "min": -6.624565972222222,
+      "max": 218.00326797385623,
+      "split": "valid_ood_cpu",
+      "label": "anomaly"
+    },
+    "valid_ood_disk": {
+      "count": 123240,
+      "mean": 20.69245912075914,
+      "median": 2.8570261437908497,
+      "std": 45.61801875480841,
+      "min": -6.528065002042483,
+      "max": 221.62418300653596,
+      "split": "valid_ood_disk",
+      "label": "anomaly"
+    },
+    "valid_ood_mem": {
+      "count": 217032,
+      "mean": 3.5401160497514224,
+      "median": 2.7777777777777777,
+      "std": 6.391329628698332,
+      "min": -6.656454248366013,
+      "max": 171.59150326797388,
+      "split": "valid_ood_mem",
+      "label": "anomaly"
+    },
+    "valid_ood_net": {
+      "count": 120077,
+      "mean": 4.695535376416758,
+      "median": 3.494281045751634,
+      "std": 5.796451673275492,
+      "min": -6.373263888888889,
+      "max": 221.0751633986928,
+      "split": "valid_ood_net",
+      "label": "anomaly"
+    },
+    "test_ood_cpu": {
+      "count": 190902,
+      "mean": 2.666447152577014,
+      "median": 2.1756535947712417,
+      "std": 4.1857966371547155,
+      "min": -6.64679074754902,
+      "max": 144.73529411764707,
+      "split": "test_ood_cpu",
+      "label": "anomaly"
+    },
+    "test_ood_disk": {
+      "count": 123783,
+      "mean": 20.63102718550343,
+      "median": 3.03921568627451,
+      "std": 45.68333984346,
+      "min": -6.527630974264706,
+      "max": 205.49346405228758,
+      "split": "test_ood_disk",
+      "label": "anomaly"
+    },
+    "test_ood_mem": {
+      "count": 217461,
+      "mean": 3.829823027544814,
+      "median": 3.0506535947712417,
+      "std": 6.957900642103736,
+      "min": -6.628140318627451,
+      "max": 215.859477124183,
+      "split": "test_ood_mem",
+      "label": "anomaly"
+    },
+    "test_ood_net": {
+      "count": 120006,
+      "mean": 4.884020399068129,
+      "median": 3.6797385620915035,
+      "std": 5.766699013590531,
+      "min": -6.226051879084967,
+      "max": 173.38888888888889,
+      "split": "test_ood_net",
+      "label": "anomaly"
+    }
+  },
+  "comparisons_vs_normal": {
+    "test_id": {
+      "mean_gap": -0.1569574190751658,
+      "median_gap": -0.05473856209150324,
+      "cohen_d": -0.0424837060521157
+    },
+    "valid_ood_cpu": {
+      "mean_gap": 2.6104164590383965,
+      "median_gap": 2.76062091503268,
+      "cohen_d": 0.5498205661846288
+    },
+    "valid_ood_disk": {
+      "mean_gap": 19.784538035896755,
+      "median_gap": 2.6650326797385624,
+      "cohen_d": 0.695001499224627
+    },
+    "valid_ood_mem": {
+      "mean_gap": 2.632194964889038,
+      "median_gap": 2.5857843137254903,
+      "cohen_d": 0.483246163800362
+    },
+    "valid_ood_net": {
+      "mean_gap": 3.787614291554374,
+      "median_gap": 3.302287581699346,
+      "cohen_d": 0.7810993295668021
+    },
+    "test_ood_cpu": {
+      "mean_gap": 1.75852606771463,
+      "median_gap": 1.983660130718954,
+      "cohen_d": 0.42097220236866273
+    },
+    "test_ood_disk": {
+      "mean_gap": 19.723106100641047,
+      "median_gap": 2.8472222222222223,
+      "cohen_d": 0.6909508164676561
+    },
+    "test_ood_mem": {
+      "mean_gap": 2.92190194268243,
+      "median_gap": 2.8586601307189543,
+      "cohen_d": 0.503745404979792
+    },
+    "test_ood_net": {
+      "mean_gap": 3.9760993142057455,
+      "median_gap": 3.487745098039216,
+      "cohen_d": 0.8222861363694508
+    }
+  },
+  "normal_reference_split": "valid_id"
+}

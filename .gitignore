@@ -7,15 +7,27 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# macOS
-.DS_Store
+.venv
+/grafana-pdfs
+experiments.tar.gz
 
-# virtual environments
-venv/
-.venv/
+micro-service-trace-data
+!micro-service-trace-data/preprocessed/delay_spans.pkl
+!micro-service-trace-data/preprocessed/vocab.pkl
 
-# run outputs
-logs/
+logs/**/*.pt
 
-# archives
-*.zip
+logs/overhead_experiments/*/*.pdf
+logs/overhead_experiments/**/*.json
+logs/overhead_experiments/**/*.csv
+
+logs/3-ce-loss-distribution-plots/transformer_multitask_cats5_scores.csv
+logs/3-ce-loss-distribution-plots/lstm_multitask_cats5_scores.csv
+
+tools/
+
+rough_work.txt
+inference_scripts.txt
+
+logs/5_root_cause_lstm_multitask_cats5_382061_hdbscan/root_cause_predictions.csv
+logs/5_root_cause_transformer_multitask_cats5_382062_hdbscan/root_cause_predictions.csv

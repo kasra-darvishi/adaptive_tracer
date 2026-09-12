@@ -1,0 +1,652 @@
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) gentoo/2023
+============================================================
+Job            : txt_dump_to_shards_cats9_seq4096_5000
+Job ID         : 1239563
+Node           : tri0891
+Project        : /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer
+Trace root     : /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data-txt-dump
+Text dumps     : /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data-txt-dump
+Output dir     : /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data/preprocessed_lmat_kernel_cats9_seq4096_5000
+Paper bins     : 9
+Code cats      : 10
+Max seq len    : 4096
+Shard size     : 5000
+CPUs           : 8
+============================================================
+[1/3] Python sanity
+Python: 3.11.4
+numpy: 2.4.2
+[2/3] Txt dump layout
+total 0
+drwxr-x--- 2 yuvraj17 yuvraj17 4.0K Mar 27 04:14 .
+drwxr-xr-x 2 yuvraj17 yuvraj17 4.0K Mar 27 03:52 ..
+drwxr-x--- 2 yuvraj17 yuvraj17 4.0K Mar 27 04:01 anomaly_cpu
+drwxr-x--- 2 yuvraj17 yuvraj17 4.0K Mar 27 04:06 anomaly_disk
+drwxr-x--- 2 yuvraj17 yuvraj17 4.0K Mar 27 04:14 anomaly_mem
+drwxr-x--- 2 yuvraj17 yuvraj17 4.0K Mar 24 19:37 anomaly_net
+drwxr-x--- 2 yuvraj17 yuvraj17 4.0K Mar 27 03:53 normal
+[3/3] Building LMAT shards from txt dumps
+[04:35:07 +0:00:00] [START] paper_duration_bins=9 -> effective n_categories=10
+[04:35:07 +0:00:00] [START] Building training split and vocabularies
+[04:35:07 +0:00:00] [RUN] Run: /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data-txt-dump/normal/run01
+[04:35:07 +0:00:00] [PARSE] Parsing text dump: /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data-txt-dump/normal/run01/kernel.txt
+[04:35:43 +0:00:35] [PARSE] Read 10,000,000 text lines
+[04:36:17 +0:01:10] [PARSE] Read 15,000,000 text lines
+[04:36:51 +0:01:43] [PARSE] Read 20,000,000 text lines
+[04:37:25 +0:02:18] [PARSE] Read 25,000,000 text lines
+[04:38:00 +0:02:52] [PARSE] Read 30,000,000 text lines
+[04:38:34 +0:03:26] [PARSE] Read 35,000,000 text lines
+[04:39:08 +0:04:00] [PARSE] Read 40,000,000 text lines
+[04:39:43 +0:04:35] [PARSE] Read 45,000,000 text lines
+[04:40:18 +0:05:11] [PARSE] Read 50,000,000 text lines
+[04:40:31 +0:05:23] [SEG] Scope=10,353,283/45,000,000 kept, 57,404 windows
+[04:40:52 +0:05:45] [PARSE] Read 55,000,000 text lines
+[04:41:27 +0:06:19] [PARSE] Read 60,000,000 text lines
+[04:41:40 +0:06:33] [SEG] Scope=12,783,624/55,000,000 kept, 69,039 windows
+[04:42:02 +0:06:54] [PARSE] Read 65,000,000 text lines
+[04:42:36 +0:07:28] [PARSE] Read 70,000,000 text lines
+[04:43:10 +0:08:02] [PARSE] Read 75,000,000 text lines
+[04:43:45 +0:08:37] [PARSE] Read 80,000,000 text lines
+[04:43:58 +0:08:50] [SEG] Scope=17,540,703/75,000,000 kept, 92,634 windows
+[04:44:20 +0:09:12] [PARSE] Read 85,000,000 text lines
+[04:44:33 +0:09:25] [SEG] Scope=18,688,964/80,000,000 kept, 98,571 windows
+[04:44:55 +0:09:47] [PARSE] Read 90,000,000 text lines
+[04:45:08 +0:10:00] [SEG] Scope=19,833,966/85,000,000 kept, 104,318 windows
+[04:45:29 +0:10:22] [PARSE] Read 95,000,000 text lines
+[04:46:04 +0:10:56] [PARSE] Read 100,000,000 text lines
+[04:46:39 +0:11:32] [PARSE] Read 105,000,000 text lines
+[04:47:14 +0:12:07] [PARSE] Read 110,000,000 text lines
+[04:47:28 +0:12:20] [SEG] Scope=24,551,827/105,000,000 kept, 127,711 windows
+[04:47:49 +0:12:41] [PARSE] Read 115,000,000 text lines
+[04:48:23 +0:13:16] [PARSE] Read 120,000,000 text lines
+[04:48:59 +0:13:51] [PARSE] Read 125,000,000 text lines
+[04:49:12 +0:14:04] [SEG] Scope=28,132,185/120,000,000 kept, 144,839 windows
+[04:49:34 +0:14:26] [PARSE] Read 130,000,000 text lines
+[04:50:07 +0:15:00] [PARSE] Read 135,000,000 text lines
+[04:50:42 +0:15:35] [PARSE] Read 140,000,000 text lines
+[04:50:56 +0:15:48] [SEG] Scope=31,696,763/135,000,000 kept, 162,129 windows
+[04:51:18 +0:16:10] [PARSE] Read 145,000,000 text lines
+[04:51:52 +0:16:45] [PARSE] Read 150,000,000 text lines
+[04:52:27 +0:17:20] [PARSE] Read 155,000,000 text lines
+[04:53:02 +0:17:54] [PARSE] Read 160,000,000 text lines
+[04:53:15 +0:18:07] [SEG] Scope=36,451,582/155,000,000 kept, 184,278 windows
+[04:53:22 +0:18:15] [RUN] Produced 196,799 windows | kept 36,688,500/155,777,636 events (syscall=36,688,500, other=119,089,136)
+[04:53:22 +0:18:15] [RUN] Run: /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data-txt-dump/normal/run02
+[04:53:22 +0:18:15] [PARSE] Parsing text dump: /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data-txt-dump/normal/run02/kernel.txt
+[04:53:50 +0:18:43] [PARSE] Read 10,000,000 text lines
+[04:54:07 +0:19:00] [SEG] Scope=1,122,642/5,000,000 kept, 6,491 windows
+[04:54:25 +0:19:17] [PARSE] Read 15,000,000 text lines
+[04:54:59 +0:19:52] [PARSE] Read 20,000,000 text lines
+[04:55:34 +0:20:26] [PARSE] Read 25,000,000 text lines
+[04:55:51 +0:20:44] [SEG] Scope=4,629,939/20,000,000 kept, 25,846 windows
+[04:56:08 +0:21:01] [PARSE] Read 30,000,000 text lines
+[04:56:26 +0:21:18] [SEG] Scope=5,763,206/25,000,000 kept, 32,193 windows
+[04:56:44 +0:21:36] [PARSE] Read 35,000,000 text lines
+[04:57:18 +0:22:11] [PARSE] Read 40,000,000 text lines
+[04:57:53 +0:22:46] [PARSE] Read 45,000,000 text lines
+[04:58:11 +0:23:04] [SEG] Scope=9,314,600/40,000,000 kept, 50,207 windows
+[04:58:28 +0:23:21] [PARSE] Read 50,000,000 text lines
+[04:59:04 +0:23:56] [PARSE] Read 55,000,000 text lines
+[04:59:38 +0:24:31] [PARSE] Read 60,000,000 text lines
+[05:00:13 +0:25:05] [PARSE] Read 65,000,000 text lines
+[05:00:48 +0:25:40] [PARSE] Read 70,000,000 text lines
+[05:01:23 +0:26:15] [PARSE] Read 75,000,000 text lines
+[05:01:57 +0:26:49] [PARSE] Read 80,000,000 text lines
+[05:02:31 +0:27:24] [PARSE] Read 85,000,000 text lines
+[05:03:07 +0:27:59] [PARSE] Read 90,000,000 text lines
+[05:03:41 +0:28:34] [PARSE] Read 95,000,000 text lines
+[05:04:17 +0:29:09] [PARSE] Read 100,000,000 text lines
+[05:04:52 +0:29:44] [PARSE] Read 105,000,000 text lines
+[05:05:27 +0:30:19] [PARSE] Read 110,000,000 text lines
+[05:06:02 +0:30:55] [PARSE] Read 115,000,000 text lines
+[05:06:37 +0:31:30] [PARSE] Read 120,000,000 text lines
+[05:06:54 +0:31:47] [SEG] Scope=27,058,978/115,000,000 kept, 138,166 windows
+[05:07:12 +0:32:05] [PARSE] Read 125,000,000 text lines
+[05:07:48 +0:32:40] [PARSE] Read 130,000,000 text lines
+[05:08:05 +0:32:57] [SEG] Scope=29,398,020/125,000,000 kept, 149,496 windows
+[05:08:22 +0:33:15] [PARSE] Read 135,000,000 text lines
+[05:08:57 +0:33:49] [PARSE] Read 140,000,000 text lines
+[05:09:14 +0:34:07] [SEG] Scope=31,839,229/135,000,000 kept, 160,379 windows
+[05:09:32 +0:34:24] [PARSE] Read 145,000,000 text lines
+[05:10:07 +0:34:59] [PARSE] Read 150,000,000 text lines
+[05:10:42 +0:35:34] [PARSE] Read 155,000,000 text lines
+[05:11:16 +0:36:09] [PARSE] Read 160,000,000 text lines
+[05:11:34 +0:36:26] [SEG] Scope=36,654,906/155,000,000 kept, 181,963 windows
+[05:11:51 +0:36:44] [PARSE] Read 165,000,000 text lines
+[05:12:03 +0:36:55] [RUN] Produced 198,521 windows | kept 37,598,264/158,892,982 events (syscall=37,598,264, other=121,294,718)
+[05:12:03 +0:36:55] [RUN] Run: /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data-txt-dump/normal/run03
+[05:12:03 +0:36:55] [PARSE] Parsing text dump: /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data-txt-dump/normal/run03/kernel.txt
+[05:12:32 +0:37:24] [PARSE] Read 10,000,000 text lines
+[05:12:48 +0:37:40] [SEG] Scope=1,118,801/5,000,000 kept, 6,407 windows
+[05:13:06 +0:37:58] [PARSE] Read 15,000,000 text lines
+[05:13:22 +0:38:14] [SEG] Scope=2,251,655/10,000,000 kept, 12,796 windows
+[05:13:39 +0:38:32] [PARSE] Read 20,000,000 text lines
+[05:14:14 +0:39:06] [PARSE] Read 25,000,000 text lines
+[05:14:49 +0:39:41] [PARSE] Read 30,000,000 text lines
+[05:15:24 +0:40:16] [PARSE] Read 35,000,000 text lines
+[05:15:39 +0:40:32] [SEG] Scope=6,966,278/30,000,000 kept, 37,912 windows
+[05:15:57 +0:40:50] [PARSE] Read 40,000,000 text lines
+[05:16:33 +0:41:25] [PARSE] Read 45,000,000 text lines
+[05:17:07 +0:42:00] [PARSE] Read 50,000,000 text lines
+[05:17:23 +0:42:16] [SEG] Scope=10,436,385/45,000,000 kept, 55,747 windows
+[05:17:41 +0:42:34] [PARSE] Read 55,000,000 text lines
+[05:18:15 +0:43:07] [PARSE] Read 60,000,000 text lines
+[05:18:50 +0:43:43] [PARSE] Read 65,000,000 text lines
+[05:19:06 +0:43:59] [SEG] Scope=14,006,551/60,000,000 kept, 73,766 windows
+[05:19:25 +0:44:17] [PARSE] Read 70,000,000 text lines
+[05:19:41 +0:44:34] [SEG] Scope=15,160,647/65,000,000 kept, 79,611 windows
+[05:20:00 +0:44:52] [PARSE] Read 75,000,000 text lines
+[05:20:35 +0:45:27] [PARSE] Read 80,000,000 text lines
+[05:21:10 +0:46:02] [PARSE] Read 85,000,000 text lines
+[05:21:45 +0:46:38] [PARSE] Read 90,000,000 text lines
+[05:22:20 +0:47:13] [PARSE] Read 95,000,000 text lines
+[05:22:55 +0:47:48] [PARSE] Read 100,000,000 text lines
+[05:23:30 +0:48:23] [PARSE] Read 105,000,000 text lines
+[05:24:05 +0:48:58] [PARSE] Read 110,000,000 text lines
+[05:24:22 +0:49:14] [SEG] Scope=24,686,029/105,000,000 kept, 125,311 windows
+[05:24:40 +0:49:33] [PARSE] Read 115,000,000 text lines
+[05:24:56 +0:49:49] [SEG] Scope=25,936,371/110,000,000 kept, 131,046 windows
+[05:25:15 +0:50:07] [PARSE] Read 120,000,000 text lines
+[05:25:50 +0:50:43] [PARSE] Read 125,000,000 text lines
+[05:26:25 +0:51:18] [PARSE] Read 130,000,000 text lines
+[05:27:01 +0:51:54] [PARSE] Read 135,000,000 text lines
+[05:27:36 +0:52:28] [PARSE] Read 140,000,000 text lines
+[05:28:11 +0:53:03] [PARSE] Read 145,000,000 text lines
+[05:28:46 +0:53:38] [PARSE] Read 150,000,000 text lines
+[05:29:21 +0:54:14] [PARSE] Read 155,000,000 text lines
+[05:29:37 +0:54:30] [SEG] Scope=35,448,689/150,000,000 kept, 175,799 windows
+[05:29:56 +0:54:49] [PARSE] Read 160,000,000 text lines
+[05:30:32 +0:55:24] [PARSE] Read 165,000,000 text lines
+[05:30:43 +0:55:35] [RUN] Produced 197,993 windows | kept 37,625,538/159,016,897 events (syscall=37,625,538, other=121,391,359)
+[05:30:44 +0:55:37] [START] Writing split: train_id
+[05:30:44 +0:55:37] [RUN] Run: /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data-txt-dump/normal/run01
+[05:30:44 +0:55:37] [PARSE] Parsing text dump: /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data-txt-dump/normal/run01/kernel.txt
+[05:31:09 +0:56:02] [PARSE] Read 10,000,000 text lines
+[05:31:46 +0:56:39] [PARSE] Read 15,000,000 text lines
+[05:32:21 +0:57:13] [PARSE] Read 20,000,000 text lines
+[05:32:57 +0:57:49] [PARSE] Read 25,000,000 text lines
+[05:33:34 +0:58:27] [PARSE] Read 30,000,000 text lines
+[05:34:10 +0:59:02] [PARSE] Read 35,000,000 text lines
+[05:34:45 +0:59:37] [PARSE] Read 40,000,000 text lines
+[05:35:21 +1:00:13] [PARSE] Read 45,000,000 text lines
+[05:35:59 +1:00:51] [PARSE] Read 50,000,000 text lines
+[05:36:12 +1:01:04] [SEG] Scope=10,353,283/45,000,000 kept, 57,404 windows
+[05:36:34 +1:01:27] [PARSE] Read 55,000,000 text lines
+[05:37:10 +1:02:02] [PARSE] Read 60,000,000 text lines
+[05:37:23 +1:02:15] [SEG] Scope=12,783,624/55,000,000 kept, 69,039 windows
+[05:37:45 +1:02:38] [PARSE] Read 65,000,000 text lines
+[05:38:22 +1:03:14] [PARSE] Read 70,000,000 text lines
+[05:38:57 +1:03:50] [PARSE] Read 75,000,000 text lines
+[05:39:35 +1:04:28] [PARSE] Read 80,000,000 text lines
+[05:39:48 +1:04:40] [SEG] Scope=17,540,703/75,000,000 kept, 92,634 windows
+[05:40:11 +1:05:03] [PARSE] Read 85,000,000 text lines
+[05:40:24 +1:05:16] [SEG] Scope=18,688,964/80,000,000 kept, 98,571 windows
+[05:40:47 +1:05:39] [PARSE] Read 90,000,000 text lines
+[05:41:00 +1:05:52] [SEG] Scope=19,833,966/85,000,000 kept, 104,318 windows
+[05:41:22 +1:06:14] [PARSE] Read 95,000,000 text lines
+[05:41:58 +1:06:50] [PARSE] Read 100,000,000 text lines
+[05:42:34 +1:07:26] [PARSE] Read 105,000,000 text lines
+[05:43:12 +1:08:05] [PARSE] Read 110,000,000 text lines
+[05:43:25 +1:08:18] [SEG] Scope=24,551,827/105,000,000 kept, 127,711 windows
+[05:43:47 +1:08:40] [PARSE] Read 115,000,000 text lines
+[05:44:23 +1:09:15] [PARSE] Read 120,000,000 text lines
+[05:44:59 +1:09:51] [PARSE] Read 125,000,000 text lines
+[05:45:12 +1:10:04] [SEG] Scope=28,132,185/120,000,000 kept, 144,839 windows
+[05:45:35 +1:10:27] [PARSE] Read 130,000,000 text lines
+[05:46:10 +1:11:02] [PARSE] Read 135,000,000 text lines
+[05:46:45 +1:11:38] [PARSE] Read 140,000,000 text lines
+[05:47:01 +1:11:53] [SEG] Scope=31,696,763/135,000,000 kept, 162,129 windows
+[05:47:23 +1:12:16] [PARSE] Read 145,000,000 text lines
+[05:47:59 +1:12:51] [PARSE] Read 150,000,000 text lines
+[05:48:34 +1:13:27] [PARSE] Read 155,000,000 text lines
+[05:49:10 +1:14:02] [PARSE] Read 160,000,000 text lines
+[05:49:23 +1:14:15] [SEG] Scope=36,451,582/155,000,000 kept, 184,278 windows
+[05:49:35 +1:14:27] [RUN] Produced 196,799 windows | kept 36,688,500/155,777,636 events (syscall=36,688,500, other=119,089,136)
+[05:49:35 +1:14:27] [RUN] Run: /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data-txt-dump/normal/run02
+[05:49:35 +1:14:27] [PARSE] Parsing text dump: /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data-txt-dump/normal/run02/kernel.txt
+[05:49:57 +1:14:49] [PARSE] Read 10,000,000 text lines
+[05:50:15 +1:15:08] [SEG] Scope=1,122,642/5,000,000 kept, 6,491 windows
+[05:50:32 +1:15:24] [PARSE] Read 15,000,000 text lines
+[05:51:09 +1:16:01] [PARSE] Read 20,000,000 text lines
+[05:51:44 +1:16:36] [PARSE] Read 25,000,000 text lines
+[05:52:02 +1:16:55] [SEG] Scope=4,629,939/20,000,000 kept, 25,846 windows
+[05:52:19 +1:17:12] [PARSE] Read 30,000,000 text lines
+[05:52:38 +1:17:30] [SEG] Scope=5,763,206/25,000,000 kept, 32,193 windows
+[05:52:57 +1:17:50] [PARSE] Read 35,000,000 text lines
+[05:53:32 +1:18:24] [PARSE] Read 40,000,000 text lines
+[05:54:08 +1:19:00] [PARSE] Read 45,000,000 text lines
+[05:54:27 +1:19:19] [SEG] Scope=9,314,600/40,000,000 kept, 50,207 windows
+[05:54:44 +1:19:36] [PARSE] Read 50,000,000 text lines
+[05:55:19 +1:20:11] [PARSE] Read 55,000,000 text lines
+[05:55:56 +1:20:49] [PARSE] Read 60,000,000 text lines
+[05:56:32 +1:21:24] [PARSE] Read 65,000,000 text lines
+[05:57:08 +1:22:00] [PARSE] Read 70,000,000 text lines
+[05:57:43 +1:22:35] [PARSE] Read 75,000,000 text lines
+[05:58:18 +1:23:10] [PARSE] Read 80,000,000 text lines
+[05:58:53 +1:23:46] [PARSE] Read 85,000,000 text lines
+[05:59:31 +1:24:23] [PARSE] Read 90,000,000 text lines
+[06:00:06 +1:24:59] [PARSE] Read 95,000,000 text lines
+[06:00:41 +1:25:34] [PARSE] Read 100,000,000 text lines
+[06:01:17 +1:26:10] [PARSE] Read 105,000,000 text lines
+[06:01:53 +1:26:46] [PARSE] Read 110,000,000 text lines
+[06:02:29 +1:27:22] [PARSE] Read 115,000,000 text lines
+[06:03:07 +1:27:59] [PARSE] Read 120,000,000 text lines
+[06:03:23 +1:28:16] [SEG] Scope=27,058,978/115,000,000 kept, 138,166 windows
+[06:03:43 +1:28:35] [PARSE] Read 125,000,000 text lines
+[06:04:19 +1:29:11] [PARSE] Read 130,000,000 text lines
+[06:04:35 +1:29:27] [SEG] Scope=29,398,020/125,000,000 kept, 149,496 windows
+[06:04:54 +1:29:46] [PARSE] Read 135,000,000 text lines
+[06:05:30 +1:30:22] [PARSE] Read 140,000,000 text lines
+[06:05:49 +1:30:41] [SEG] Scope=31,839,229/135,000,000 kept, 160,379 windows
+[06:06:06 +1:30:58] [PARSE] Read 145,000,000 text lines
+[06:06:42 +1:31:34] [PARSE] Read 150,000,000 text lines
+[06:07:18 +1:32:11] [PARSE] Read 155,000,000 text lines
+[06:07:54 +1:32:47] [PARSE] Read 160,000,000 text lines
+[06:08:13 +1:33:06] [SEG] Scope=36,654,906/155,000,000 kept, 181,963 windows
+[06:08:30 +1:33:23] [PARSE] Read 165,000,000 text lines
+[06:08:48 +1:33:40] [RUN] Produced 198,521 windows | kept 37,598,264/158,892,982 events (syscall=37,598,264, other=121,294,718)
+[06:08:48 +1:33:40] [RUN] Run: /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data-txt-dump/normal/run03
+[06:08:48 +1:33:40] [PARSE] Parsing text dump: /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data-txt-dump/normal/run03/kernel.txt
+[06:09:10 +1:34:03] [PARSE] Read 10,000,000 text lines
+[06:09:28 +1:34:20] [SEG] Scope=1,118,801/5,000,000 kept, 6,407 windows
+[06:09:46 +1:34:38] [PARSE] Read 15,000,000 text lines
+[06:10:03 +1:34:56] [SEG] Scope=2,251,655/10,000,000 kept, 12,796 windows
+[06:10:22 +1:35:14] [PARSE] Read 20,000,000 text lines
+[06:10:57 +1:35:49] [PARSE] Read 25,000,000 text lines
+[06:11:33 +1:36:25] [PARSE] Read 30,000,000 text lines
+[06:12:10 +1:37:03] [PARSE] Read 35,000,000 text lines
+[06:12:25 +1:37:18] [SEG] Scope=6,966,278/30,000,000 kept, 37,912 windows
+[06:12:45 +1:37:37] [PARSE] Read 40,000,000 text lines
+[06:13:20 +1:38:13] [PARSE] Read 45,000,000 text lines
+[06:13:56 +1:38:48] [PARSE] Read 50,000,000 text lines
+[06:14:13 +1:39:06] [SEG] Scope=10,436,385/45,000,000 kept, 55,747 windows
+[06:14:31 +1:39:24] [PARSE] Read 55,000,000 text lines
+[06:15:06 +1:39:59] [PARSE] Read 60,000,000 text lines
+[06:15:44 +1:40:36] [PARSE] Read 65,000,000 text lines
+[06:15:59 +1:40:52] [SEG] Scope=14,006,551/60,000,000 kept, 73,766 windows
+[06:16:21 +1:41:14] [PARSE] Read 70,000,000 text lines
+[06:16:37 +1:41:29] [SEG] Scope=15,160,647/65,000,000 kept, 79,611 windows
+[06:16:57 +1:41:49] [PARSE] Read 75,000,000 text lines
+[06:17:32 +1:42:25] [PARSE] Read 80,000,000 text lines
+[06:18:09 +1:43:01] [PARSE] Read 85,000,000 text lines
+[06:18:47 +1:43:40] [PARSE] Read 90,000,000 text lines
+[06:19:23 +1:44:15] [PARSE] Read 95,000,000 text lines
+[06:19:58 +1:44:50] [PARSE] Read 100,000,000 text lines
+[06:20:36 +1:45:28] [PARSE] Read 105,000,000 text lines
+[06:21:12 +1:46:04] [PARSE] Read 110,000,000 text lines
+[06:21:30 +1:46:22] [SEG] Scope=24,686,029/105,000,000 kept, 125,311 windows
+[06:21:48 +1:46:40] [PARSE] Read 115,000,000 text lines
+[06:22:05 +1:46:58] [SEG] Scope=25,936,371/110,000,000 kept, 131,046 windows
+[06:22:23 +1:47:16] [PARSE] Read 120,000,000 text lines
+[06:23:00 +1:47:52] [PARSE] Read 125,000,000 text lines
+[06:23:35 +1:48:28] [PARSE] Read 130,000,000 text lines
+[06:24:14 +1:49:06] [PARSE] Read 135,000,000 text lines
+[06:24:49 +1:49:42] [PARSE] Read 140,000,000 text lines
+[06:25:25 +1:50:18] [PARSE] Read 145,000,000 text lines
+[06:26:01 +1:50:54] [PARSE] Read 150,000,000 text lines
+[06:26:37 +1:51:30] [PARSE] Read 155,000,000 text lines
+[06:26:55 +1:51:47] [SEG] Scope=35,448,689/150,000,000 kept, 175,799 windows
+[06:27:13 +1:52:05] [PARSE] Read 160,000,000 text lines
+[06:27:49 +1:52:41] [PARSE] Read 165,000,000 text lines
+[06:28:05 +1:52:57] [RUN] Produced 197,993 windows | kept 37,625,538/159,016,897 events (syscall=37,625,538, other=121,391,359)
+[06:28:05 +1:52:58] [START] Building split: valid_id
+[06:28:05 +1:52:58] [RUN] Run: /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data-txt-dump/normal/run04
+[06:28:05 +1:52:58] [PARSE] Parsing text dump: /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data-txt-dump/normal/run04/kernel.txt
+[06:28:35 +1:53:27] [PARSE] Read 10,000,000 text lines
+[06:29:11 +1:54:04] [PARSE] Read 15,000,000 text lines
+[06:29:49 +1:54:42] [PARSE] Read 20,000,000 text lines
+[06:30:27 +1:55:19] [PARSE] Read 25,000,000 text lines
+[06:31:03 +1:55:55] [PARSE] Read 30,000,000 text lines
+[06:31:41 +1:56:33] [PARSE] Read 35,000,000 text lines
+[06:32:17 +1:57:09] [PARSE] Read 40,000,000 text lines
+[06:32:53 +1:57:45] [PARSE] Read 45,000,000 text lines
+[06:33:30 +1:58:22] [PARSE] Read 50,000,000 text lines
+[06:33:49 +1:58:41] [SEG] Scope=10,463,432/45,000,000 kept, 55,856 windows
+[06:34:06 +1:58:59] [PARSE] Read 55,000,000 text lines
+[06:34:25 +1:59:17] [SEG] Scope=11,854,189/50,000,000 kept, 61,606 windows
+[06:34:42 +1:59:35] [PARSE] Read 60,000,000 text lines
+[06:35:21 +2:00:13] [PARSE] Read 65,000,000 text lines
+[06:35:57 +2:00:50] [PARSE] Read 70,000,000 text lines
+[06:36:34 +2:01:27] [PARSE] Read 75,000,000 text lines
+[06:37:11 +2:02:03] [PARSE] Read 80,000,000 text lines
+[06:37:48 +2:02:40] [PARSE] Read 85,000,000 text lines
+[06:38:07 +2:03:00] [SEG] Scope=18,946,882/80,000,000 kept, 96,726 windows
+[06:38:25 +2:03:17] [PARSE] Read 90,000,000 text lines
+[06:39:04 +2:03:56] [PARSE] Read 95,000,000 text lines
+[06:39:41 +2:04:33] [PARSE] Read 100,000,000 text lines
+[06:40:18 +2:05:11] [PARSE] Read 105,000,000 text lines
+[06:40:55 +2:05:47] [PARSE] Read 110,000,000 text lines
+[06:41:32 +2:06:25] [PARSE] Read 115,000,000 text lines
+[06:42:09 +2:07:02] [PARSE] Read 120,000,000 text lines
+[06:42:47 +2:07:39] [PARSE] Read 125,000,000 text lines
+[06:43:23 +2:08:16] [PARSE] Read 130,000,000 text lines
+[06:43:43 +2:08:36] [SEG] Scope=29,599,534/125,000,000 kept, 147,147 windows
+[06:44:01 +2:08:54] [PARSE] Read 135,000,000 text lines
+[06:44:40 +2:09:32] [PARSE] Read 140,000,000 text lines
+[06:45:17 +2:10:09] [PARSE] Read 145,000,000 text lines
+[06:45:54 +2:10:46] [PARSE] Read 150,000,000 text lines
+[06:46:31 +2:11:24] [PARSE] Read 155,000,000 text lines
+[06:47:08 +2:12:00] [PARSE] Read 160,000,000 text lines
+[06:47:45 +2:12:37] [PARSE] Read 165,000,000 text lines
+[06:48:04 +2:12:57] [RUN] Produced 197,476 windows | kept 37,862,779/159,362,462 events (syscall=37,862,779, other=121,499,683)
+[06:48:05 +2:12:57] [START] Building split: test_id
+[06:48:05 +2:12:57] [RUN] Run: /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data-txt-dump/normal/run05
+[06:48:05 +2:12:57] [PARSE] Parsing text dump: /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data-txt-dump/normal/run05/kernel.txt
+[06:48:33 +2:13:26] [PARSE] Read 10,000,000 text lines
+[06:49:09 +2:14:02] [PARSE] Read 15,000,000 text lines
+[06:49:47 +2:14:39] [PARSE] Read 20,000,000 text lines
+[06:50:23 +2:15:16] [PARSE] Read 25,000,000 text lines
+[06:50:59 +2:15:52] [PARSE] Read 30,000,000 text lines
+[06:51:19 +2:16:11] [SEG] Scope=5,798,728/25,000,000 kept, 31,777 windows
+[06:51:42 +2:16:35] [PARSE] Read 35,000,000 text lines
+[06:52:22 +2:17:15] [PARSE] Read 40,000,000 text lines
+[06:52:39 +2:17:31] [SEG] Scope=8,210,786/35,000,000 kept, 43,777 windows
+[06:52:58 +2:17:51] [PARSE] Read 45,000,000 text lines
+[06:53:35 +2:18:28] [PARSE] Read 50,000,000 text lines
+[06:54:13 +2:19:05] [PARSE] Read 55,000,000 text lines
+[06:54:51 +2:19:43] [PARSE] Read 60,000,000 text lines
+[06:55:28 +2:20:21] [PARSE] Read 65,000,000 text lines
+[06:55:45 +2:20:38] [SEG] Scope=14,038,570/60,000,000 kept, 73,556 windows
+[06:56:05 +2:20:58] [PARSE] Read 70,000,000 text lines
+[06:56:21 +2:21:14] [SEG] Scope=15,196,533/65,000,000 kept, 79,493 windows
+[06:56:41 +2:21:34] [PARSE] Read 75,000,000 text lines
+[06:56:59 +2:21:52] [SEG] Scope=16,430,895/70,000,000 kept, 85,224 windows
+[06:57:17 +2:22:10] [PARSE] Read 80,000,000 text lines
+[06:57:55 +2:22:47] [PARSE] Read 85,000,000 text lines
+[06:58:32 +2:23:24] [PARSE] Read 90,000,000 text lines
+[06:58:51 +2:23:43] [SEG] Scope=19,910,823/85,000,000 kept, 102,163 windows
+[06:59:11 +2:24:04] [PARSE] Read 95,000,000 text lines
+[06:59:48 +2:24:40] [PARSE] Read 100,000,000 text lines
+[07:00:05 +2:24:57] [SEG] Scope=22,324,596/95,000,000 kept, 113,292 windows
+[07:00:25 +2:25:17] [PARSE] Read 105,000,000 text lines
+[07:01:02 +2:25:54] [PARSE] Read 110,000,000 text lines
+[07:01:19 +2:26:11] [SEG] Scope=24,635,035/105,000,000 kept, 124,706 windows
+[07:01:39 +2:26:32] [PARSE] Read 115,000,000 text lines
+[07:02:16 +2:27:09] [PARSE] Read 120,000,000 text lines
+[07:02:36 +2:27:28] [SEG] Scope=27,061,817/115,000,000 kept, 135,780 windows
+[07:02:54 +2:27:46] [PARSE] Read 125,000,000 text lines
+[07:03:13 +2:28:06] [SEG] Scope=28,232,201/120,000,000 kept, 141,318 windows
+[07:03:31 +2:28:24] [PARSE] Read 130,000,000 text lines
+[07:03:51 +2:28:43] [SEG] Scope=29,397,823/125,000,000 kept, 146,860 windows
+[07:04:10 +2:29:02] [PARSE] Read 135,000,000 text lines
+[07:04:48 +2:29:41] [PARSE] Read 140,000,000 text lines
+[07:05:05 +2:29:58] [SEG] Scope=31,806,570/135,000,000 kept, 157,843 windows
+[07:05:25 +2:30:18] [PARSE] Read 145,000,000 text lines
+[07:06:02 +2:30:55] [PARSE] Read 150,000,000 text lines
+[07:06:39 +2:31:31] [PARSE] Read 155,000,000 text lines
+[07:07:14 +2:32:07] [PARSE] Read 160,000,000 text lines
+[07:07:52 +2:32:44] [PARSE] Read 165,000,000 text lines
+[07:08:07 +2:33:00] [RUN] Produced 197,044 windows | kept 37,482,529/158,852,839 events (syscall=37,482,529, other=121,370,310)
+[07:08:08 +2:33:00] [START] Building split: valid_ood_cpu
+[07:08:08 +2:33:00] [RUN] Run: /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data-txt-dump/anomaly_cpu/run04
+[07:08:08 +2:33:00] [PARSE] Parsing text dump: /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data-txt-dump/anomaly_cpu/run04/kernel.txt
+[07:08:17 +2:33:09] [PARSE] Read 5,000,000 text lines
+[07:08:51 +2:33:44] [PARSE] Read 10,000,000 text lines
+[07:09:25 +2:34:17] [SEG] Scope=2,250,465/10,000,000 kept, 16,393 windows
+[07:09:27 +2:34:19] [PARSE] Read 15,000,000 text lines
+[07:09:59 +2:34:51] [SEG] Scope=3,451,510/15,000,000 kept, 24,901 windows
+[07:10:03 +2:34:55] [PARSE] Read 20,000,000 text lines
+[07:10:37 +2:35:29] [PARSE] Read 25,000,000 text lines
+[07:11:11 +2:36:03] [SEG] Scope=5,722,302/25,000,000 kept, 42,442 windows
+[07:11:13 +2:36:05] [PARSE] Read 30,000,000 text lines
+[07:11:46 +2:36:38] [SEG] Scope=6,866,581/30,000,000 kept, 51,123 windows
+[07:11:48 +2:36:41] [PARSE] Read 35,000,000 text lines
+[07:12:24 +2:37:16] [PARSE] Read 40,000,000 text lines
+[07:12:58 +2:37:51] [PARSE] Read 45,000,000 text lines
+[07:13:35 +2:38:27] [PARSE] Read 50,000,000 text lines
+[07:14:11 +2:39:04] [PARSE] Read 55,000,000 text lines
+[07:14:47 +2:39:39] [PARSE] Read 60,000,000 text lines
+[07:15:21 +2:40:14] [SEG] Scope=13,742,999/60,000,000 kept, 101,781 windows
+[07:15:23 +2:40:16] [PARSE] Read 65,000,000 text lines
+[07:16:00 +2:40:53] [PARSE] Read 70,000,000 text lines
+[07:16:35 +2:41:28] [PARSE] Read 75,000,000 text lines
+[07:17:12 +2:42:04] [PARSE] Read 80,000,000 text lines
+[07:17:47 +2:42:39] [PARSE] Read 85,000,000 text lines
+[07:18:24 +2:43:16] [PARSE] Read 90,000,000 text lines
+[07:18:56 +2:43:49] [SEG] Scope=20,894,253/90,000,000 kept, 149,847 windows
+[07:19:03 +2:43:56] [PARSE] Read 95,000,000 text lines
+[07:19:39 +2:44:31] [PARSE] Read 100,000,000 text lines
+[07:20:16 +2:45:08] [PARSE] Read 105,000,000 text lines
+[07:20:50 +2:45:43] [SEG] Scope=24,382,232/105,000,000 kept, 173,440 windows
+[07:20:52 +2:45:45] [PARSE] Read 110,000,000 text lines
+[07:21:19 +2:46:12] [RUN] Produced 186,473 windows | kept 25,182,052/108,355,706 events (syscall=25,182,052, other=83,173,654)
+[07:21:20 +2:46:12] [START] Building split: test_ood_cpu
+[07:21:20 +2:46:12] [RUN] Run: /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data-txt-dump/anomaly_cpu/run05
+[07:21:20 +2:46:12] [PARSE] Parsing text dump: /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data-txt-dump/anomaly_cpu/run05/kernel.txt
+[07:21:31 +2:46:24] [PARSE] Read 5,000,000 text lines
+[07:22:06 +2:46:58] [PARSE] Read 10,000,000 text lines
+[07:22:42 +2:47:34] [PARSE] Read 15,000,000 text lines
+[07:23:17 +2:48:10] [PARSE] Read 20,000,000 text lines
+[07:23:52 +2:48:45] [PARSE] Read 25,000,000 text lines
+[07:24:29 +2:49:21] [PARSE] Read 30,000,000 text lines
+[07:25:06 +2:49:58] [PARSE] Read 35,000,000 text lines
+[07:25:40 +2:50:33] [PARSE] Read 40,000,000 text lines
+[07:26:17 +2:51:10] [PARSE] Read 45,000,000 text lines
+[07:26:53 +2:51:46] [PARSE] Read 50,000,000 text lines
+[07:27:28 +2:52:21] [PARSE] Read 55,000,000 text lines
+[07:28:02 +2:52:55] [SEG] Scope=12,727,564/55,000,000 kept, 90,492 windows
+[07:28:05 +2:52:58] [PARSE] Read 60,000,000 text lines
+[07:28:37 +2:53:30] [SEG] Scope=13,861,181/60,000,000 kept, 98,274 windows
+[07:28:40 +2:53:33] [PARSE] Read 65,000,000 text lines
+[07:29:17 +2:54:10] [PARSE] Read 70,000,000 text lines
+[07:29:52 +2:54:45] [PARSE] Read 75,000,000 text lines
+[07:30:29 +2:55:22] [PARSE] Read 80,000,000 text lines
+[07:31:06 +2:55:59] [PARSE] Read 85,000,000 text lines
+[07:31:41 +2:56:33] [PARSE] Read 90,000,000 text lines
+[07:32:18 +2:57:10] [PARSE] Read 95,000,000 text lines
+[07:32:53 +2:57:46] [PARSE] Read 100,000,000 text lines
+[07:33:30 +2:58:23] [PARSE] Read 105,000,000 text lines
+[07:34:02 +2:58:55] [SEG] Scope=24,382,190/105,000,000 kept, 167,959 windows
+[07:34:05 +2:58:58] [PARSE] Read 110,000,000 text lines
+[07:34:39 +2:59:32] [SEG] Scope=25,606,878/110,000,000 kept, 175,268 windows
+[07:34:42 +2:59:35] [PARSE] Read 115,000,000 text lines
+[07:35:18 +3:00:11] [PARSE] Read 120,000,000 text lines
+[07:35:26 +3:00:18] [RUN] Produced 190,902 windows | kept 27,049,016/115,931,997 events (syscall=27,049,016, other=88,882,981)
+[07:35:26 +3:00:18] [START] Building split: valid_ood_disk
+[07:35:26 +3:00:18] [RUN] Run: /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data-txt-dump/anomaly_disk/run04
+[07:35:26 +3:00:18] [PARSE] Parsing text dump: /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data-txt-dump/anomaly_disk/run04/kernel.txt
+[07:36:03 +3:00:56] [PARSE] Read 10,000,000 text lines
+[07:36:37 +3:01:29] [PARSE] Read 15,000,000 text lines
+[07:37:12 +3:02:04] [PARSE] Read 20,000,000 text lines
+[07:37:47 +3:02:40] [PARSE] Read 25,000,000 text lines
+[07:38:23 +3:03:15] [PARSE] Read 30,000,000 text lines
+[07:38:30 +3:03:23] [SEG] Scope=5,142,740/25,000,000 kept, 41,479 windows
+[07:39:00 +3:03:52] [PARSE] Read 35,000,000 text lines
+[07:39:06 +3:03:58] [SEG] Scope=6,191,487/30,000,000 kept, 53,354 windows
+[07:39:35 +3:04:27] [PARSE] Read 40,000,000 text lines
+[07:40:09 +3:05:02] [PARSE] Read 45,000,000 text lines
+[07:40:44 +3:05:37] [PARSE] Read 50,000,000 text lines
+[07:41:20 +3:06:13] [PARSE] Read 55,000,000 text lines
+[07:41:56 +3:06:49] [PARSE] Read 60,000,000 text lines
+[07:42:32 +3:07:25] [PARSE] Read 65,000,000 text lines
+[07:42:53 +3:07:46] [RUN] Produced 123,240 windows | kept 13,015,878/61,589,361 events (syscall=13,015,878, other=48,573,483)
+[07:42:54 +3:07:47] [START] Building split: test_ood_disk
+[07:42:54 +3:07:47] [RUN] Run: /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data-txt-dump/anomaly_disk/run05
+[07:42:54 +3:07:47] [PARSE] Parsing text dump: /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data-txt-dump/anomaly_disk/run05/kernel.txt
+[07:43:31 +3:08:24] [PARSE] Read 10,000,000 text lines
+[07:44:07 +3:08:59] [PARSE] Read 15,000,000 text lines
+[07:44:40 +3:09:33] [PARSE] Read 20,000,000 text lines
+[07:45:16 +3:10:09] [PARSE] Read 25,000,000 text lines
+[07:45:21 +3:10:13] [SEG] Scope=4,107,741/20,000,000 kept, 32,977 windows
+[07:45:52 +3:10:45] [PARSE] Read 30,000,000 text lines
+[07:46:27 +3:11:19] [PARSE] Read 35,000,000 text lines
+[07:47:02 +3:11:55] [PARSE] Read 40,000,000 text lines
+[07:47:39 +3:12:31] [PARSE] Read 45,000,000 text lines
+[07:48:15 +3:13:07] [PARSE] Read 50,000,000 text lines
+[07:48:50 +3:13:42] [PARSE] Read 55,000,000 text lines
+[07:49:25 +3:14:18] [PARSE] Read 60,000,000 text lines
+[07:50:01 +3:14:53] [PARSE] Read 65,000,000 text lines
+[07:50:23 +3:15:16] [RUN] Produced 123,783 windows | kept 13,002,659/62,305,832 events (syscall=13,002,659, other=49,303,173)
+[07:50:24 +3:15:17] [START] Building split: valid_ood_mem
+[07:50:24 +3:15:17] [RUN] Run: /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data-txt-dump/anomaly_mem/run04
+[07:50:24 +3:15:17] [PARSE] Parsing text dump: /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data-txt-dump/anomaly_mem/run04/kernel.txt
+[07:50:43 +3:15:36] [PARSE] Read 5,000,000 text lines
+[07:51:19 +3:16:12] [PARSE] Read 10,000,000 text lines
+[07:51:39 +3:16:32] [SEG] Scope=2,191,837/10,000,000 kept, 15,202 windows
+[07:51:54 +3:16:47] [PARSE] Read 15,000,000 text lines
+[07:52:30 +3:17:22] [PARSE] Read 20,000,000 text lines
+[07:53:05 +3:17:58] [PARSE] Read 25,000,000 text lines
+[07:53:39 +3:18:32] [PARSE] Read 30,000,000 text lines
+[07:54:14 +3:19:06] [PARSE] Read 35,000,000 text lines
+[07:54:49 +3:19:42] [PARSE] Read 40,000,000 text lines
+[07:55:25 +3:20:18] [PARSE] Read 45,000,000 text lines
+[07:56:01 +3:20:54] [PARSE] Read 50,000,000 text lines
+[07:56:36 +3:21:29] [PARSE] Read 55,000,000 text lines
+[07:56:54 +3:21:46] [SEG] Scope=12,223,573/55,000,000 kept, 94,900 windows
+[07:57:10 +3:22:02] [PARSE] Read 60,000,000 text lines
+[07:57:45 +3:22:37] [PARSE] Read 65,000,000 text lines
+[07:58:20 +3:23:13] [PARSE] Read 70,000,000 text lines
+[07:58:56 +3:23:49] [PARSE] Read 75,000,000 text lines
+[07:59:16 +3:24:09] [SEG] Scope=16,706,503/75,000,000 kept, 130,613 windows
+[07:59:31 +3:24:23] [PARSE] Read 80,000,000 text lines
+[08:00:07 +3:24:59] [PARSE] Read 85,000,000 text lines
+[08:00:41 +3:25:34] [PARSE] Read 90,000,000 text lines
+[08:01:17 +3:26:09] [PARSE] Read 95,000,000 text lines
+[08:01:37 +3:26:29] [SEG] Scope=21,196,359/95,000,000 kept, 166,331 windows
+[08:01:52 +3:26:45] [PARSE] Read 100,000,000 text lines
+[08:02:29 +3:27:22] [PARSE] Read 105,000,000 text lines
+[08:03:06 +3:27:58] [PARSE] Read 110,000,000 text lines
+[08:03:43 +3:28:35] [PARSE] Read 115,000,000 text lines
+[08:04:20 +3:29:13] [PARSE] Read 120,000,000 text lines
+[08:04:57 +3:29:49] [PARSE] Read 125,000,000 text lines
+[08:05:32 +3:30:25] [RUN] Produced 217,032 windows | kept 28,597,675/126,410,495 events (syscall=28,597,675, other=97,812,820)
+[08:05:33 +3:30:25] [START] Building split: test_ood_mem
+[08:05:33 +3:30:25] [RUN] Run: /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data-txt-dump/anomaly_mem/run05
+[08:05:33 +3:30:25] [PARSE] Parsing text dump: /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data-txt-dump/anomaly_mem/run05/kernel.txt
+[08:05:50 +3:30:43] [PARSE] Read 5,000,000 text lines
+[08:06:14 +3:31:06] [SEG] Scope=1,129,397/5,000,000 kept, 6,985 windows
+[08:06:26 +3:31:18] [PARSE] Read 10,000,000 text lines
+[08:07:01 +3:31:54] [PARSE] Read 15,000,000 text lines
+[08:07:38 +3:32:30] [PARSE] Read 20,000,000 text lines
+[08:08:12 +3:33:04] [PARSE] Read 25,000,000 text lines
+[08:08:48 +3:33:40] [PARSE] Read 30,000,000 text lines
+[08:09:24 +3:34:16] [PARSE] Read 35,000,000 text lines
+[08:10:00 +3:34:52] [PARSE] Read 40,000,000 text lines
+[08:10:22 +3:35:15] [SEG] Scope=9,269,302/40,000,000 kept, 66,658 windows
+[08:10:34 +3:35:26] [PARSE] Read 45,000,000 text lines
+[08:11:11 +3:36:03] [PARSE] Read 50,000,000 text lines
+[08:11:47 +3:36:40] [PARSE] Read 55,000,000 text lines
+[08:12:24 +3:37:16] [PARSE] Read 60,000,000 text lines
+[08:12:58 +3:37:51] [PARSE] Read 65,000,000 text lines
+[08:13:34 +3:38:27] [PARSE] Read 70,000,000 text lines
+[08:14:08 +3:39:01] [PARSE] Read 75,000,000 text lines
+[08:14:30 +3:39:22] [SEG] Scope=17,241,952/75,000,000 kept, 129,667 windows
+[08:14:43 +3:39:35] [PARSE] Read 80,000,000 text lines
+[08:15:18 +3:40:10] [PARSE] Read 85,000,000 text lines
+[08:15:52 +3:40:45] [PARSE] Read 90,000,000 text lines
+[08:16:27 +3:41:19] [PARSE] Read 95,000,000 text lines
+[08:17:04 +3:41:56] [PARSE] Read 100,000,000 text lines
+[08:17:40 +3:42:33] [PARSE] Read 105,000,000 text lines
+[08:18:14 +3:43:07] [PARSE] Read 110,000,000 text lines
+[08:18:51 +3:43:43] [PARSE] Read 115,000,000 text lines
+[08:19:15 +3:44:08] [SEG] Scope=26,375,569/115,000,000 kept, 195,567 windows
+[08:19:27 +3:44:20] [PARSE] Read 120,000,000 text lines
+[08:20:04 +3:44:56] [PARSE] Read 125,000,000 text lines
+[08:20:40 +3:45:32] [RUN] Produced 217,461 windows | kept 28,975,572/125,974,449 events (syscall=28,975,572, other=96,998,877)
+[08:20:40 +3:45:33] [START] Building split: valid_ood_net
+[08:20:40 +3:45:33] [RUN] Run: /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data-txt-dump/anomaly_net/run04
+[08:20:40 +3:45:33] [PARSE] Parsing text dump: /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data-txt-dump/anomaly_net/run04/kernel.txt
+[08:21:08 +3:46:01] [PARSE] Read 5,000,000 text lines
+[08:21:17 +3:46:09] [SEG] Scope=1,157,098/5,000,000 kept, 5,910 windows
+[08:21:45 +3:46:37] [PARSE] Read 10,000,000 text lines
+[08:22:19 +3:47:12] [PARSE] Read 15,000,000 text lines
+[08:22:54 +3:47:46] [PARSE] Read 20,000,000 text lines
+[08:23:30 +3:48:23] [PARSE] Read 25,000,000 text lines
+[08:23:37 +3:48:29] [SEG] Scope=5,374,960/25,000,000 kept, 31,381 windows
+[08:24:04 +3:48:57] [PARSE] Read 30,000,000 text lines
+[08:24:11 +3:49:04] [SEG] Scope=6,493,944/30,000,000 kept, 37,256 windows
+[08:24:39 +3:49:32] [PARSE] Read 35,000,000 text lines
+[08:25:14 +3:50:06] [PARSE] Read 40,000,000 text lines
+[08:25:48 +3:50:41] [PARSE] Read 45,000,000 text lines
+[08:26:23 +3:51:15] [PARSE] Read 50,000,000 text lines
+[08:26:31 +3:51:24] [SEG] Scope=10,643,062/50,000,000 kept, 61,153 windows
+[08:26:59 +3:51:51] [PARSE] Read 55,000,000 text lines
+[08:27:33 +3:52:25] [PARSE] Read 60,000,000 text lines
+[08:27:39 +3:52:32] [SEG] Scope=12,780,900/60,000,000 kept, 72,589 windows
+[08:28:07 +3:52:59] [PARSE] Read 65,000,000 text lines
+[08:28:13 +3:53:06] [SEG] Scope=13,909,432/65,000,000 kept, 77,962 windows
+[08:28:41 +3:53:34] [PARSE] Read 70,000,000 text lines
+[08:29:16 +3:54:08] [PARSE] Read 75,000,000 text lines
+[08:29:50 +3:54:42] [PARSE] Read 80,000,000 text lines
+[08:30:25 +3:55:17] [PARSE] Read 85,000,000 text lines
+[08:30:59 +3:55:52] [PARSE] Read 90,000,000 text lines
+[08:31:34 +3:56:27] [PARSE] Read 95,000,000 text lines
+[08:31:48 +3:56:41] [RUN] Produced 120,077 windows | kept 20,325,032/94,979,249 events (syscall=20,325,032, other=74,654,217)
+[08:31:48 +3:56:41] [START] Building split: test_ood_net
+[08:31:48 +3:56:41] [RUN] Run: /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data-txt-dump/anomaly_net/run05
+[08:31:48 +3:56:41] [PARSE] Parsing text dump: /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data-txt-dump/anomaly_net/run05/kernel.txt
+[08:32:16 +3:57:08] [PARSE] Read 5,000,000 text lines
+[08:32:52 +3:57:44] [PARSE] Read 10,000,000 text lines
+[08:33:26 +3:58:19] [PARSE] Read 15,000,000 text lines
+[08:34:00 +3:58:52] [PARSE] Read 20,000,000 text lines
+[08:34:35 +3:59:27] [PARSE] Read 25,000,000 text lines
+[08:34:42 +3:59:35] [SEG] Scope=5,390,529/25,000,000 kept, 30,835 windows
+[08:35:10 +4:00:03] [PARSE] Read 30,000,000 text lines
+[08:35:45 +4:00:37] [PARSE] Read 35,000,000 text lines
+[08:35:51 +4:00:44] [SEG] Scope=7,516,628/35,000,000 kept, 42,988 windows
+[08:36:19 +4:01:11] [PARSE] Read 40,000,000 text lines
+[08:36:25 +4:01:17] [SEG] Scope=8,603,623/40,000,000 kept, 48,960 windows
+[08:36:53 +4:01:46] [PARSE] Read 45,000,000 text lines
+[08:37:28 +4:02:20] [PARSE] Read 50,000,000 text lines
+[08:38:04 +4:02:56] [PARSE] Read 55,000,000 text lines
+[08:38:10 +4:03:03] [SEG] Scope=11,775,542/55,000,000 kept, 66,394 windows
+[08:38:38 +4:03:31] [PARSE] Read 60,000,000 text lines
+[08:39:13 +4:04:06] [PARSE] Read 65,000,000 text lines
+[08:39:48 +4:04:41] [PARSE] Read 70,000,000 text lines
+[08:40:23 +4:05:15] [PARSE] Read 75,000,000 text lines
+[08:40:57 +4:05:50] [PARSE] Read 80,000,000 text lines
+[08:41:32 +4:06:25] [PARSE] Read 85,000,000 text lines
+[08:42:07 +4:06:59] [PARSE] Read 90,000,000 text lines
+[08:42:42 +4:07:35] [PARSE] Read 95,000,000 text lines
+[08:43:01 +4:07:53] [RUN] Produced 120,006 windows | kept 20,513,257/95,659,261 events (syscall=20,513,257, other=75,146,004)
+[08:43:01 +4:07:53] [DONE] Done. Output written to /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data/preprocessed_lmat_kernel_cats9_seq4096_5000
+============================================================
+Finished with exit code: 0
+Output dir: /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data/preprocessed_lmat_kernel_cats9_seq4096_5000
+Manifest  : /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data/preprocessed_lmat_kernel_cats9_seq4096_5000/dataset_manifest.json
+Vocab     : /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data/preprocessed_lmat_kernel_cats9_seq4096_5000/vocab.pkl
+Delays    : /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data/preprocessed_lmat_kernel_cats9_seq4096_5000/delay_spans.pkl
+============================================================
+
+scontrol show job 1239563
+JobId=1239563 JobName=txt_dump_to_shards_9cat_4096_5000
+   UserId=yuvraj17(3154711) GroupId=yuvraj17(3154711) MCS_label=N/A
+   Priority=862772 Nice=0 Account=def-naser2 QOS=normal
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=04:08:22 TimeLimit=08:00:00 TimeMin=N/A
+   SubmitTime=2026-03-27T04:34:40 EligibleTime=2026-03-27T04:34:40
+   AccrueTime=2026-03-27T04:34:40
+   StartTime=2026-03-27T04:34:41 EndTime=2026-03-27T08:43:03 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-03-27T04:34:41 Scheduler=Main
+   Partition=compute AllocNode:Sid=tri-login01:1347118
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=tri0891
+   BatchHost=tri0891
+   NumNodes=1 NumCPUs=192 NumTasks=1 CPUs/Task=8 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=8,mem=767000M,node=1,billing=8
+   AllocTRES=cpu=192,mem=767000M,node=1,billing=192
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=8 MinMemoryNode=767000M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=NO Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/compute-canada-new-trillium/final-preprocessing/step-2-txt-to-shard-4096-5000/txt_dump_to_shards_cats9_seq4096_5000.sh
+   SubmitLine=SBATCH --comment /opt/slurm/bin/sbatch --export=NONE --get-user-env txt_dump_to_shards_cats9_seq4096_5000.sh --export=NONE --get-user-env txt_dump_to_shards_cats9_seq4096_5000.sh
+   WorkDir=/scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/compute-canada-new-trillium/final-preprocessing/step-2-txt-to-shard-4096-5000
+   Comment=/opt/slurm/bin/sbatch --export=NONE --get-user-env txt_dump_to_shards_cats9_seq4096_5000.sh
+   StdErr=
+   StdIn=/dev/null
+   StdOut=/scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/txt_dump_to_shards_9cat_4096_5000-1239563.out
+   TresPerTask=cpu=8
+   MailUser=yuvraj17@scinet.local MailType=BEGIN,END,FAIL
+
+sacct -j 1239563
+JobID           JobName    Account    Elapsed  MaxVMSize     MaxRSS  SystemCPU    UserCPU ExitCode 
+------------ ---------- ---------- ---------- ---------- ---------- ---------- ---------- -------- 
+1239563      txt_dump_+ def-naser2   04:08:22                         00:00:00   00:00:00      0:0 
+1239563.bat+      batch def-naser2   04:08:22                         00:00:00   00:00:00      0:0 
+1239563.ext+     extern def-naser2   04:08:22                         00:00:00   00:00:00      0:0 
+

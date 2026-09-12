@@ -1,0 +1,4 @@
+condition,users,repeats,throughput_mean_req_s,throughput_std_req_s,error_rate_mean_pct,error_rate_std_pct,p50_mean_ms,p50_std_ms,p95_mean_ms,p95_std_ms,p99_mean_ms,p99_std_ms,n_success_mean
+baseline,100,3,89.0042,0.2333,9.6901,0.0964,47.6467,0.4244,54.0500,0.7935,78.2548,3.8258,9040.3
+lmat_async,100,3,88.6507,0.3110,9.9279,0.2190,47.1333,0.6944,53.3595,1.3697,73.6411,4.5680,8979.0
+lttng_only,100,3,88.3661,1.1245,9.9008,0.2270,48.3700,0.5881,55.8893,1.1687,82.8648,2.6840,8980.0

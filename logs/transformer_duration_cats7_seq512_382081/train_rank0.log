@@ -1,0 +1,1059 @@
+[03:56:38][rank0] Vocab: 175 syscalls / 113 processes
+[03:56:38][rank0] Train shards for this rank: 119  (total=119)  Valid shards: 40
+[03:56:38][rank0] Model: TRANSFORMER  params=2,772,560
+[03:56:38][rank0]   n_hidden=1024  n_layer=6  n_head=8
+[03:56:38][rank0]   AMP(bf16)=True  compile=False  chk=False  DDP=False
+[03:56:38][rank0]   batch=64  accum_steps=1  world_size=1  eff_batch=64
+[03:56:38][rank0] ======================================================================
+[03:56:38][rank0] Starting training  device=cuda:0  total_steps~=278100  world_size=1
+[03:56:38][rank0] ======================================================================
+[03:57:05][rank0] step=   500  epoch=1  loss=1.7975  acc_e=0.00%  lr=3.00e-04  elapsed=0:00:27
+[03:57:32][rank0] step=  1000  epoch=1  loss=1.6494  acc_e=0.00%  lr=3.00e-04  elapsed=0:00:54
+[03:57:59][rank0] step=  1500  epoch=1  loss=1.5569  acc_e=0.00%  lr=3.00e-04  elapsed=0:01:21
+[03:58:27][rank0] step=  2000  epoch=1  loss=1.4973  acc_e=0.00%  lr=3.00e-04  elapsed=0:01:48
+[03:58:27][rank0] --- Validation @ step 2000 ---
+[03:59:35][rank0]   val loss=1.2440  loss_e=0.0000  acc_e=0.00%  acc_l=49.66%
+[03:59:35][rank0]   New best val loss=1.2440 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[04:00:01][rank0] step=  2500  epoch=1  loss=1.4491  acc_e=0.00%  lr=3.00e-04  elapsed=0:03:23
+[04:00:28][rank0] step=  3000  epoch=1  loss=1.4057  acc_e=0.00%  lr=3.00e-04  elapsed=0:03:50
+[04:00:56][rank0] step=  3500  epoch=1  loss=1.3678  acc_e=0.00%  lr=3.00e-04  elapsed=0:04:17
+[04:01:22][rank0] step=  4000  epoch=1  loss=1.3400  acc_e=0.00%  lr=3.00e-04  elapsed=0:04:44
+[04:01:22][rank0] --- Validation @ step 4000 ---
+[04:02:27][rank0]   val loss=1.0787  loss_e=0.0000  acc_e=0.00%  acc_l=55.78%
+[04:02:27][rank0]   New best val loss=1.0787 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[04:02:53][rank0] step=  4500  epoch=1  loss=1.3177  acc_e=0.00%  lr=3.00e-04  elapsed=0:06:15
+[04:03:20][rank0] step=  5000  epoch=1  loss=1.2968  acc_e=0.00%  lr=3.00e-04  elapsed=0:06:42
+[04:03:46][rank0] step=  5500  epoch=1  loss=1.2793  acc_e=0.00%  lr=3.00e-04  elapsed=0:07:08
+[04:04:13][rank0] step=  6000  epoch=1  loss=1.2627  acc_e=0.00%  lr=3.00e-04  elapsed=0:07:35
+[04:04:13][rank0] --- Validation @ step 6000 ---
+[04:05:18][rank0]   val loss=1.0377  loss_e=0.0000  acc_e=0.00%  acc_l=57.50%
+[04:05:18][rank0]   New best val loss=1.0377 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[04:05:45][rank0] step=  6500  epoch=1  loss=1.2473  acc_e=0.00%  lr=3.00e-04  elapsed=0:09:07
+[04:06:13][rank0] step=  7000  epoch=1  loss=1.2333  acc_e=0.00%  lr=3.00e-04  elapsed=0:09:34
+[04:06:39][rank0] step=  7500  epoch=1  loss=1.2224  acc_e=0.00%  lr=3.00e-04  elapsed=0:10:01
+[04:07:06][rank0] step=  8000  epoch=1  loss=1.2119  acc_e=0.00%  lr=2.99e-04  elapsed=0:10:28
+[04:07:06][rank0] --- Validation @ step 8000 ---
+[04:08:16][rank0]   val loss=1.0255  loss_e=0.0000  acc_e=0.00%  acc_l=58.03%
+[04:08:16][rank0]   New best val loss=1.0255 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[04:08:43][rank0] step=  8500  epoch=1  loss=1.2027  acc_e=0.00%  lr=2.99e-04  elapsed=0:12:05
+[04:09:10][rank0] step=  9000  epoch=1  loss=1.1947  acc_e=0.00%  lr=2.99e-04  elapsed=0:12:31
+[04:09:30][rank0] Epoch   1/30  loss=1.1884  acc_e=0.00%  acc_l=51.53%  elapsed=0:12:52
+[04:09:37][rank0] step=  9500  epoch=2  loss=1.0516  acc_e=0.00%  lr=2.99e-04  elapsed=0:12:58
+[04:10:03][rank0] step= 10000  epoch=2  loss=1.0451  acc_e=0.00%  lr=2.99e-04  elapsed=0:13:25
+[04:10:03][rank0] --- Validation @ step 10000 ---
+[04:11:09][rank0]   val loss=1.0097  loss_e=0.0000  acc_e=0.00%  acc_l=58.58%
+[04:11:09][rank0]   New best val loss=1.0097 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[04:11:09][rank0]   Checkpoint -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/ckpt_0010000.pt
+[04:11:36][rank0] step= 10500  epoch=2  loss=1.0353  acc_e=0.00%  lr=2.99e-04  elapsed=0:14:58
+[04:12:04][rank0] step= 11000  epoch=2  loss=1.0315  acc_e=0.00%  lr=2.99e-04  elapsed=0:15:25
+[04:12:31][rank0] step= 11500  epoch=2  loss=1.0327  acc_e=0.00%  lr=2.99e-04  elapsed=0:15:52
+[04:12:57][rank0] step= 12000  epoch=2  loss=1.0331  acc_e=0.00%  lr=2.99e-04  elapsed=0:16:19
+[04:12:57][rank0] --- Validation @ step 12000 ---
+[04:14:02][rank0]   val loss=0.9976  loss_e=0.0000  acc_e=0.00%  acc_l=59.10%
+[04:14:02][rank0]   New best val loss=0.9976 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[04:14:30][rank0] step= 12500  epoch=2  loss=1.0305  acc_e=0.00%  lr=2.99e-04  elapsed=0:17:52
+[04:14:58][rank0] step= 13000  epoch=2  loss=1.0284  acc_e=0.00%  lr=2.99e-04  elapsed=0:18:19
+[04:15:24][rank0] step= 13500  epoch=2  loss=1.0293  acc_e=0.00%  lr=2.98e-04  elapsed=0:18:46
+[04:15:51][rank0] step= 14000  epoch=2  loss=1.0293  acc_e=0.00%  lr=2.98e-04  elapsed=0:19:12
+[04:15:51][rank0] --- Validation @ step 14000 ---
+[04:16:56][rank0]   val loss=0.9902  loss_e=0.0000  acc_e=0.00%  acc_l=59.36%
+[04:16:56][rank0]   New best val loss=0.9902 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[04:17:22][rank0] step= 14500  epoch=2  loss=1.0290  acc_e=0.00%  lr=2.98e-04  elapsed=0:20:44
+[04:17:49][rank0] step= 15000  epoch=2  loss=1.0287  acc_e=0.00%  lr=2.98e-04  elapsed=0:21:10
+[04:18:16][rank0] step= 15500  epoch=2  loss=1.0273  acc_e=0.00%  lr=2.98e-04  elapsed=0:21:38
+[04:18:43][rank0] step= 16000  epoch=2  loss=1.0257  acc_e=0.00%  lr=2.98e-04  elapsed=0:22:05
+[04:18:43][rank0] --- Validation @ step 16000 ---
+[04:19:48][rank0]   val loss=0.9882  loss_e=0.0000  acc_e=0.00%  acc_l=59.49%
+[04:19:48][rank0]   New best val loss=0.9882 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[04:20:15][rank0] step= 16500  epoch=2  loss=1.0243  acc_e=0.00%  lr=2.98e-04  elapsed=0:23:37
+[04:20:41][rank0] step= 17000  epoch=2  loss=1.0234  acc_e=0.00%  lr=2.98e-04  elapsed=0:24:03
+[04:21:09][rank0] step= 17500  epoch=2  loss=1.0225  acc_e=0.00%  lr=2.97e-04  elapsed=0:24:31
+[04:21:36][rank0] step= 18000  epoch=2  loss=1.0219  acc_e=0.00%  lr=2.97e-04  elapsed=0:24:57
+[04:21:36][rank0] --- Validation @ step 18000 ---
+[04:22:40][rank0]   val loss=0.9844  loss_e=0.0000  acc_e=0.00%  acc_l=59.60%
+[04:22:40][rank0]   New best val loss=0.9844 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[04:23:07][rank0] step= 18500  epoch=2  loss=1.0216  acc_e=0.00%  lr=2.97e-04  elapsed=0:26:29
+[04:23:20][rank0] Epoch   2/30  loss=1.0210  acc_e=0.00%  acc_l=58.01%  elapsed=0:26:42
+[04:23:34][rank0] step= 19000  epoch=3  loss=1.0072  acc_e=0.00%  lr=2.97e-04  elapsed=0:26:56
+[04:24:00][rank0] step= 19500  epoch=3  loss=1.0051  acc_e=0.00%  lr=2.97e-04  elapsed=0:27:22
+[04:24:28][rank0] step= 20000  epoch=3  loss=0.9999  acc_e=0.00%  lr=2.97e-04  elapsed=0:27:50
+[04:24:28][rank0] --- Validation @ step 20000 ---
+[04:25:33][rank0]   val loss=0.9810  loss_e=0.0000  acc_e=0.00%  acc_l=59.81%
+[04:25:33][rank0]   New best val loss=0.9810 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[04:25:33][rank0]   Checkpoint -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/ckpt_0020000.pt
+[04:26:01][rank0] step= 20500  epoch=3  loss=0.9993  acc_e=0.00%  lr=2.96e-04  elapsed=0:29:22
+[04:26:27][rank0] step= 21000  epoch=3  loss=1.0004  acc_e=0.00%  lr=2.96e-04  elapsed=0:29:49
+[04:26:54][rank0] step= 21500  epoch=3  loss=1.0004  acc_e=0.00%  lr=2.96e-04  elapsed=0:30:15
+[04:27:21][rank0] step= 22000  epoch=3  loss=0.9993  acc_e=0.00%  lr=2.96e-04  elapsed=0:30:43
+[04:27:21][rank0] --- Validation @ step 22000 ---
+[04:28:26][rank0]   val loss=0.9789  loss_e=0.0000  acc_e=0.00%  acc_l=59.83%
+[04:28:26][rank0]   New best val loss=0.9789 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[04:28:53][rank0] step= 22500  epoch=3  loss=0.9985  acc_e=0.00%  lr=2.96e-04  elapsed=0:32:15
+[04:29:19][rank0] step= 23000  epoch=3  loss=1.0000  acc_e=0.00%  lr=2.95e-04  elapsed=0:32:41
+[04:29:46][rank0] step= 23500  epoch=3  loss=1.0002  acc_e=0.00%  lr=2.95e-04  elapsed=0:33:08
+[04:30:13][rank0] step= 24000  epoch=3  loss=1.0006  acc_e=0.00%  lr=2.95e-04  elapsed=0:33:35
+[04:30:13][rank0] --- Validation @ step 24000 ---
+[04:31:18][rank0]   val loss=0.9732  loss_e=0.0000  acc_e=0.00%  acc_l=60.10%
+[04:31:18][rank0]   New best val loss=0.9732 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[04:31:44][rank0] step= 24500  epoch=3  loss=1.0011  acc_e=0.00%  lr=2.95e-04  elapsed=0:35:06
+[04:32:12][rank0] step= 25000  epoch=3  loss=1.0000  acc_e=0.00%  lr=2.95e-04  elapsed=0:35:33
+[04:32:39][rank0] step= 25500  epoch=3  loss=0.9990  acc_e=0.00%  lr=2.94e-04  elapsed=0:36:01
+[04:33:06][rank0] step= 26000  epoch=3  loss=0.9985  acc_e=0.00%  lr=2.94e-04  elapsed=0:36:27
+[04:33:06][rank0] --- Validation @ step 26000 ---
+[04:34:11][rank0]   val loss=0.9721  loss_e=0.0000  acc_e=0.00%  acc_l=60.14%
+[04:34:11][rank0]   New best val loss=0.9721 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[04:34:38][rank0] step= 26500  epoch=3  loss=0.9980  acc_e=0.00%  lr=2.94e-04  elapsed=0:37:59
+[04:35:05][rank0] step= 27000  epoch=3  loss=0.9977  acc_e=0.00%  lr=2.94e-04  elapsed=0:38:27
+[04:35:32][rank0] step= 27500  epoch=3  loss=0.9978  acc_e=0.00%  lr=2.93e-04  elapsed=0:38:53
+[04:35:58][rank0] step= 28000  epoch=3  loss=0.9976  acc_e=0.00%  lr=2.93e-04  elapsed=0:39:20
+[04:35:58][rank0] --- Validation @ step 28000 ---
+[04:37:04][rank0]   val loss=0.9742  loss_e=0.0000  acc_e=0.00%  acc_l=60.13%
+[04:37:04][rank0]   No improvement count: 1/10
+[04:37:11][rank0] Epoch   3/30  loss=0.9974  acc_e=0.00%  acc_l=58.96%  elapsed=0:40:32
+[04:37:31][rank0] step= 28500  epoch=4  loss=0.9904  acc_e=0.00%  lr=2.93e-04  elapsed=0:40:53
+[04:37:58][rank0] step= 29000  epoch=4  loss=0.9897  acc_e=0.00%  lr=2.93e-04  elapsed=0:41:19
+[04:38:25][rank0] step= 29500  epoch=4  loss=0.9849  acc_e=0.00%  lr=2.92e-04  elapsed=0:41:46
+[04:38:52][rank0] step= 30000  epoch=4  loss=0.9855  acc_e=0.00%  lr=2.92e-04  elapsed=0:42:14
+[04:38:52][rank0] --- Validation @ step 30000 ---
+[04:39:57][rank0]   val loss=0.9705  loss_e=0.0000  acc_e=0.00%  acc_l=60.18%
+[04:39:57][rank0]   New best val loss=0.9705 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[04:39:57][rank0]   Checkpoint -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/ckpt_0030000.pt
+[04:40:23][rank0] step= 30500  epoch=4  loss=0.9869  acc_e=0.00%  lr=2.92e-04  elapsed=0:43:45
+[04:40:50][rank0] step= 31000  epoch=4  loss=0.9866  acc_e=0.00%  lr=2.92e-04  elapsed=0:44:12
+[04:41:17][rank0] step= 31500  epoch=4  loss=0.9857  acc_e=0.00%  lr=2.91e-04  elapsed=0:44:39
+[04:41:44][rank0] step= 32000  epoch=4  loss=0.9857  acc_e=0.00%  lr=2.91e-04  elapsed=0:45:06
+[04:41:44][rank0] --- Validation @ step 32000 ---
+[04:42:49][rank0]   val loss=0.9684  loss_e=0.0000  acc_e=0.00%  acc_l=60.23%
+[04:42:49][rank0]   New best val loss=0.9684 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[04:43:15][rank0] step= 32500  epoch=4  loss=0.9870  acc_e=0.00%  lr=2.91e-04  elapsed=0:46:37
+[04:43:42][rank0] step= 33000  epoch=4  loss=0.9871  acc_e=0.00%  lr=2.90e-04  elapsed=0:47:04
+[04:44:09][rank0] step= 33500  epoch=4  loss=0.9878  acc_e=0.00%  lr=2.90e-04  elapsed=0:47:30
+[04:44:35][rank0] step= 34000  epoch=4  loss=0.9880  acc_e=0.00%  lr=2.90e-04  elapsed=0:47:57
+[04:44:35][rank0] --- Validation @ step 34000 ---
+[04:45:40][rank0]   val loss=0.9653  loss_e=0.0000  acc_e=0.00%  acc_l=60.46%
+[04:45:40][rank0]   New best val loss=0.9653 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[04:46:07][rank0] step= 34500  epoch=4  loss=0.9873  acc_e=0.00%  lr=2.90e-04  elapsed=0:49:29
+[04:46:35][rank0] step= 35000  epoch=4  loss=0.9863  acc_e=0.00%  lr=2.89e-04  elapsed=0:49:57
+[04:47:01][rank0] step= 35500  epoch=4  loss=0.9861  acc_e=0.00%  lr=2.89e-04  elapsed=0:50:23
+[04:47:28][rank0] step= 36000  epoch=4  loss=0.9859  acc_e=0.00%  lr=2.89e-04  elapsed=0:50:50
+[04:47:28][rank0] --- Validation @ step 36000 ---
+[04:48:33][rank0]   val loss=0.9643  loss_e=0.0000  acc_e=0.00%  acc_l=60.50%
+[04:48:33][rank0]   New best val loss=0.9643 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[04:49:00][rank0] step= 36500  epoch=4  loss=0.9857  acc_e=0.00%  lr=2.88e-04  elapsed=0:52:22
+[04:49:27][rank0] step= 37000  epoch=4  loss=0.9861  acc_e=0.00%  lr=2.88e-04  elapsed=0:52:48
+[04:49:53][rank0] Epoch   4/30  loss=0.9858  acc_e=0.00%  acc_l=59.45%  elapsed=0:53:15
+[04:49:54][rank0] step= 37500  epoch=5  loss=0.9596  acc_e=0.00%  lr=2.88e-04  elapsed=0:53:16
+[04:50:21][rank0] step= 38000  epoch=5  loss=0.9818  acc_e=0.00%  lr=2.87e-04  elapsed=0:53:42
+[04:50:21][rank0] --- Validation @ step 38000 ---
+[04:51:25][rank0]   val loss=0.9615  loss_e=0.0000  acc_e=0.00%  acc_l=60.64%
+[04:51:25][rank0]   New best val loss=0.9615 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[04:51:53][rank0] step= 38500  epoch=5  loss=0.9797  acc_e=0.00%  lr=2.87e-04  elapsed=0:55:14
+[04:52:20][rank0] step= 39000  epoch=5  loss=0.9760  acc_e=0.00%  lr=2.87e-04  elapsed=0:55:41
+[04:52:47][rank0] step= 39500  epoch=5  loss=0.9775  acc_e=0.00%  lr=2.86e-04  elapsed=0:56:08
+[04:53:13][rank0] step= 40000  epoch=5  loss=0.9785  acc_e=0.00%  lr=2.86e-04  elapsed=0:56:35
+[04:53:13][rank0] --- Validation @ step 40000 ---
+[04:54:23][rank0]   val loss=0.9613  loss_e=0.0000  acc_e=0.00%  acc_l=60.67%
+[04:54:23][rank0]   New best val loss=0.9613 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[04:54:23][rank0]   Checkpoint -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/ckpt_0040000.pt
+[04:54:50][rank0] step= 40500  epoch=5  loss=0.9779  acc_e=0.00%  lr=2.86e-04  elapsed=0:58:12
+[04:55:17][rank0] step= 41000  epoch=5  loss=0.9772  acc_e=0.00%  lr=2.85e-04  elapsed=0:58:39
+[04:55:44][rank0] step= 41500  epoch=5  loss=0.9779  acc_e=0.00%  lr=2.85e-04  elapsed=0:59:06
+[04:56:10][rank0] step= 42000  epoch=5  loss=0.9790  acc_e=0.00%  lr=2.85e-04  elapsed=0:59:32
+[04:56:10][rank0] --- Validation @ step 42000 ---
+[04:57:16][rank0]   val loss=0.9584  loss_e=0.0000  acc_e=0.00%  acc_l=60.78%
+[04:57:16][rank0]   New best val loss=0.9584 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[04:57:43][rank0] step= 42500  epoch=5  loss=0.9793  acc_e=0.00%  lr=2.84e-04  elapsed=1:01:05
+[04:58:09][rank0] step= 43000  epoch=5  loss=0.9799  acc_e=0.00%  lr=2.84e-04  elapsed=1:01:31
+[04:58:36][rank0] step= 43500  epoch=5  loss=0.9798  acc_e=0.00%  lr=2.83e-04  elapsed=1:01:58
+[04:59:03][rank0] step= 44000  epoch=5  loss=0.9793  acc_e=0.00%  lr=2.83e-04  elapsed=1:02:25
+[04:59:03][rank0] --- Validation @ step 44000 ---
+[05:00:10][rank0]   val loss=0.9604  loss_e=0.0000  acc_e=0.00%  acc_l=60.69%
+[05:00:10][rank0]   No improvement count: 1/10
+[05:00:37][rank0] step= 44500  epoch=5  loss=0.9783  acc_e=0.00%  lr=2.83e-04  elapsed=1:03:59
+[05:01:04][rank0] step= 45000  epoch=5  loss=0.9783  acc_e=0.00%  lr=2.82e-04  elapsed=1:04:25
+[05:01:31][rank0] step= 45500  epoch=5  loss=0.9781  acc_e=0.00%  lr=2.82e-04  elapsed=1:04:52
+[05:01:58][rank0] step= 46000  epoch=5  loss=0.9782  acc_e=0.00%  lr=2.82e-04  elapsed=1:05:19
+[05:01:58][rank0] --- Validation @ step 46000 ---
+[05:03:03][rank0]   val loss=0.9582  loss_e=0.0000  acc_e=0.00%  acc_l=60.72%
+[05:03:03][rank0]   New best val loss=0.9582 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[05:03:29][rank0] step= 46500  epoch=5  loss=0.9787  acc_e=0.00%  lr=2.81e-04  elapsed=1:06:51
+[05:03:49][rank0] Epoch   5/30  loss=0.9783  acc_e=0.00%  acc_l=59.75%  elapsed=1:07:11
+[05:03:56][rank0] step= 47000  epoch=6  loss=0.9762  acc_e=0.00%  lr=2.81e-04  elapsed=1:07:18
+[05:04:23][rank0] step= 47500  epoch=6  loss=0.9756  acc_e=0.00%  lr=2.80e-04  elapsed=1:07:44
+[05:04:50][rank0] step= 48000  epoch=6  loss=0.9717  acc_e=0.00%  lr=2.80e-04  elapsed=1:08:12
+[05:04:50][rank0] --- Validation @ step 48000 ---
+[05:05:55][rank0]   val loss=0.9593  loss_e=0.0000  acc_e=0.00%  acc_l=60.66%
+[05:05:55][rank0]   No improvement count: 1/10
+[05:06:23][rank0] step= 48500  epoch=6  loss=0.9703  acc_e=0.00%  lr=2.79e-04  elapsed=1:09:44
+[05:06:49][rank0] step= 49000  epoch=6  loss=0.9722  acc_e=0.00%  lr=2.79e-04  elapsed=1:10:11
+[05:07:16][rank0] step= 49500  epoch=6  loss=0.9729  acc_e=0.00%  lr=2.79e-04  elapsed=1:10:38
+[05:07:43][rank0] step= 50000  epoch=6  loss=0.9718  acc_e=0.00%  lr=2.78e-04  elapsed=1:11:05
+[05:07:43][rank0] --- Validation @ step 50000 ---
+[05:08:48][rank0]   val loss=0.9593  loss_e=0.0000  acc_e=0.00%  acc_l=60.75%
+[05:08:48][rank0]   No improvement count: 2/10
+[05:08:48][rank0]   Checkpoint -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/ckpt_0050000.pt
+[05:09:16][rank0] step= 50500  epoch=6  loss=0.9713  acc_e=0.00%  lr=2.78e-04  elapsed=1:12:37
+[05:09:42][rank0] step= 51000  epoch=6  loss=0.9726  acc_e=0.00%  lr=2.77e-04  elapsed=1:13:03
+[05:10:08][rank0] step= 51500  epoch=6  loss=0.9733  acc_e=0.00%  lr=2.77e-04  elapsed=1:13:30
+[05:10:35][rank0] step= 52000  epoch=6  loss=0.9738  acc_e=0.00%  lr=2.76e-04  elapsed=1:13:57
+[05:10:35][rank0] --- Validation @ step 52000 ---
+[05:11:40][rank0]   val loss=0.9570  loss_e=0.0000  acc_e=0.00%  acc_l=60.77%
+[05:11:40][rank0]   New best val loss=0.9570 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[05:12:06][rank0] step= 52500  epoch=6  loss=0.9743  acc_e=0.00%  lr=2.76e-04  elapsed=1:15:28
+[05:12:34][rank0] step= 53000  epoch=6  loss=0.9741  acc_e=0.00%  lr=2.76e-04  elapsed=1:15:56
+[05:13:02][rank0] step= 53500  epoch=6  loss=0.9736  acc_e=0.00%  lr=2.75e-04  elapsed=1:16:23
+[05:13:29][rank0] step= 54000  epoch=6  loss=0.9731  acc_e=0.00%  lr=2.75e-04  elapsed=1:16:50
+[05:13:29][rank0] --- Validation @ step 54000 ---
+[05:14:34][rank0]   val loss=0.9566  loss_e=0.0000  acc_e=0.00%  acc_l=60.86%
+[05:14:34][rank0]   New best val loss=0.9566 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[05:15:01][rank0] step= 54500  epoch=6  loss=0.9729  acc_e=0.00%  lr=2.74e-04  elapsed=1:18:23
+[05:15:29][rank0] step= 55000  epoch=6  loss=0.9729  acc_e=0.00%  lr=2.74e-04  elapsed=1:18:51
+[05:15:57][rank0] step= 55500  epoch=6  loss=0.9730  acc_e=0.00%  lr=2.73e-04  elapsed=1:19:18
+[05:16:24][rank0] step= 56000  epoch=6  loss=0.9734  acc_e=0.00%  lr=2.73e-04  elapsed=1:19:46
+[05:16:24][rank0] --- Validation @ step 56000 ---
+[05:17:31][rank0]   val loss=0.9548  loss_e=0.0000  acc_e=0.00%  acc_l=60.89%
+[05:17:31][rank0]   New best val loss=0.9548 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[05:17:44][rank0] Epoch   6/30  loss=0.9731  acc_e=0.00%  acc_l=59.98%  elapsed=1:21:05
+[05:17:58][rank0] step= 56500  epoch=7  loss=0.9695  acc_e=0.00%  lr=2.72e-04  elapsed=1:21:19
+[05:18:24][rank0] step= 57000  epoch=7  loss=0.9700  acc_e=0.00%  lr=2.72e-04  elapsed=1:21:46
+[05:18:51][rank0] step= 57500  epoch=7  loss=0.9667  acc_e=0.00%  lr=2.71e-04  elapsed=1:22:13
+[05:19:19][rank0] step= 58000  epoch=7  loss=0.9667  acc_e=0.00%  lr=2.71e-04  elapsed=1:22:40
+[05:19:19][rank0] --- Validation @ step 58000 ---
+[05:20:25][rank0]   val loss=0.9549  loss_e=0.0000  acc_e=0.00%  acc_l=60.91%
+[05:20:25][rank0]   No improvement count: 1/10
+[05:20:52][rank0] step= 58500  epoch=7  loss=0.9678  acc_e=0.00%  lr=2.70e-04  elapsed=1:24:14
+[05:21:18][rank0] step= 59000  epoch=7  loss=0.9677  acc_e=0.00%  lr=2.70e-04  elapsed=1:24:40
+[05:21:46][rank0] step= 59500  epoch=7  loss=0.9674  acc_e=0.00%  lr=2.69e-04  elapsed=1:25:07
+[05:22:13][rank0] step= 60000  epoch=7  loss=0.9671  acc_e=0.00%  lr=2.69e-04  elapsed=1:25:35
+[05:22:13][rank0] --- Validation @ step 60000 ---
+[05:23:19][rank0]   val loss=0.9544  loss_e=0.0000  acc_e=0.00%  acc_l=60.93%
+[05:23:19][rank0]   New best val loss=0.9544 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[05:23:19][rank0]   Checkpoint -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/ckpt_0060000.pt
+[05:23:45][rank0] step= 60500  epoch=7  loss=0.9684  acc_e=0.00%  lr=2.68e-04  elapsed=1:27:07
+[05:24:12][rank0] step= 61000  epoch=7  loss=0.9690  acc_e=0.00%  lr=2.68e-04  elapsed=1:27:34
+[05:24:38][rank0] step= 61500  epoch=7  loss=0.9694  acc_e=0.00%  lr=2.67e-04  elapsed=1:28:00
+[05:25:05][rank0] step= 62000  epoch=7  loss=0.9702  acc_e=0.00%  lr=2.67e-04  elapsed=1:28:26
+[05:25:05][rank0] --- Validation @ step 62000 ---
+[05:26:10][rank0]   val loss=0.9542  loss_e=0.0000  acc_e=0.00%  acc_l=60.94%
+[05:26:10][rank0]   New best val loss=0.9542 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[05:26:37][rank0] step= 62500  epoch=7  loss=0.9697  acc_e=0.00%  lr=2.66e-04  elapsed=1:29:59
+[05:27:04][rank0] step= 63000  epoch=7  loss=0.9691  acc_e=0.00%  lr=2.66e-04  elapsed=1:30:26
+[05:27:31][rank0] step= 63500  epoch=7  loss=0.9689  acc_e=0.00%  lr=2.65e-04  elapsed=1:30:53
+[05:27:58][rank0] step= 64000  epoch=7  loss=0.9687  acc_e=0.00%  lr=2.65e-04  elapsed=1:31:19
+[05:27:58][rank0] --- Validation @ step 64000 ---
+[05:29:02][rank0]   val loss=0.9532  loss_e=0.0000  acc_e=0.00%  acc_l=60.99%
+[05:29:02][rank0]   New best val loss=0.9532 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[05:29:30][rank0] step= 64500  epoch=7  loss=0.9688  acc_e=0.00%  lr=2.64e-04  elapsed=1:32:51
+[05:29:56][rank0] step= 65000  epoch=7  loss=0.9690  acc_e=0.00%  lr=2.64e-04  elapsed=1:33:18
+[05:30:23][rank0] step= 65500  epoch=7  loss=0.9692  acc_e=0.00%  lr=2.63e-04  elapsed=1:33:45
+[05:30:29][rank0] Epoch   7/30  loss=0.9690  acc_e=0.00%  acc_l=60.15%  elapsed=1:33:51
+[05:30:50][rank0] step= 66000  epoch=8  loss=0.9659  acc_e=0.00%  lr=2.63e-04  elapsed=1:34:12
+[05:30:50][rank0] --- Validation @ step 66000 ---
+[05:31:55][rank0]   val loss=0.9507  loss_e=0.0000  acc_e=0.00%  acc_l=61.06%
+[05:31:55][rank0]   New best val loss=0.9507 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[05:32:22][rank0] step= 66500  epoch=8  loss=0.9663  acc_e=0.00%  lr=2.62e-04  elapsed=1:35:44
+[05:32:49][rank0] step= 67000  epoch=8  loss=0.9625  acc_e=0.00%  lr=2.62e-04  elapsed=1:36:11
+[05:33:17][rank0] step= 67500  epoch=8  loss=0.9635  acc_e=0.00%  lr=2.61e-04  elapsed=1:36:38
+[05:33:43][rank0] step= 68000  epoch=8  loss=0.9648  acc_e=0.00%  lr=2.60e-04  elapsed=1:37:04
+[05:33:43][rank0] --- Validation @ step 68000 ---
+[05:34:48][rank0]   val loss=0.9520  loss_e=0.0000  acc_e=0.00%  acc_l=61.05%
+[05:34:48][rank0]   No improvement count: 1/10
+[05:35:15][rank0] step= 68500  epoch=8  loss=0.9644  acc_e=0.00%  lr=2.60e-04  elapsed=1:38:37
+[05:35:42][rank0] step= 69000  epoch=8  loss=0.9639  acc_e=0.00%  lr=2.59e-04  elapsed=1:39:04
+[05:36:09][rank0] step= 69500  epoch=8  loss=0.9641  acc_e=0.00%  lr=2.59e-04  elapsed=1:39:31
+[05:36:35][rank0] step= 70000  epoch=8  loss=0.9653  acc_e=0.00%  lr=2.58e-04  elapsed=1:39:57
+[05:36:35][rank0] --- Validation @ step 70000 ---
+[05:37:40][rank0]   val loss=0.9505  loss_e=0.0000  acc_e=0.00%  acc_l=61.07%
+[05:37:40][rank0]   New best val loss=0.9505 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[05:37:40][rank0]   Checkpoint -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/ckpt_0070000.pt
+[05:38:07][rank0] step= 70500  epoch=8  loss=0.9654  acc_e=0.00%  lr=2.58e-04  elapsed=1:41:29
+[05:38:34][rank0] step= 71000  epoch=8  loss=0.9662  acc_e=0.00%  lr=2.57e-04  elapsed=1:41:55
+[05:39:00][rank0] step= 71500  epoch=8  loss=0.9667  acc_e=0.00%  lr=2.56e-04  elapsed=1:42:22
+[05:39:27][rank0] step= 72000  epoch=8  loss=0.9662  acc_e=0.00%  lr=2.56e-04  elapsed=1:42:49
+[05:39:27][rank0] --- Validation @ step 72000 ---
+[05:40:33][rank0]   val loss=0.9500  loss_e=0.0000  acc_e=0.00%  acc_l=61.09%
+[05:40:33][rank0]   New best val loss=0.9500 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[05:41:01][rank0] step= 72500  epoch=8  loss=0.9655  acc_e=0.00%  lr=2.55e-04  elapsed=1:44:22
+[05:41:27][rank0] step= 73000  epoch=8  loss=0.9654  acc_e=0.00%  lr=2.55e-04  elapsed=1:44:49
+[05:41:54][rank0] step= 73500  epoch=8  loss=0.9653  acc_e=0.00%  lr=2.54e-04  elapsed=1:45:16
+[05:42:21][rank0] step= 74000  epoch=8  loss=0.9654  acc_e=0.00%  lr=2.53e-04  elapsed=1:45:43
+[05:42:21][rank0] --- Validation @ step 74000 ---
+[05:43:26][rank0]   val loss=0.9498  loss_e=0.0000  acc_e=0.00%  acc_l=61.09%
+[05:43:26][rank0]   New best val loss=0.9498 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[05:43:52][rank0] step= 74500  epoch=8  loss=0.9659  acc_e=0.00%  lr=2.53e-04  elapsed=1:47:14
+[05:44:19][rank0] Epoch   8/30  loss=0.9657  acc_e=0.00%  acc_l=60.28%  elapsed=1:47:41
+[05:44:20][rank0] step= 75000  epoch=9  loss=0.9585  acc_e=0.00%  lr=2.52e-04  elapsed=1:47:42
+[05:44:46][rank0] step= 75500  epoch=9  loss=0.9639  acc_e=0.00%  lr=2.52e-04  elapsed=1:48:08
+[05:45:14][rank0] step= 76000  epoch=9  loss=0.9628  acc_e=0.00%  lr=2.51e-04  elapsed=1:48:35
+[05:45:14][rank0] --- Validation @ step 76000 ---
+[05:46:19][rank0]   val loss=0.9489  loss_e=0.0000  acc_e=0.00%  acc_l=61.20%
+[05:46:19][rank0]   New best val loss=0.9489 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[05:46:46][rank0] step= 76500  epoch=9  loss=0.9594  acc_e=0.00%  lr=2.50e-04  elapsed=1:50:08
+[05:47:13][rank0] step= 77000  epoch=9  loss=0.9609  acc_e=0.00%  lr=2.50e-04  elapsed=1:50:35
+[05:47:39][rank0] step= 77500  epoch=9  loss=0.9618  acc_e=0.00%  lr=2.49e-04  elapsed=1:51:01
+[05:48:06][rank0] step= 78000  epoch=9  loss=0.9614  acc_e=0.00%  lr=2.49e-04  elapsed=1:51:28
+[05:48:06][rank0] --- Validation @ step 78000 ---
+[05:49:12][rank0]   val loss=0.9519  loss_e=0.0000  acc_e=0.00%  acc_l=60.99%
+[05:49:12][rank0]   No improvement count: 1/10
+[05:49:39][rank0] step= 78500  epoch=9  loss=0.9608  acc_e=0.00%  lr=2.48e-04  elapsed=1:53:01
+[05:50:05][rank0] step= 79000  epoch=9  loss=0.9616  acc_e=0.00%  lr=2.47e-04  elapsed=1:53:27
+[05:50:31][rank0] step= 79500  epoch=9  loss=0.9626  acc_e=0.00%  lr=2.47e-04  elapsed=1:53:53
+[05:50:59][rank0] step= 80000  epoch=9  loss=0.9629  acc_e=0.00%  lr=2.46e-04  elapsed=1:54:20
+[05:50:59][rank0] --- Validation @ step 80000 ---
+[05:52:04][rank0]   val loss=0.9494  loss_e=0.0000  acc_e=0.00%  acc_l=61.09%
+[05:52:04][rank0]   No improvement count: 2/10
+[05:52:04][rank0]   Checkpoint -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/ckpt_0080000.pt
+[05:52:30][rank0] step= 80500  epoch=9  loss=0.9636  acc_e=0.00%  lr=2.45e-04  elapsed=1:55:51
+[05:52:56][rank0] step= 81000  epoch=9  loss=0.9636  acc_e=0.00%  lr=2.45e-04  elapsed=1:56:18
+[05:53:24][rank0] step= 81500  epoch=9  loss=0.9633  acc_e=0.00%  lr=2.44e-04  elapsed=1:56:46
+[05:53:51][rank0] step= 82000  epoch=9  loss=0.9625  acc_e=0.00%  lr=2.44e-04  elapsed=1:57:13
+[05:53:51][rank0] --- Validation @ step 82000 ---
+[05:54:58][rank0]   val loss=0.9492  loss_e=0.0000  acc_e=0.00%  acc_l=61.07%
+[05:54:58][rank0]   No improvement count: 3/10
+[05:55:24][rank0] step= 82500  epoch=9  loss=0.9625  acc_e=0.00%  lr=2.43e-04  elapsed=1:58:46
+[05:55:51][rank0] step= 83000  epoch=9  loss=0.9625  acc_e=0.00%  lr=2.42e-04  elapsed=1:59:13
+[05:56:18][rank0] step= 83500  epoch=9  loss=0.9626  acc_e=0.00%  lr=2.42e-04  elapsed=1:59:40
+[05:56:45][rank0] step= 84000  epoch=9  loss=0.9632  acc_e=0.00%  lr=2.41e-04  elapsed=2:00:07
+[05:56:45][rank0] --- Validation @ step 84000 ---
+[05:57:50][rank0]   val loss=0.9471  loss_e=0.0000  acc_e=0.00%  acc_l=61.23%
+[05:57:50][rank0]   New best val loss=0.9471 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[05:58:10][rank0] Epoch   9/30  loss=0.9629  acc_e=0.00%  acc_l=60.40%  elapsed=2:01:31
+[05:58:17][rank0] step= 84500  epoch=10  loss=0.9623  acc_e=0.00%  lr=2.40e-04  elapsed=2:01:39
+[05:58:43][rank0] step= 85000  epoch=10  loss=0.9613  acc_e=0.00%  lr=2.40e-04  elapsed=2:02:05
+[05:59:11][rank0] step= 85500  epoch=10  loss=0.9581  acc_e=0.00%  lr=2.39e-04  elapsed=2:02:33
+[05:59:38][rank0] step= 86000  epoch=10  loss=0.9570  acc_e=0.00%  lr=2.38e-04  elapsed=2:03:00
+[05:59:38][rank0] --- Validation @ step 86000 ---
+[06:00:43][rank0]   val loss=0.9469  loss_e=0.0000  acc_e=0.00%  acc_l=61.23%
+[06:00:43][rank0]   New best val loss=0.9469 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[06:01:10][rank0] step= 86500  epoch=10  loss=0.9588  acc_e=0.00%  lr=2.38e-04  elapsed=2:04:32
+[06:01:37][rank0] step= 87000  epoch=10  loss=0.9594  acc_e=0.00%  lr=2.37e-04  elapsed=2:04:58
+[06:02:04][rank0] step= 87500  epoch=10  loss=0.9585  acc_e=0.00%  lr=2.36e-04  elapsed=2:05:26
+[06:02:31][rank0] step= 88000  epoch=10  loss=0.9581  acc_e=0.00%  lr=2.36e-04  elapsed=2:05:53
+[06:02:31][rank0] --- Validation @ step 88000 ---
+[06:03:36][rank0]   val loss=0.9470  loss_e=0.0000  acc_e=0.00%  acc_l=61.21%
+[06:03:36][rank0]   No improvement count: 1/10
+[06:04:02][rank0] step= 88500  epoch=10  loss=0.9593  acc_e=0.00%  lr=2.35e-04  elapsed=2:07:24
+[06:04:29][rank0] step= 89000  epoch=10  loss=0.9600  acc_e=0.00%  lr=2.34e-04  elapsed=2:07:50
+[06:04:55][rank0] step= 89500  epoch=10  loss=0.9605  acc_e=0.00%  lr=2.34e-04  elapsed=2:08:17
+[06:05:21][rank0] step= 90000  epoch=10  loss=0.9612  acc_e=0.00%  lr=2.33e-04  elapsed=2:08:43
+[06:05:21][rank0] --- Validation @ step 90000 ---
+[06:06:27][rank0]   val loss=0.9464  loss_e=0.0000  acc_e=0.00%  acc_l=61.28%
+[06:06:27][rank0]   New best val loss=0.9464 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[06:06:27][rank0]   Checkpoint -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/ckpt_0090000.pt
+[06:06:54][rank0] step= 90500  epoch=10  loss=0.9610  acc_e=0.00%  lr=2.32e-04  elapsed=2:10:16
+[06:07:22][rank0] step= 91000  epoch=10  loss=0.9607  acc_e=0.00%  lr=2.32e-04  elapsed=2:10:43
+[06:07:49][rank0] step= 91500  epoch=10  loss=0.9602  acc_e=0.00%  lr=2.31e-04  elapsed=2:11:10
+[06:08:15][rank0] step= 92000  epoch=10  loss=0.9600  acc_e=0.00%  lr=2.30e-04  elapsed=2:11:37
+[06:08:15][rank0] --- Validation @ step 92000 ---
+[06:09:22][rank0]   val loss=0.9479  loss_e=0.0000  acc_e=0.00%  acc_l=61.25%
+[06:09:22][rank0]   No improvement count: 1/10
+[06:09:50][rank0] step= 92500  epoch=10  loss=0.9601  acc_e=0.00%  lr=2.29e-04  elapsed=2:13:11
+[06:10:16][rank0] step= 93000  epoch=10  loss=0.9603  acc_e=0.00%  lr=2.29e-04  elapsed=2:13:38
+[06:10:43][rank0] step= 93500  epoch=10  loss=0.9608  acc_e=0.00%  lr=2.28e-04  elapsed=2:14:05
+[06:10:56][rank0] Epoch  10/30  loss=0.9604  acc_e=0.00%  acc_l=60.50%  elapsed=2:14:18
+[06:11:10][rank0] step= 94000  epoch=11  loss=0.9579  acc_e=0.00%  lr=2.27e-04  elapsed=2:14:32
+[06:11:10][rank0] --- Validation @ step 94000 ---
+[06:12:16][rank0]   val loss=0.9453  loss_e=0.0000  acc_e=0.00%  acc_l=61.35%
+[06:12:16][rank0]   New best val loss=0.9453 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[06:12:42][rank0] step= 94500  epoch=11  loss=0.9585  acc_e=0.00%  lr=2.27e-04  elapsed=2:16:04
+[06:13:10][rank0] step= 95000  epoch=11  loss=0.9554  acc_e=0.00%  lr=2.26e-04  elapsed=2:16:31
+[06:13:37][rank0] step= 95500  epoch=11  loss=0.9555  acc_e=0.00%  lr=2.25e-04  elapsed=2:16:59
+[06:14:04][rank0] step= 96000  epoch=11  loss=0.9567  acc_e=0.00%  lr=2.25e-04  elapsed=2:17:25
+[06:14:04][rank0] --- Validation @ step 96000 ---
+[06:15:09][rank0]   val loss=0.9448  loss_e=0.0000  acc_e=0.00%  acc_l=61.35%
+[06:15:09][rank0]   New best val loss=0.9448 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[06:15:36][rank0] step= 96500  epoch=11  loss=0.9565  acc_e=0.00%  lr=2.24e-04  elapsed=2:18:57
+[06:16:03][rank0] step= 97000  epoch=11  loss=0.9562  acc_e=0.00%  lr=2.23e-04  elapsed=2:19:25
+[06:16:30][rank0] step= 97500  epoch=11  loss=0.9560  acc_e=0.00%  lr=2.22e-04  elapsed=2:19:52
+[06:16:56][rank0] step= 98000  epoch=11  loss=0.9573  acc_e=0.00%  lr=2.22e-04  elapsed=2:20:18
+[06:16:56][rank0] --- Validation @ step 98000 ---
+[06:18:02][rank0]   val loss=0.9448  loss_e=0.0000  acc_e=0.00%  acc_l=61.33%
+[06:18:02][rank0]   No improvement count: 1/10
+[06:18:29][rank0] step= 98500  epoch=11  loss=0.9579  acc_e=0.00%  lr=2.21e-04  elapsed=2:21:50
+[06:18:55][rank0] step= 99000  epoch=11  loss=0.9583  acc_e=0.00%  lr=2.20e-04  elapsed=2:22:17
+[06:19:21][rank0] step= 99500  epoch=11  loss=0.9591  acc_e=0.00%  lr=2.20e-04  elapsed=2:22:43
+[06:19:49][rank0] step=100000  epoch=11  loss=0.9587  acc_e=0.00%  lr=2.19e-04  elapsed=2:23:11
+[06:19:49][rank0] --- Validation @ step 100000 ---
+[06:20:54][rank0]   val loss=0.9450  loss_e=0.0000  acc_e=0.00%  acc_l=61.35%
+[06:20:54][rank0]   No improvement count: 2/10
+[06:20:54][rank0]   Checkpoint -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/ckpt_0100000.pt
+[06:21:21][rank0] step=100500  epoch=11  loss=0.9582  acc_e=0.00%  lr=2.18e-04  elapsed=2:24:43
+[06:21:48][rank0] step=101000  epoch=11  loss=0.9580  acc_e=0.00%  lr=2.17e-04  elapsed=2:25:09
+[06:22:14][rank0] step=101500  epoch=11  loss=0.9579  acc_e=0.00%  lr=2.17e-04  elapsed=2:25:36
+[06:22:42][rank0] step=102000  epoch=11  loss=0.9580  acc_e=0.00%  lr=2.16e-04  elapsed=2:26:03
+[06:22:42][rank0] --- Validation @ step 102000 ---
+[06:23:46][rank0]   val loss=0.9463  loss_e=0.0000  acc_e=0.00%  acc_l=61.28%
+[06:23:46][rank0]   No improvement count: 3/10
+[06:24:13][rank0] step=102500  epoch=11  loss=0.9583  acc_e=0.00%  lr=2.15e-04  elapsed=2:27:35
+[06:24:40][rank0] step=103000  epoch=11  loss=0.9585  acc_e=0.00%  lr=2.14e-04  elapsed=2:28:02
+[06:24:46][rank0] Epoch  11/30  loss=0.9583  acc_e=0.00%  acc_l=60.59%  elapsed=2:28:08
+[06:25:07][rank0] step=103500  epoch=12  loss=0.9557  acc_e=0.00%  lr=2.14e-04  elapsed=2:28:28
+[06:25:33][rank0] step=104000  epoch=12  loss=0.9564  acc_e=0.00%  lr=2.13e-04  elapsed=2:28:55
+[06:25:33][rank0] --- Validation @ step 104000 ---
+[06:26:39][rank0]   val loss=0.9440  loss_e=0.0000  acc_e=0.00%  acc_l=61.39%
+[06:26:39][rank0]   New best val loss=0.9440 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[06:27:07][rank0] step=104500  epoch=12  loss=0.9528  acc_e=0.00%  lr=2.12e-04  elapsed=2:30:28
+[06:27:34][rank0] step=105000  epoch=12  loss=0.9540  acc_e=0.00%  lr=2.11e-04  elapsed=2:30:56
+[06:28:00][rank0] step=105500  epoch=12  loss=0.9551  acc_e=0.00%  lr=2.11e-04  elapsed=2:31:22
+[06:28:27][rank0] step=106000  epoch=12  loss=0.9547  acc_e=0.00%  lr=2.10e-04  elapsed=2:31:49
+[06:28:27][rank0] --- Validation @ step 106000 ---
+[06:29:32][rank0]   val loss=0.9436  loss_e=0.0000  acc_e=0.00%  acc_l=61.40%
+[06:29:32][rank0]   New best val loss=0.9436 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[06:29:59][rank0] step=106500  epoch=12  loss=0.9543  acc_e=0.00%  lr=2.09e-04  elapsed=2:33:21
+[06:30:26][rank0] step=107000  epoch=12  loss=0.9546  acc_e=0.00%  lr=2.08e-04  elapsed=2:33:48
+[06:30:52][rank0] step=107500  epoch=12  loss=0.9557  acc_e=0.00%  lr=2.08e-04  elapsed=2:34:14
+[06:31:19][rank0] step=108000  epoch=12  loss=0.9558  acc_e=0.00%  lr=2.07e-04  elapsed=2:34:41
+[06:31:19][rank0] --- Validation @ step 108000 ---
+[06:32:24][rank0]   val loss=0.9449  loss_e=0.0000  acc_e=0.00%  acc_l=61.35%
+[06:32:24][rank0]   No improvement count: 1/10
+[06:32:51][rank0] step=108500  epoch=12  loss=0.9566  acc_e=0.00%  lr=2.06e-04  elapsed=2:36:12
+[06:33:17][rank0] step=109000  epoch=12  loss=0.9571  acc_e=0.00%  lr=2.05e-04  elapsed=2:36:39
+[06:33:44][rank0] step=109500  epoch=12  loss=0.9567  acc_e=0.00%  lr=2.05e-04  elapsed=2:37:06
+[06:34:12][rank0] step=110000  epoch=12  loss=0.9560  acc_e=0.00%  lr=2.04e-04  elapsed=2:37:34
+[06:34:12][rank0] --- Validation @ step 110000 ---
+[06:35:17][rank0]   val loss=0.9440  loss_e=0.0000  acc_e=0.00%  acc_l=61.41%
+[06:35:17][rank0]   No improvement count: 2/10
+[06:35:17][rank0]   Checkpoint -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/ckpt_0110000.pt
+[06:35:43][rank0] step=110500  epoch=12  loss=0.9559  acc_e=0.00%  lr=2.03e-04  elapsed=2:39:05
+[06:36:10][rank0] step=111000  epoch=12  loss=0.9559  acc_e=0.00%  lr=2.02e-04  elapsed=2:39:32
+[06:36:37][rank0] step=111500  epoch=12  loss=0.9560  acc_e=0.00%  lr=2.02e-04  elapsed=2:39:59
+[06:37:04][rank0] step=112000  epoch=12  loss=0.9565  acc_e=0.00%  lr=2.01e-04  elapsed=2:40:25
+[06:37:04][rank0] --- Validation @ step 112000 ---
+[06:38:08][rank0]   val loss=0.9423  loss_e=0.0000  acc_e=0.00%  acc_l=61.46%
+[06:38:08][rank0]   New best val loss=0.9423 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[06:38:35][rank0] Epoch  12/30  loss=0.9563  acc_e=0.00%  acc_l=60.67%  elapsed=2:41:57
+[06:38:36][rank0] step=112500  epoch=13  loss=0.9513  acc_e=0.00%  lr=2.00e-04  elapsed=2:41:58
+[06:39:02][rank0] step=113000  epoch=13  loss=0.9554  acc_e=0.00%  lr=1.99e-04  elapsed=2:42:24
+[06:39:29][rank0] step=113500  epoch=13  loss=0.9540  acc_e=0.00%  lr=1.99e-04  elapsed=2:42:51
+[06:39:57][rank0] step=114000  epoch=13  loss=0.9508  acc_e=0.00%  lr=1.98e-04  elapsed=2:43:18
+[06:39:57][rank0] --- Validation @ step 114000 ---
+[06:41:02][rank0]   val loss=0.9431  loss_e=0.0000  acc_e=0.00%  acc_l=61.43%
+[06:41:02][rank0]   No improvement count: 1/10
+[06:41:29][rank0] step=114500  epoch=13  loss=0.9523  acc_e=0.00%  lr=1.97e-04  elapsed=2:44:50
+[06:41:55][rank0] step=115000  epoch=13  loss=0.9531  acc_e=0.00%  lr=1.96e-04  elapsed=2:45:17
+[06:42:22][rank0] step=115500  epoch=13  loss=0.9527  acc_e=0.00%  lr=1.95e-04  elapsed=2:45:44
+[06:42:50][rank0] step=116000  epoch=13  loss=0.9523  acc_e=0.00%  lr=1.95e-04  elapsed=2:46:12
+[06:42:50][rank0] --- Validation @ step 116000 ---
+[06:43:55][rank0]   val loss=0.9438  loss_e=0.0000  acc_e=0.00%  acc_l=61.41%
+[06:43:55][rank0]   No improvement count: 2/10
+[06:44:22][rank0] step=116500  epoch=13  loss=0.9531  acc_e=0.00%  lr=1.94e-04  elapsed=2:47:44
+[06:44:49][rank0] step=117000  epoch=13  loss=0.9540  acc_e=0.00%  lr=1.93e-04  elapsed=2:48:11
+[06:45:17][rank0] step=117500  epoch=13  loss=0.9543  acc_e=0.00%  lr=1.92e-04  elapsed=2:48:39
+[06:45:44][rank0] step=118000  epoch=13  loss=0.9550  acc_e=0.00%  lr=1.92e-04  elapsed=2:49:06
+[06:45:44][rank0] --- Validation @ step 118000 ---
+[06:46:49][rank0]   val loss=0.9408  loss_e=0.0000  acc_e=0.00%  acc_l=61.50%
+[06:46:49][rank0]   New best val loss=0.9408 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[06:47:16][rank0] step=118500  epoch=13  loss=0.9551  acc_e=0.00%  lr=1.91e-04  elapsed=2:50:38
+[06:47:44][rank0] step=119000  epoch=13  loss=0.9549  acc_e=0.00%  lr=1.90e-04  elapsed=2:51:05
+[06:48:11][rank0] step=119500  epoch=13  loss=0.9541  acc_e=0.00%  lr=1.89e-04  elapsed=2:51:33
+[06:48:38][rank0] step=120000  epoch=13  loss=0.9540  acc_e=0.00%  lr=1.88e-04  elapsed=2:51:59
+[06:48:38][rank0] --- Validation @ step 120000 ---
+[06:49:44][rank0]   val loss=0.9408  loss_e=0.0000  acc_e=0.00%  acc_l=61.53%
+[06:49:44][rank0]   New best val loss=0.9408 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[06:49:44][rank0]   Checkpoint -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/ckpt_0120000.pt
+[06:50:11][rank0] step=120500  epoch=13  loss=0.9541  acc_e=0.00%  lr=1.88e-04  elapsed=2:53:32
+[06:50:38][rank0] step=121000  epoch=13  loss=0.9542  acc_e=0.00%  lr=1.87e-04  elapsed=2:53:59
+[06:51:04][rank0] step=121500  epoch=13  loss=0.9548  acc_e=0.00%  lr=1.86e-04  elapsed=2:54:26
+[06:51:24][rank0] Epoch  13/30  loss=0.9545  acc_e=0.00%  acc_l=60.76%  elapsed=2:54:46
+[06:51:32][rank0] step=122000  epoch=14  loss=0.9525  acc_e=0.00%  lr=1.85e-04  elapsed=2:54:53
+[06:51:32][rank0] --- Validation @ step 122000 ---
+[06:52:37][rank0]   val loss=0.9416  loss_e=0.0000  acc_e=0.00%  acc_l=61.54%
+[06:52:37][rank0]   No improvement count: 1/10
+[06:53:03][rank0] step=122500  epoch=14  loss=0.9535  acc_e=0.00%  lr=1.84e-04  elapsed=2:56:25
+[06:53:31][rank0] step=123000  epoch=14  loss=0.9504  acc_e=0.00%  lr=1.84e-04  elapsed=2:56:52
+[06:53:58][rank0] step=123500  epoch=14  loss=0.9496  acc_e=0.00%  lr=1.83e-04  elapsed=2:57:20
+[06:54:25][rank0] step=124000  epoch=14  loss=0.9511  acc_e=0.00%  lr=1.82e-04  elapsed=2:57:46
+[06:54:25][rank0] --- Validation @ step 124000 ---
+[06:55:30][rank0]   val loss=0.9407  loss_e=0.0000  acc_e=0.00%  acc_l=61.53%
+[06:55:30][rank0]   New best val loss=0.9407 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[06:55:56][rank0] step=124500  epoch=14  loss=0.9516  acc_e=0.00%  lr=1.81e-04  elapsed=2:59:18
+[06:56:24][rank0] step=125000  epoch=14  loss=0.9508  acc_e=0.00%  lr=1.80e-04  elapsed=2:59:45
+[06:56:51][rank0] step=125500  epoch=14  loss=0.9505  acc_e=0.00%  lr=1.80e-04  elapsed=3:00:13
+[06:57:17][rank0] step=126000  epoch=14  loss=0.9515  acc_e=0.00%  lr=1.79e-04  elapsed=3:00:39
+[06:57:17][rank0] --- Validation @ step 126000 ---
+[06:58:22][rank0]   val loss=0.9420  loss_e=0.0000  acc_e=0.00%  acc_l=61.48%
+[06:58:22][rank0]   No improvement count: 1/10
+[06:58:48][rank0] step=126500  epoch=14  loss=0.9523  acc_e=0.00%  lr=1.78e-04  elapsed=3:02:10
+[06:59:15][rank0] step=127000  epoch=14  loss=0.9527  acc_e=0.00%  lr=1.77e-04  elapsed=3:02:37
+[06:59:42][rank0] step=127500  epoch=14  loss=0.9534  acc_e=0.00%  lr=1.76e-04  elapsed=3:03:03
+[07:00:09][rank0] step=128000  epoch=14  loss=0.9533  acc_e=0.00%  lr=1.76e-04  elapsed=3:03:30
+[07:00:09][rank0] --- Validation @ step 128000 ---
+[07:01:16][rank0]   val loss=0.9410  loss_e=0.0000  acc_e=0.00%  acc_l=61.53%
+[07:01:16][rank0]   No improvement count: 2/10
+[07:01:44][rank0] step=128500  epoch=14  loss=0.9529  acc_e=0.00%  lr=1.75e-04  elapsed=3:05:05
+[07:02:11][rank0] step=129000  epoch=14  loss=0.9525  acc_e=0.00%  lr=1.74e-04  elapsed=3:05:32
+[07:02:37][rank0] step=129500  epoch=14  loss=0.9523  acc_e=0.00%  lr=1.73e-04  elapsed=3:05:59
+[07:03:05][rank0] step=130000  epoch=14  loss=0.9525  acc_e=0.00%  lr=1.72e-04  elapsed=3:06:26
+[07:03:05][rank0] --- Validation @ step 130000 ---
+[07:04:10][rank0]   val loss=0.9405  loss_e=0.0000  acc_e=0.00%  acc_l=61.54%
+[07:04:10][rank0]   New best val loss=0.9405 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[07:04:10][rank0]   Checkpoint -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/ckpt_0130000.pt
+[07:04:36][rank0] step=130500  epoch=14  loss=0.9526  acc_e=0.00%  lr=1.72e-04  elapsed=3:07:58
+[07:05:03][rank0] step=131000  epoch=14  loss=0.9532  acc_e=0.00%  lr=1.71e-04  elapsed=3:08:25
+[07:05:16][rank0] Epoch  14/30  loss=0.9528  acc_e=0.00%  acc_l=60.82%  elapsed=3:08:37
+[07:05:30][rank0] step=131500  epoch=15  loss=0.9495  acc_e=0.00%  lr=1.70e-04  elapsed=3:08:52
+[07:05:57][rank0] step=132000  epoch=15  loss=0.9510  acc_e=0.00%  lr=1.69e-04  elapsed=3:09:18
+[07:05:57][rank0] --- Validation @ step 132000 ---
+[07:07:03][rank0]   val loss=0.9404  loss_e=0.0000  acc_e=0.00%  acc_l=61.57%
+[07:07:03][rank0]   New best val loss=0.9404 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[07:07:30][rank0] step=132500  epoch=15  loss=0.9481  acc_e=0.00%  lr=1.68e-04  elapsed=3:10:52
+[07:07:58][rank0] step=133000  epoch=15  loss=0.9485  acc_e=0.00%  lr=1.68e-04  elapsed=3:11:20
+[07:08:25][rank0] step=133500  epoch=15  loss=0.9495  acc_e=0.00%  lr=1.67e-04  elapsed=3:11:46
+[07:08:51][rank0] step=134000  epoch=15  loss=0.9494  acc_e=0.00%  lr=1.66e-04  elapsed=3:12:13
+[07:08:51][rank0] --- Validation @ step 134000 ---
+[07:09:56][rank0]   val loss=0.9399  loss_e=0.0000  acc_e=0.00%  acc_l=61.54%
+[07:09:56][rank0]   New best val loss=0.9399 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[07:10:23][rank0] step=134500  epoch=15  loss=0.9492  acc_e=0.00%  lr=1.65e-04  elapsed=3:13:45
+[07:10:51][rank0] step=135000  epoch=15  loss=0.9491  acc_e=0.00%  lr=1.64e-04  elapsed=3:14:13
+[07:11:17][rank0] step=135500  epoch=15  loss=0.9502  acc_e=0.00%  lr=1.64e-04  elapsed=3:14:38
+[07:11:43][rank0] step=136000  epoch=15  loss=0.9508  acc_e=0.00%  lr=1.63e-04  elapsed=3:15:05
+[07:11:43][rank0] --- Validation @ step 136000 ---
+[07:12:48][rank0]   val loss=0.9392  loss_e=0.0000  acc_e=0.00%  acc_l=61.61%
+[07:12:48][rank0]   New best val loss=0.9392 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[07:13:15][rank0] step=136500  epoch=15  loss=0.9512  acc_e=0.00%  lr=1.62e-04  elapsed=3:16:36
+[07:13:41][rank0] step=137000  epoch=15  loss=0.9519  acc_e=0.00%  lr=1.61e-04  elapsed=3:17:03
+[07:14:09][rank0] step=137500  epoch=15  loss=0.9516  acc_e=0.00%  lr=1.60e-04  elapsed=3:17:31
+[07:14:36][rank0] step=138000  epoch=15  loss=0.9512  acc_e=0.00%  lr=1.60e-04  elapsed=3:17:58
+[07:14:36][rank0] --- Validation @ step 138000 ---
+[07:15:42][rank0]   val loss=0.9407  loss_e=0.0000  acc_e=0.00%  acc_l=61.54%
+[07:15:42][rank0]   No improvement count: 1/10
+[07:16:09][rank0] step=138500  epoch=15  loss=0.9510  acc_e=0.00%  lr=1.59e-04  elapsed=3:19:31
+[07:16:36][rank0] step=139000  epoch=15  loss=0.9509  acc_e=0.00%  lr=1.58e-04  elapsed=3:19:58
+[07:17:04][rank0] step=139500  epoch=15  loss=0.9510  acc_e=0.00%  lr=1.57e-04  elapsed=3:20:26
+[07:17:31][rank0] step=140000  epoch=15  loss=0.9513  acc_e=0.00%  lr=1.56e-04  elapsed=3:20:52
+[07:17:31][rank0] --- Validation @ step 140000 ---
+[07:18:37][rank0]   val loss=0.9385  loss_e=0.0000  acc_e=0.00%  acc_l=61.63%
+[07:18:37][rank0]   New best val loss=0.9385 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[07:18:37][rank0]   Checkpoint -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/ckpt_0140000.pt
+[07:19:04][rank0] step=140500  epoch=15  loss=0.9515  acc_e=0.00%  lr=1.56e-04  elapsed=3:22:26
+[07:19:10][rank0] Epoch  15/30  loss=0.9513  acc_e=0.00%  acc_l=60.89%  elapsed=3:22:32
+[07:19:31][rank0] step=141000  epoch=16  loss=0.9489  acc_e=0.00%  lr=1.55e-04  elapsed=3:22:53
+[07:19:58][rank0] step=141500  epoch=16  loss=0.9494  acc_e=0.00%  lr=1.54e-04  elapsed=3:23:20
+[07:20:26][rank0] step=142000  epoch=16  loss=0.9459  acc_e=0.00%  lr=1.53e-04  elapsed=3:23:47
+[07:20:26][rank0] --- Validation @ step 142000 ---
+[07:21:31][rank0]   val loss=0.9400  loss_e=0.0000  acc_e=0.00%  acc_l=61.58%
+[07:21:31][rank0]   No improvement count: 1/10
+[07:21:58][rank0] step=142500  epoch=16  loss=0.9472  acc_e=0.00%  lr=1.52e-04  elapsed=3:25:20
+[07:22:24][rank0] step=143000  epoch=16  loss=0.9483  acc_e=0.00%  lr=1.52e-04  elapsed=3:25:46
+[07:22:51][rank0] step=143500  epoch=16  loss=0.9479  acc_e=0.00%  lr=1.51e-04  elapsed=3:26:13
+[07:23:18][rank0] step=144000  epoch=16  loss=0.9477  acc_e=0.00%  lr=1.50e-04  elapsed=3:26:40
+[07:23:18][rank0] --- Validation @ step 144000 ---
+[07:24:23][rank0]   val loss=0.9390  loss_e=0.0000  acc_e=0.00%  acc_l=61.60%
+[07:24:23][rank0]   No improvement count: 2/10
+[07:24:50][rank0] step=144500  epoch=16  loss=0.9479  acc_e=0.00%  lr=1.49e-04  elapsed=3:28:12
+[07:25:16][rank0] step=145000  epoch=16  loss=0.9490  acc_e=0.00%  lr=1.48e-04  elapsed=3:28:38
+[07:25:43][rank0] step=145500  epoch=16  loss=0.9491  acc_e=0.00%  lr=1.48e-04  elapsed=3:29:05
+[07:26:10][rank0] step=146000  epoch=16  loss=0.9499  acc_e=0.00%  lr=1.47e-04  elapsed=3:29:31
+[07:26:10][rank0] --- Validation @ step 146000 ---
+[07:27:14][rank0]   val loss=0.9391  loss_e=0.0000  acc_e=0.00%  acc_l=61.61%
+[07:27:14][rank0]   No improvement count: 3/10
+[07:27:41][rank0] step=146500  epoch=16  loss=0.9504  acc_e=0.00%  lr=1.46e-04  elapsed=3:31:03
+[07:28:08][rank0] step=147000  epoch=16  loss=0.9501  acc_e=0.00%  lr=1.45e-04  elapsed=3:31:30
+[07:28:36][rank0] step=147500  epoch=16  loss=0.9494  acc_e=0.00%  lr=1.44e-04  elapsed=3:31:57
+[07:29:02][rank0] step=148000  epoch=16  loss=0.9493  acc_e=0.00%  lr=1.43e-04  elapsed=3:32:24
+[07:29:02][rank0] --- Validation @ step 148000 ---
+[07:30:07][rank0]   val loss=0.9396  loss_e=0.0000  acc_e=0.00%  acc_l=61.60%
+[07:30:07][rank0]   No improvement count: 4/10
+[07:30:34][rank0] step=148500  epoch=16  loss=0.9493  acc_e=0.00%  lr=1.43e-04  elapsed=3:33:56
+[07:31:01][rank0] step=149000  epoch=16  loss=0.9494  acc_e=0.00%  lr=1.42e-04  elapsed=3:34:23
+[07:31:27][rank0] step=149500  epoch=16  loss=0.9500  acc_e=0.00%  lr=1.41e-04  elapsed=3:34:49
+[07:31:53][rank0] Epoch  16/30  loss=0.9498  acc_e=0.00%  acc_l=60.95%  elapsed=3:35:15
+[07:31:54][rank0] step=150000  epoch=17  loss=0.9467  acc_e=0.00%  lr=1.40e-04  elapsed=3:35:16
+[07:31:54][rank0] --- Validation @ step 150000 ---
+[07:32:59][rank0]   val loss=0.9398  loss_e=0.0000  acc_e=0.00%  acc_l=61.57%
+[07:32:59][rank0]   No improvement count: 5/10
+[07:32:59][rank0]   Checkpoint -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/ckpt_0150000.pt
+[07:33:26][rank0] step=150500  epoch=17  loss=0.9488  acc_e=0.00%  lr=1.39e-04  elapsed=3:36:48
+[07:33:53][rank0] step=151000  epoch=17  loss=0.9478  acc_e=0.00%  lr=1.39e-04  elapsed=3:37:15
+[07:34:20][rank0] step=151500  epoch=17  loss=0.9447  acc_e=0.00%  lr=1.38e-04  elapsed=3:37:42
+[07:34:47][rank0] step=152000  epoch=17  loss=0.9460  acc_e=0.00%  lr=1.37e-04  elapsed=3:38:09
+[07:34:47][rank0] --- Validation @ step 152000 ---
+[07:35:52][rank0]   val loss=0.9380  loss_e=0.0000  acc_e=0.00%  acc_l=61.67%
+[07:35:52][rank0]   New best val loss=0.9380 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[07:36:19][rank0] step=152500  epoch=17  loss=0.9468  acc_e=0.00%  lr=1.36e-04  elapsed=3:39:40
+[07:36:46][rank0] step=153000  epoch=17  loss=0.9465  acc_e=0.00%  lr=1.35e-04  elapsed=3:40:07
+[07:37:13][rank0] step=153500  epoch=17  loss=0.9462  acc_e=0.00%  lr=1.35e-04  elapsed=3:40:35
+[07:37:40][rank0] step=154000  epoch=17  loss=0.9469  acc_e=0.00%  lr=1.34e-04  elapsed=3:41:01
+[07:37:40][rank0] --- Validation @ step 154000 ---
+[07:38:45][rank0]   val loss=0.9381  loss_e=0.0000  acc_e=0.00%  acc_l=61.63%
+[07:38:45][rank0]   No improvement count: 1/10
+[07:39:11][rank0] step=154500  epoch=17  loss=0.9478  acc_e=0.00%  lr=1.33e-04  elapsed=3:42:32
+[07:39:38][rank0] step=155000  epoch=17  loss=0.9481  acc_e=0.00%  lr=1.32e-04  elapsed=3:43:00
+[07:40:04][rank0] step=155500  epoch=17  loss=0.9487  acc_e=0.00%  lr=1.32e-04  elapsed=3:43:26
+[07:40:31][rank0] step=156000  epoch=17  loss=0.9489  acc_e=0.00%  lr=1.31e-04  elapsed=3:43:53
+[07:40:31][rank0] --- Validation @ step 156000 ---
+[07:41:36][rank0]   val loss=0.9374  loss_e=0.0000  acc_e=0.00%  acc_l=61.68%
+[07:41:36][rank0]   New best val loss=0.9374 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[07:42:03][rank0] step=156500  epoch=17  loss=0.9487  acc_e=0.00%  lr=1.30e-04  elapsed=3:45:25
+[07:42:30][rank0] step=157000  epoch=17  loss=0.9479  acc_e=0.00%  lr=1.29e-04  elapsed=3:45:52
+[07:42:57][rank0] step=157500  epoch=17  loss=0.9479  acc_e=0.00%  lr=1.28e-04  elapsed=3:46:19
+[07:43:24][rank0] step=158000  epoch=17  loss=0.9480  acc_e=0.00%  lr=1.28e-04  elapsed=3:46:46
+[07:43:24][rank0] --- Validation @ step 158000 ---
+[07:44:29][rank0]   val loss=0.9386  loss_e=0.0000  acc_e=0.00%  acc_l=61.62%
+[07:44:29][rank0]   No improvement count: 1/10
+[07:44:56][rank0] step=158500  epoch=17  loss=0.9481  acc_e=0.00%  lr=1.27e-04  elapsed=3:48:17
+[07:45:22][rank0] step=159000  epoch=17  loss=0.9487  acc_e=0.00%  lr=1.26e-04  elapsed=3:48:44
+[07:45:41][rank0] Epoch  17/30  loss=0.9484  acc_e=0.00%  acc_l=61.01%  elapsed=3:49:03
+[07:45:49][rank0] step=159500  epoch=18  loss=0.9468  acc_e=0.00%  lr=1.25e-04  elapsed=3:49:11
+[07:46:15][rank0] step=160000  epoch=18  loss=0.9474  acc_e=0.00%  lr=1.24e-04  elapsed=3:49:37
+[07:46:15][rank0] --- Validation @ step 160000 ---
+[07:47:20][rank0]   val loss=0.9394  loss_e=0.0000  acc_e=0.00%  acc_l=61.60%
+[07:47:20][rank0]   No improvement count: 2/10
+[07:47:20][rank0]   Checkpoint -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/ckpt_0160000.pt
+[07:47:48][rank0] step=160500  epoch=18  loss=0.9446  acc_e=0.00%  lr=1.24e-04  elapsed=3:51:10
+[07:48:15][rank0] step=161000  epoch=18  loss=0.9437  acc_e=0.00%  lr=1.23e-04  elapsed=3:51:37
+[07:48:42][rank0] step=161500  epoch=18  loss=0.9454  acc_e=0.00%  lr=1.22e-04  elapsed=3:52:03
+[07:49:08][rank0] step=162000  epoch=18  loss=0.9458  acc_e=0.00%  lr=1.21e-04  elapsed=3:52:30
+[07:49:08][rank0] --- Validation @ step 162000 ---
+[07:50:13][rank0]   val loss=0.9360  loss_e=0.0000  acc_e=0.00%  acc_l=61.72%
+[07:50:13][rank0]   New best val loss=0.9360 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[07:50:41][rank0] step=162500  epoch=18  loss=0.9450  acc_e=0.00%  lr=1.21e-04  elapsed=3:54:02
+[07:51:08][rank0] step=163000  epoch=18  loss=0.9448  acc_e=0.00%  lr=1.20e-04  elapsed=3:54:29
+[07:51:34][rank0] step=163500  epoch=18  loss=0.9457  acc_e=0.00%  lr=1.19e-04  elapsed=3:54:55
+[07:52:00][rank0] step=164000  epoch=18  loss=0.9464  acc_e=0.00%  lr=1.18e-04  elapsed=3:55:22
+[07:52:00][rank0] --- Validation @ step 164000 ---
+[07:53:05][rank0]   val loss=0.9360  loss_e=0.0000  acc_e=0.00%  acc_l=61.71%
+[07:53:05][rank0]   No improvement count: 1/10
+[07:53:32][rank0] step=164500  epoch=18  loss=0.9468  acc_e=0.00%  lr=1.17e-04  elapsed=3:56:53
+[07:53:58][rank0] step=165000  epoch=18  loss=0.9476  acc_e=0.00%  lr=1.17e-04  elapsed=3:57:20
+[07:54:25][rank0] step=165500  epoch=18  loss=0.9474  acc_e=0.00%  lr=1.16e-04  elapsed=3:57:47
+[07:54:53][rank0] step=166000  epoch=18  loss=0.9471  acc_e=0.00%  lr=1.15e-04  elapsed=3:58:14
+[07:54:53][rank0] --- Validation @ step 166000 ---
+[07:55:58][rank0]   val loss=0.9370  loss_e=0.0000  acc_e=0.00%  acc_l=61.73%
+[07:55:58][rank0]   No improvement count: 2/10
+[07:56:24][rank0] step=166500  epoch=18  loss=0.9468  acc_e=0.00%  lr=1.14e-04  elapsed=3:59:46
+[07:56:51][rank0] step=167000  epoch=18  loss=0.9465  acc_e=0.00%  lr=1.14e-04  elapsed=4:00:12
+[07:57:18][rank0] step=167500  epoch=18  loss=0.9467  acc_e=0.00%  lr=1.13e-04  elapsed=4:00:40
+[07:57:45][rank0] step=168000  epoch=18  loss=0.9468  acc_e=0.00%  lr=1.12e-04  elapsed=4:01:06
+[07:57:45][rank0] --- Validation @ step 168000 ---
+[07:58:50][rank0]   val loss=0.9368  loss_e=0.0000  acc_e=0.00%  acc_l=61.69%
+[07:58:50][rank0]   No improvement count: 3/10
+[07:59:17][rank0] step=168500  epoch=18  loss=0.9474  acc_e=0.00%  lr=1.11e-04  elapsed=4:02:38
+[07:59:29][rank0] Epoch  18/30  loss=0.9471  acc_e=0.00%  acc_l=61.07%  elapsed=4:02:51
+[07:59:44][rank0] step=169000  epoch=19  loss=0.9440  acc_e=0.00%  lr=1.11e-04  elapsed=4:03:05
+[08:00:10][rank0] step=169500  epoch=19  loss=0.9453  acc_e=0.00%  lr=1.10e-04  elapsed=4:03:32
+[08:00:37][rank0] step=170000  epoch=19  loss=0.9426  acc_e=0.00%  lr=1.09e-04  elapsed=4:03:59
+[08:00:37][rank0] --- Validation @ step 170000 ---
+[08:01:42][rank0]   val loss=0.9378  loss_e=0.0000  acc_e=0.00%  acc_l=61.69%
+[08:01:42][rank0]   No improvement count: 4/10
+[08:01:42][rank0]   Checkpoint -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/ckpt_0170000.pt
+[08:02:10][rank0] step=170500  epoch=19  loss=0.9432  acc_e=0.00%  lr=1.08e-04  elapsed=4:05:31
+[08:02:36][rank0] step=171000  epoch=19  loss=0.9440  acc_e=0.00%  lr=1.07e-04  elapsed=4:05:58
+[08:03:03][rank0] step=171500  epoch=19  loss=0.9439  acc_e=0.00%  lr=1.07e-04  elapsed=4:06:24
+[08:03:30][rank0] step=172000  epoch=19  loss=0.9437  acc_e=0.00%  lr=1.06e-04  elapsed=4:06:51
+[08:03:30][rank0] --- Validation @ step 172000 ---
+[08:04:36][rank0]   val loss=0.9363  loss_e=0.0000  acc_e=0.00%  acc_l=61.71%
+[08:04:36][rank0]   No improvement count: 5/10
+[08:05:03][rank0] step=172500  epoch=19  loss=0.9437  acc_e=0.00%  lr=1.05e-04  elapsed=4:08:25
+[08:05:29][rank0] step=173000  epoch=19  loss=0.9448  acc_e=0.00%  lr=1.04e-04  elapsed=4:08:51
+[08:05:56][rank0] step=173500  epoch=19  loss=0.9453  acc_e=0.00%  lr=1.04e-04  elapsed=4:09:18
+[08:06:22][rank0] step=174000  epoch=19  loss=0.9458  acc_e=0.00%  lr=1.03e-04  elapsed=4:09:44
+[08:06:22][rank0] --- Validation @ step 174000 ---
+[08:07:27][rank0]   val loss=0.9361  loss_e=0.0000  acc_e=0.00%  acc_l=61.72%
+[08:07:27][rank0]   No improvement count: 6/10
+[08:07:53][rank0] step=174500  epoch=19  loss=0.9465  acc_e=0.00%  lr=1.02e-04  elapsed=4:11:15
+[08:08:21][rank0] step=175000  epoch=19  loss=0.9462  acc_e=0.00%  lr=1.01e-04  elapsed=4:11:43
+[08:08:48][rank0] step=175500  epoch=19  loss=0.9458  acc_e=0.00%  lr=1.01e-04  elapsed=4:12:10
+[08:09:15][rank0] step=176000  epoch=19  loss=0.9456  acc_e=0.00%  lr=1.00e-04  elapsed=4:12:37
+[08:09:15][rank0] --- Validation @ step 176000 ---
+[08:10:23][rank0]   val loss=0.9365  loss_e=0.0000  acc_e=0.00%  acc_l=61.74%
+[08:10:23][rank0]   No improvement count: 7/10
+[08:10:50][rank0] step=176500  epoch=19  loss=0.9455  acc_e=0.00%  lr=9.93e-05  elapsed=4:14:12
+[08:11:17][rank0] step=177000  epoch=19  loss=0.9456  acc_e=0.00%  lr=9.85e-05  elapsed=4:14:39
+[08:11:44][rank0] step=177500  epoch=19  loss=0.9459  acc_e=0.00%  lr=9.78e-05  elapsed=4:15:06
+[08:12:11][rank0] step=178000  epoch=19  loss=0.9461  acc_e=0.00%  lr=9.71e-05  elapsed=4:15:33
+[08:12:11][rank0] --- Validation @ step 178000 ---
+[08:13:16][rank0]   val loss=0.9371  loss_e=0.0000  acc_e=0.00%  acc_l=61.70%
+[08:13:16][rank0]   No improvement count: 8/10
+[08:13:21][rank0] Epoch  19/30  loss=0.9460  acc_e=0.00%  acc_l=61.11%  elapsed=4:16:43
+[08:13:43][rank0] step=178500  epoch=20  loss=0.9430  acc_e=0.00%  lr=9.63e-05  elapsed=4:17:04
+[08:14:09][rank0] step=179000  epoch=20  loss=0.9445  acc_e=0.00%  lr=9.56e-05  elapsed=4:17:31
+[08:14:37][rank0] step=179500  epoch=20  loss=0.9407  acc_e=0.00%  lr=9.49e-05  elapsed=4:17:58
+[08:15:04][rank0] step=180000  epoch=20  loss=0.9421  acc_e=0.00%  lr=9.42e-05  elapsed=4:18:26
+[08:15:04][rank0] --- Validation @ step 180000 ---
+[08:16:12][rank0]   val loss=0.9365  loss_e=0.0000  acc_e=0.00%  acc_l=61.72%
+[08:16:12][rank0]   No improvement count: 9/10
+[08:16:12][rank0]   Checkpoint -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/ckpt_0180000.pt
+[08:16:38][rank0] step=180500  epoch=20  loss=0.9433  acc_e=0.00%  lr=9.34e-05  elapsed=4:20:00
+[08:17:05][rank0] step=181000  epoch=20  loss=0.9429  acc_e=0.00%  lr=9.27e-05  elapsed=4:20:27
+[08:17:32][rank0] step=181500  epoch=20  loss=0.9427  acc_e=0.00%  lr=9.20e-05  elapsed=4:20:54
+[08:17:59][rank0] step=182000  epoch=20  loss=0.9430  acc_e=0.00%  lr=9.13e-05  elapsed=4:21:21
+[08:17:59][rank0] --- Validation @ step 182000 ---
+[08:19:04][rank0]   val loss=0.9354  loss_e=0.0000  acc_e=0.00%  acc_l=61.75%
+[08:19:04][rank0]   New best val loss=0.9354 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[08:19:30][rank0] step=182500  epoch=20  loss=0.9440  acc_e=0.00%  lr=9.06e-05  elapsed=4:22:52
+[08:19:57][rank0] step=183000  epoch=20  loss=0.9442  acc_e=0.00%  lr=8.99e-05  elapsed=4:23:19
+[08:20:24][rank0] step=183500  epoch=20  loss=0.9449  acc_e=0.00%  lr=8.92e-05  elapsed=4:23:46
+[08:20:50][rank0] step=184000  epoch=20  loss=0.9454  acc_e=0.00%  lr=8.84e-05  elapsed=4:24:12
+[08:20:50][rank0] --- Validation @ step 184000 ---
+[08:22:00][rank0]   val loss=0.9350  loss_e=0.0000  acc_e=0.00%  acc_l=61.80%
+[08:22:00][rank0]   New best val loss=0.9350 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[08:22:28][rank0] step=184500  epoch=20  loss=0.9451  acc_e=0.00%  lr=8.77e-05  elapsed=4:25:49
+[08:22:55][rank0] step=185000  epoch=20  loss=0.9445  acc_e=0.00%  lr=8.70e-05  elapsed=4:26:17
+[08:23:22][rank0] step=185500  epoch=20  loss=0.9443  acc_e=0.00%  lr=8.63e-05  elapsed=4:26:44
+[08:23:50][rank0] step=186000  epoch=20  loss=0.9443  acc_e=0.00%  lr=8.56e-05  elapsed=4:27:11
+[08:23:50][rank0] --- Validation @ step 186000 ---
+[08:24:55][rank0]   val loss=0.9354  loss_e=0.0000  acc_e=0.00%  acc_l=61.76%
+[08:24:55][rank0]   No improvement count: 1/10
+[08:25:22][rank0] step=186500  epoch=20  loss=0.9444  acc_e=0.00%  lr=8.50e-05  elapsed=4:28:44
+[08:25:48][rank0] step=187000  epoch=20  loss=0.9449  acc_e=0.00%  lr=8.43e-05  elapsed=4:29:10
+[08:26:15][rank0] Epoch  20/30  loss=0.9448  acc_e=0.00%  acc_l=61.16%  elapsed=4:29:36
+[08:26:16][rank0] step=187500  epoch=21  loss=0.9420  acc_e=0.00%  lr=8.36e-05  elapsed=4:29:38
+[08:26:42][rank0] step=188000  epoch=21  loss=0.9437  acc_e=0.00%  lr=8.29e-05  elapsed=4:30:04
+[08:26:42][rank0] --- Validation @ step 188000 ---
+[08:27:50][rank0]   val loss=0.9346  loss_e=0.0000  acc_e=0.00%  acc_l=61.81%
+[08:27:50][rank0]   New best val loss=0.9346 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[08:28:17][rank0] step=188500  epoch=21  loss=0.9429  acc_e=0.00%  lr=8.22e-05  elapsed=4:31:39
+[08:28:44][rank0] step=189000  epoch=21  loss=0.9399  acc_e=0.00%  lr=8.15e-05  elapsed=4:32:06
+[08:29:11][rank0] step=189500  epoch=21  loss=0.9412  acc_e=0.00%  lr=8.08e-05  elapsed=4:32:33
+[08:29:38][rank0] step=190000  epoch=21  loss=0.9420  acc_e=0.00%  lr=8.02e-05  elapsed=4:33:00
+[08:29:38][rank0] --- Validation @ step 190000 ---
+[08:30:43][rank0]   val loss=0.9340  loss_e=0.0000  acc_e=0.00%  acc_l=61.82%
+[08:30:43][rank0]   New best val loss=0.9340 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[08:30:43][rank0]   Checkpoint -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/ckpt_0190000.pt
+[08:31:11][rank0] step=190500  epoch=21  loss=0.9418  acc_e=0.00%  lr=7.95e-05  elapsed=4:34:32
+[08:31:38][rank0] step=191000  epoch=21  loss=0.9415  acc_e=0.00%  lr=7.88e-05  elapsed=4:35:00
+[08:32:04][rank0] step=191500  epoch=21  loss=0.9421  acc_e=0.00%  lr=7.81e-05  elapsed=4:35:26
+[08:32:31][rank0] step=192000  epoch=21  loss=0.9430  acc_e=0.00%  lr=7.75e-05  elapsed=4:35:53
+[08:32:31][rank0] --- Validation @ step 192000 ---
+[08:33:37][rank0]   val loss=0.9340  loss_e=0.0000  acc_e=0.00%  acc_l=61.81%
+[08:33:37][rank0]   New best val loss=0.9340 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[08:34:05][rank0] step=192500  epoch=21  loss=0.9433  acc_e=0.00%  lr=7.68e-05  elapsed=4:37:27
+[08:34:31][rank0] step=193000  epoch=21  loss=0.9439  acc_e=0.00%  lr=7.61e-05  elapsed=4:37:53
+[08:34:58][rank0] step=193500  epoch=21  loss=0.9440  acc_e=0.00%  lr=7.55e-05  elapsed=4:38:20
+[08:35:25][rank0] step=194000  epoch=21  loss=0.9439  acc_e=0.00%  lr=7.48e-05  elapsed=4:38:47
+[08:35:25][rank0] --- Validation @ step 194000 ---
+[08:36:30][rank0]   val loss=0.9348  loss_e=0.0000  acc_e=0.00%  acc_l=61.81%
+[08:36:30][rank0]   No improvement count: 1/10
+[08:36:58][rank0] step=194500  epoch=21  loss=0.9432  acc_e=0.00%  lr=7.42e-05  elapsed=4:40:19
+[08:37:24][rank0] step=195000  epoch=21  loss=0.9431  acc_e=0.00%  lr=7.35e-05  elapsed=4:40:46
+[08:37:52][rank0] step=195500  epoch=21  loss=0.9432  acc_e=0.00%  lr=7.29e-05  elapsed=4:41:13
+[08:38:19][rank0] step=196000  epoch=21  loss=0.9433  acc_e=0.00%  lr=7.22e-05  elapsed=4:41:40
+[08:38:19][rank0] --- Validation @ step 196000 ---
+[08:39:26][rank0]   val loss=0.9347  loss_e=0.0000  acc_e=0.00%  acc_l=61.81%
+[08:39:26][rank0]   No improvement count: 2/10
+[08:39:52][rank0] step=196500  epoch=21  loss=0.9440  acc_e=0.00%  lr=7.16e-05  elapsed=4:43:14
+[08:40:11][rank0] Epoch  21/30  loss=0.9437  acc_e=0.00%  acc_l=61.21%  elapsed=4:43:33
+[08:40:19][rank0] step=197000  epoch=22  loss=0.9429  acc_e=0.00%  lr=7.09e-05  elapsed=4:43:41
+[08:40:46][rank0] step=197500  epoch=22  loss=0.9425  acc_e=0.00%  lr=7.03e-05  elapsed=4:44:07
+[08:41:13][rank0] step=198000  epoch=22  loss=0.9400  acc_e=0.00%  lr=6.96e-05  elapsed=4:44:35
+[08:41:13][rank0] --- Validation @ step 198000 ---
+[08:42:19][rank0]   val loss=0.9344  loss_e=0.0000  acc_e=0.00%  acc_l=61.80%
+[08:42:19][rank0]   No improvement count: 3/10
+[08:42:46][rank0] step=198500  epoch=22  loss=0.9392  acc_e=0.00%  lr=6.90e-05  elapsed=4:46:08
+[08:43:13][rank0] step=199000  epoch=22  loss=0.9408  acc_e=0.00%  lr=6.84e-05  elapsed=4:46:34
+[08:43:39][rank0] step=199500  epoch=22  loss=0.9413  acc_e=0.00%  lr=6.78e-05  elapsed=4:47:01
+[08:44:06][rank0] step=200000  epoch=22  loss=0.9407  acc_e=0.00%  lr=6.71e-05  elapsed=4:47:28
+[08:44:06][rank0] --- Validation @ step 200000 ---
+[08:45:11][rank0]   val loss=0.9342  loss_e=0.0000  acc_e=0.00%  acc_l=61.84%
+[08:45:11][rank0]   No improvement count: 4/10
+[08:45:11][rank0]   Checkpoint -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/ckpt_0200000.pt
+[08:45:39][rank0] step=200500  epoch=22  loss=0.9404  acc_e=0.00%  lr=6.65e-05  elapsed=4:49:01
+[08:46:05][rank0] step=201000  epoch=22  loss=0.9412  acc_e=0.00%  lr=6.59e-05  elapsed=4:49:27
+[08:46:32][rank0] step=201500  epoch=22  loss=0.9420  acc_e=0.00%  lr=6.53e-05  elapsed=4:49:53
+[08:46:59][rank0] step=202000  epoch=22  loss=0.9423  acc_e=0.00%  lr=6.47e-05  elapsed=4:50:20
+[08:46:59][rank0] --- Validation @ step 202000 ---
+[08:48:03][rank0]   val loss=0.9345  loss_e=0.0000  acc_e=0.00%  acc_l=61.78%
+[08:48:03][rank0]   No improvement count: 5/10
+[08:48:30][rank0] step=202500  epoch=22  loss=0.9431  acc_e=0.00%  lr=6.40e-05  elapsed=4:51:52
+[08:48:57][rank0] step=203000  epoch=22  loss=0.9430  acc_e=0.00%  lr=6.34e-05  elapsed=4:52:19
+[08:49:25][rank0] step=203500  epoch=22  loss=0.9427  acc_e=0.00%  lr=6.28e-05  elapsed=4:52:46
+[08:49:52][rank0] step=204000  epoch=22  loss=0.9424  acc_e=0.00%  lr=6.22e-05  elapsed=4:53:13
+[08:49:52][rank0] --- Validation @ step 204000 ---
+[08:50:56][rank0]   val loss=0.9337  loss_e=0.0000  acc_e=0.00%  acc_l=61.84%
+[08:50:56][rank0]   New best val loss=0.9337 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[08:51:23][rank0] step=204500  epoch=22  loss=0.9422  acc_e=0.00%  lr=6.16e-05  elapsed=4:54:45
+[08:51:50][rank0] step=205000  epoch=22  loss=0.9424  acc_e=0.00%  lr=6.10e-05  elapsed=4:55:12
+[08:52:17][rank0] step=205500  epoch=22  loss=0.9425  acc_e=0.00%  lr=6.05e-05  elapsed=4:55:39
+[08:52:44][rank0] step=206000  epoch=22  loss=0.9430  acc_e=0.00%  lr=5.99e-05  elapsed=4:56:06
+[08:52:44][rank0] --- Validation @ step 206000 ---
+[08:53:49][rank0]   val loss=0.9336  loss_e=0.0000  acc_e=0.00%  acc_l=61.83%
+[08:53:49][rank0]   New best val loss=0.9336 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[08:54:01][rank0] Epoch  22/30  loss=0.9427  acc_e=0.00%  acc_l=61.25%  elapsed=4:57:23
+[08:54:16][rank0] step=206500  epoch=23  loss=0.9399  acc_e=0.00%  lr=5.93e-05  elapsed=4:57:38
+[08:54:43][rank0] step=207000  epoch=23  loss=0.9412  acc_e=0.00%  lr=5.87e-05  elapsed=4:58:04
+[08:55:10][rank0] step=207500  epoch=23  loss=0.9385  acc_e=0.00%  lr=5.81e-05  elapsed=4:58:32
+[08:55:38][rank0] step=208000  epoch=23  loss=0.9392  acc_e=0.00%  lr=5.75e-05  elapsed=4:58:59
+[08:55:38][rank0] --- Validation @ step 208000 ---
+[08:56:43][rank0]   val loss=0.9332  loss_e=0.0000  acc_e=0.00%  acc_l=61.85%
+[08:56:43][rank0]   New best val loss=0.9332 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[08:57:10][rank0] step=208500  epoch=23  loss=0.9400  acc_e=0.00%  lr=5.70e-05  elapsed=5:00:31
+[08:57:36][rank0] step=209000  epoch=23  loss=0.9398  acc_e=0.00%  lr=5.64e-05  elapsed=5:00:58
+[08:58:04][rank0] step=209500  epoch=23  loss=0.9396  acc_e=0.00%  lr=5.58e-05  elapsed=5:01:25
+[08:58:31][rank0] step=210000  epoch=23  loss=0.9396  acc_e=0.00%  lr=5.53e-05  elapsed=5:01:53
+[08:58:31][rank0] --- Validation @ step 210000 ---
+[08:59:36][rank0]   val loss=0.9331  loss_e=0.0000  acc_e=0.00%  acc_l=61.86%
+[08:59:36][rank0]   New best val loss=0.9331 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[08:59:36][rank0]   Checkpoint -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/ckpt_0210000.pt
+[09:00:02][rank0] step=210500  epoch=23  loss=0.9406  acc_e=0.00%  lr=5.47e-05  elapsed=5:03:24
+[09:00:29][rank0] step=211000  epoch=23  loss=0.9412  acc_e=0.00%  lr=5.41e-05  elapsed=5:03:51
+[09:00:55][rank0] step=211500  epoch=23  loss=0.9416  acc_e=0.00%  lr=5.36e-05  elapsed=5:04:17
+[09:01:22][rank0] step=212000  epoch=23  loss=0.9424  acc_e=0.00%  lr=5.30e-05  elapsed=5:04:43
+[09:01:22][rank0] --- Validation @ step 212000 ---
+[09:02:29][rank0]   val loss=0.9333  loss_e=0.0000  acc_e=0.00%  acc_l=61.86%
+[09:02:29][rank0]   No improvement count: 1/10
+[09:02:57][rank0] step=212500  epoch=23  loss=0.9421  acc_e=0.00%  lr=5.25e-05  elapsed=5:06:19
+[09:03:24][rank0] step=213000  epoch=23  loss=0.9417  acc_e=0.00%  lr=5.20e-05  elapsed=5:06:46
+[09:03:51][rank0] step=213500  epoch=23  loss=0.9415  acc_e=0.00%  lr=5.14e-05  elapsed=5:07:12
+[09:04:17][rank0] step=214000  epoch=23  loss=0.9414  acc_e=0.00%  lr=5.09e-05  elapsed=5:07:39
+[09:04:17][rank0] --- Validation @ step 214000 ---
+[09:05:22][rank0]   val loss=0.9332  loss_e=0.0000  acc_e=0.00%  acc_l=61.86%
+[09:05:22][rank0]   No improvement count: 2/10
+[09:05:50][rank0] step=214500  epoch=23  loss=0.9415  acc_e=0.00%  lr=5.03e-05  elapsed=5:09:11
+[09:06:16][rank0] step=215000  epoch=23  loss=0.9418  acc_e=0.00%  lr=4.98e-05  elapsed=5:09:38
+[09:06:43][rank0] step=215500  epoch=23  loss=0.9420  acc_e=0.00%  lr=4.93e-05  elapsed=5:10:05
+[09:06:49][rank0] Epoch  23/30  loss=0.9419  acc_e=0.00%  acc_l=61.28%  elapsed=5:10:10
+[09:07:10][rank0] step=216000  epoch=24  loss=0.9393  acc_e=0.00%  lr=4.88e-05  elapsed=5:10:32
+[09:07:10][rank0] --- Validation @ step 216000 ---
+[09:08:15][rank0]   val loss=0.9331  loss_e=0.0000  acc_e=0.00%  acc_l=61.86%
+[09:08:15][rank0]   New best val loss=0.9331 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[09:08:42][rank0] step=216500  epoch=24  loss=0.9408  acc_e=0.00%  lr=4.82e-05  elapsed=5:12:04
+[09:09:09][rank0] step=217000  epoch=24  loss=0.9369  acc_e=0.00%  lr=4.77e-05  elapsed=5:12:31
+[09:09:37][rank0] step=217500  epoch=24  loss=0.9383  acc_e=0.00%  lr=4.72e-05  elapsed=5:12:59
+[09:10:03][rank0] step=218000  epoch=24  loss=0.9396  acc_e=0.00%  lr=4.67e-05  elapsed=5:13:25
+[09:10:03][rank0] --- Validation @ step 218000 ---
+[09:11:08][rank0]   val loss=0.9328  loss_e=0.0000  acc_e=0.00%  acc_l=61.87%
+[09:11:08][rank0]   New best val loss=0.9328 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[09:11:36][rank0] step=218500  epoch=24  loss=0.9392  acc_e=0.00%  lr=4.62e-05  elapsed=5:14:58
+[09:12:05][rank0] step=219000  epoch=24  loss=0.9390  acc_e=0.00%  lr=4.57e-05  elapsed=5:15:26
+[09:12:33][rank0] step=219500  epoch=24  loss=0.9393  acc_e=0.00%  lr=4.52e-05  elapsed=5:15:54
+[09:13:00][rank0] step=220000  epoch=24  loss=0.9403  acc_e=0.00%  lr=4.47e-05  elapsed=5:16:21
+[09:13:00][rank0] --- Validation @ step 220000 ---
+[09:14:07][rank0]   val loss=0.9327  loss_e=0.0000  acc_e=0.00%  acc_l=61.86%
+[09:14:07][rank0]   New best val loss=0.9327 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[09:14:07][rank0]   Checkpoint -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/ckpt_0220000.pt
+[09:14:34][rank0] step=220500  epoch=24  loss=0.9404  acc_e=0.00%  lr=4.42e-05  elapsed=5:17:56
+[09:15:00][rank0] step=221000  epoch=24  loss=0.9411  acc_e=0.00%  lr=4.37e-05  elapsed=5:18:22
+[09:15:27][rank0] step=221500  epoch=24  loss=0.9416  acc_e=0.00%  lr=4.32e-05  elapsed=5:18:49
+[09:15:54][rank0] step=222000  epoch=24  loss=0.9413  acc_e=0.00%  lr=4.28e-05  elapsed=5:19:16
+[09:15:54][rank0] --- Validation @ step 222000 ---
+[09:17:00][rank0]   val loss=0.9324  loss_e=0.0000  acc_e=0.00%  acc_l=61.88%
+[09:17:00][rank0]   New best val loss=0.9324 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[09:17:27][rank0] step=222500  epoch=24  loss=0.9408  acc_e=0.00%  lr=4.23e-05  elapsed=5:20:49
+[09:17:54][rank0] step=223000  epoch=24  loss=0.9406  acc_e=0.00%  lr=4.18e-05  elapsed=5:21:16
+[09:18:22][rank0] step=223500  epoch=24  loss=0.9406  acc_e=0.00%  lr=4.13e-05  elapsed=5:21:43
+[09:18:49][rank0] step=224000  epoch=24  loss=0.9407  acc_e=0.00%  lr=4.09e-05  elapsed=5:22:10
+[09:18:49][rank0] --- Validation @ step 224000 ---
+[09:19:54][rank0]   val loss=0.9323  loss_e=0.0000  acc_e=0.00%  acc_l=61.89%
+[09:19:54][rank0]   New best val loss=0.9323 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[09:20:20][rank0] step=224500  epoch=24  loss=0.9413  acc_e=0.00%  lr=4.04e-05  elapsed=5:23:42
+[09:20:46][rank0] Epoch  24/30  loss=0.9411  acc_e=0.00%  acc_l=61.32%  elapsed=5:24:08
+[09:20:47][rank0] step=225000  epoch=25  loss=0.9403  acc_e=0.00%  lr=4.00e-05  elapsed=5:24:09
+[09:21:14][rank0] step=225500  epoch=25  loss=0.9404  acc_e=0.00%  lr=3.95e-05  elapsed=5:24:36
+[09:21:41][rank0] step=226000  epoch=25  loss=0.9394  acc_e=0.00%  lr=3.91e-05  elapsed=5:25:03
+[09:21:41][rank0] --- Validation @ step 226000 ---
+[09:22:46][rank0]   val loss=0.9324  loss_e=0.0000  acc_e=0.00%  acc_l=61.90%
+[09:22:46][rank0]   No improvement count: 1/10
+[09:23:13][rank0] step=226500  epoch=25  loss=0.9367  acc_e=0.00%  lr=3.86e-05  elapsed=5:26:35
+[09:23:40][rank0] step=227000  epoch=25  loss=0.9381  acc_e=0.00%  lr=3.82e-05  elapsed=5:27:02
+[09:24:07][rank0] step=227500  epoch=25  loss=0.9385  acc_e=0.00%  lr=3.77e-05  elapsed=5:27:29
+[09:24:34][rank0] step=228000  epoch=25  loss=0.9385  acc_e=0.00%  lr=3.73e-05  elapsed=5:27:56
+[09:24:34][rank0] --- Validation @ step 228000 ---
+[09:25:39][rank0]   val loss=0.9323  loss_e=0.0000  acc_e=0.00%  acc_l=61.88%
+[09:25:39][rank0]   New best val loss=0.9323 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[09:26:06][rank0] step=228500  epoch=25  loss=0.9382  acc_e=0.00%  lr=3.69e-05  elapsed=5:29:28
+[09:26:32][rank0] step=229000  epoch=25  loss=0.9388  acc_e=0.00%  lr=3.64e-05  elapsed=5:29:54
+[09:26:59][rank0] step=229500  epoch=25  loss=0.9396  acc_e=0.00%  lr=3.60e-05  elapsed=5:30:20
+[09:27:26][rank0] step=230000  epoch=25  loss=0.9400  acc_e=0.00%  lr=3.56e-05  elapsed=5:30:48
+[09:27:26][rank0] --- Validation @ step 230000 ---
+[09:28:33][rank0]   val loss=0.9320  loss_e=0.0000  acc_e=0.00%  acc_l=61.88%
+[09:28:33][rank0]   New best val loss=0.9320 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[09:28:33][rank0]   Checkpoint -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/ckpt_0230000.pt
+[09:28:59][rank0] step=230500  epoch=25  loss=0.9406  acc_e=0.00%  lr=3.52e-05  elapsed=5:32:21
+[09:29:26][rank0] step=231000  epoch=25  loss=0.9407  acc_e=0.00%  lr=3.48e-05  elapsed=5:32:48
+[09:29:53][rank0] step=231500  epoch=25  loss=0.9406  acc_e=0.00%  lr=3.44e-05  elapsed=5:33:15
+[09:30:20][rank0] step=232000  epoch=25  loss=0.9399  acc_e=0.00%  lr=3.40e-05  elapsed=5:33:42
+[09:30:20][rank0] --- Validation @ step 232000 ---
+[09:31:25][rank0]   val loss=0.9320  loss_e=0.0000  acc_e=0.00%  acc_l=61.89%
+[09:31:25][rank0]   No improvement count: 1/10
+[09:31:52][rank0] step=232500  epoch=25  loss=0.9399  acc_e=0.00%  lr=3.36e-05  elapsed=5:35:14
+[09:32:19][rank0] step=233000  epoch=25  loss=0.9399  acc_e=0.00%  lr=3.32e-05  elapsed=5:35:41
+[09:32:46][rank0] step=233500  epoch=25  loss=0.9401  acc_e=0.00%  lr=3.28e-05  elapsed=5:36:08
+[09:33:13][rank0] step=234000  epoch=25  loss=0.9407  acc_e=0.00%  lr=3.24e-05  elapsed=5:36:34
+[09:33:13][rank0] --- Validation @ step 234000 ---
+[09:34:19][rank0]   val loss=0.9318  loss_e=0.0000  acc_e=0.00%  acc_l=61.90%
+[09:34:19][rank0]   New best val loss=0.9318 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[09:34:38][rank0] Epoch  25/30  loss=0.9404  acc_e=0.00%  acc_l=61.34%  elapsed=5:37:59
+[09:34:46][rank0] step=234500  epoch=26  loss=0.9409  acc_e=0.00%  lr=3.20e-05  elapsed=5:38:07
+[09:35:12][rank0] step=235000  epoch=26  loss=0.9391  acc_e=0.00%  lr=3.16e-05  elapsed=5:38:34
+[09:35:40][rank0] step=235500  epoch=26  loss=0.9371  acc_e=0.00%  lr=3.12e-05  elapsed=5:39:01
+[09:36:07][rank0] step=236000  epoch=26  loss=0.9364  acc_e=0.00%  lr=3.09e-05  elapsed=5:39:29
+[09:36:07][rank0] --- Validation @ step 236000 ---
+[09:37:13][rank0]   val loss=0.9318  loss_e=0.0000  acc_e=0.00%  acc_l=61.90%
+[09:37:13][rank0]   New best val loss=0.9318 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[09:37:40][rank0] step=236500  epoch=26  loss=0.9379  acc_e=0.00%  lr=3.05e-05  elapsed=5:41:02
+[09:38:07][rank0] step=237000  epoch=26  loss=0.9384  acc_e=0.00%  lr=3.01e-05  elapsed=5:41:28
+[09:38:34][rank0] step=237500  epoch=26  loss=0.9378  acc_e=0.00%  lr=2.98e-05  elapsed=5:41:56
+[09:39:01][rank0] step=238000  epoch=26  loss=0.9376  acc_e=0.00%  lr=2.94e-05  elapsed=5:42:23
+[09:39:01][rank0] --- Validation @ step 238000 ---
+[09:40:07][rank0]   val loss=0.9315  loss_e=0.0000  acc_e=0.00%  acc_l=61.91%
+[09:40:07][rank0]   New best val loss=0.9315 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[09:40:33][rank0] step=238500  epoch=26  loss=0.9383  acc_e=0.00%  lr=2.91e-05  elapsed=5:43:55
+[09:41:00][rank0] step=239000  epoch=26  loss=0.9391  acc_e=0.00%  lr=2.87e-05  elapsed=5:44:22
+[09:41:27][rank0] step=239500  epoch=26  loss=0.9394  acc_e=0.00%  lr=2.84e-05  elapsed=5:44:49
+[09:41:53][rank0] step=240000  epoch=26  loss=0.9402  acc_e=0.00%  lr=2.80e-05  elapsed=5:45:15
+[09:41:53][rank0] --- Validation @ step 240000 ---
+[09:42:58][rank0]   val loss=0.9315  loss_e=0.0000  acc_e=0.00%  acc_l=61.91%
+[09:42:58][rank0]   No improvement count: 1/10
+[09:42:58][rank0]   Checkpoint -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/ckpt_0240000.pt
+[09:43:26][rank0] step=240500  epoch=26  loss=0.9401  acc_e=0.00%  lr=2.77e-05  elapsed=5:46:47
+[09:43:53][rank0] step=241000  epoch=26  loss=0.9399  acc_e=0.00%  lr=2.74e-05  elapsed=5:47:15
+[09:44:20][rank0] step=241500  epoch=26  loss=0.9395  acc_e=0.00%  lr=2.71e-05  elapsed=5:47:42
+[09:44:46][rank0] step=242000  epoch=26  loss=0.9393  acc_e=0.00%  lr=2.67e-05  elapsed=5:48:08
+[09:44:46][rank0] --- Validation @ step 242000 ---
+[09:45:51][rank0]   val loss=0.9314  loss_e=0.0000  acc_e=0.00%  acc_l=61.93%
+[09:45:51][rank0]   New best val loss=0.9314 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[09:46:19][rank0] step=242500  epoch=26  loss=0.9395  acc_e=0.00%  lr=2.64e-05  elapsed=5:49:41
+[09:46:46][rank0] step=243000  epoch=26  loss=0.9397  acc_e=0.00%  lr=2.61e-05  elapsed=5:50:07
+[09:47:12][rank0] step=243500  epoch=26  loss=0.9402  acc_e=0.00%  lr=2.58e-05  elapsed=5:50:34
+[09:47:24][rank0] Epoch  26/30  loss=0.9399  acc_e=0.00%  acc_l=61.36%  elapsed=5:50:46
+[09:47:39][rank0] step=244000  epoch=27  loss=0.9378  acc_e=0.00%  lr=2.55e-05  elapsed=5:51:01
+[09:47:39][rank0] --- Validation @ step 244000 ---
+[09:48:46][rank0]   val loss=0.9315  loss_e=0.0000  acc_e=0.00%  acc_l=61.93%
+[09:48:46][rank0]   No improvement count: 1/10
+[09:49:12][rank0] step=244500  epoch=27  loss=0.9385  acc_e=0.00%  lr=2.52e-05  elapsed=5:52:34
+[09:49:40][rank0] step=245000  epoch=27  loss=0.9359  acc_e=0.00%  lr=2.49e-05  elapsed=5:53:01
+[09:50:07][rank0] step=245500  epoch=27  loss=0.9367  acc_e=0.00%  lr=2.46e-05  elapsed=5:53:29
+[09:50:34][rank0] step=246000  epoch=27  loss=0.9374  acc_e=0.00%  lr=2.43e-05  elapsed=5:53:56
+[09:50:34][rank0] --- Validation @ step 246000 ---
+[09:51:39][rank0]   val loss=0.9317  loss_e=0.0000  acc_e=0.00%  acc_l=61.92%
+[09:51:39][rank0]   No improvement count: 2/10
+[09:52:06][rank0] step=246500  epoch=27  loss=0.9373  acc_e=0.00%  lr=2.40e-05  elapsed=5:55:27
+[09:52:33][rank0] step=247000  epoch=27  loss=0.9371  acc_e=0.00%  lr=2.37e-05  elapsed=5:55:55
+[09:53:01][rank0] step=247500  epoch=27  loss=0.9371  acc_e=0.00%  lr=2.35e-05  elapsed=5:56:22
+[09:53:27][rank0] step=248000  epoch=27  loss=0.9381  acc_e=0.00%  lr=2.32e-05  elapsed=5:56:48
+[09:53:27][rank0] --- Validation @ step 248000 ---
+[09:54:32][rank0]   val loss=0.9313  loss_e=0.0000  acc_e=0.00%  acc_l=61.91%
+[09:54:32][rank0]   New best val loss=0.9313 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[09:54:59][rank0] step=248500  epoch=27  loss=0.9386  acc_e=0.00%  lr=2.29e-05  elapsed=5:58:21
+[09:55:26][rank0] step=249000  epoch=27  loss=0.9391  acc_e=0.00%  lr=2.27e-05  elapsed=5:58:48
+[09:55:52][rank0] step=249500  epoch=27  loss=0.9398  acc_e=0.00%  lr=2.24e-05  elapsed=5:59:14
+[09:56:20][rank0] step=250000  epoch=27  loss=0.9396  acc_e=0.00%  lr=2.21e-05  elapsed=5:59:42
+[09:56:20][rank0] --- Validation @ step 250000 ---
+[09:57:27][rank0]   val loss=0.9312  loss_e=0.0000  acc_e=0.00%  acc_l=61.95%
+[09:57:27][rank0]   New best val loss=0.9312 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[09:57:27][rank0]   Checkpoint -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/ckpt_0250000.pt
+[09:57:54][rank0] step=250500  epoch=27  loss=0.9392  acc_e=0.00%  lr=2.19e-05  elapsed=6:01:16
+[09:58:21][rank0] step=251000  epoch=27  loss=0.9390  acc_e=0.00%  lr=2.16e-05  elapsed=6:01:43
+[09:58:49][rank0] step=251500  epoch=27  loss=0.9389  acc_e=0.00%  lr=2.14e-05  elapsed=6:02:10
+[09:59:17][rank0] step=252000  epoch=27  loss=0.9391  acc_e=0.00%  lr=2.12e-05  elapsed=6:02:39
+[09:59:17][rank0] --- Validation @ step 252000 ---
+[10:00:25][rank0]   val loss=0.9309  loss_e=0.0000  acc_e=0.00%  acc_l=61.95%
+[10:00:25][rank0]   New best val loss=0.9309 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[10:00:52][rank0] step=252500  epoch=27  loss=0.9394  acc_e=0.00%  lr=2.09e-05  elapsed=6:04:14
+[10:01:19][rank0] step=253000  epoch=27  loss=0.9396  acc_e=0.00%  lr=2.07e-05  elapsed=6:04:41
+[10:01:25][rank0] Epoch  27/30  loss=0.9394  acc_e=0.00%  acc_l=61.39%  elapsed=6:04:46
+[10:01:46][rank0] step=253500  epoch=28  loss=0.9372  acc_e=0.00%  lr=2.05e-05  elapsed=6:05:08
+[10:02:13][rank0] step=254000  epoch=28  loss=0.9385  acc_e=0.00%  lr=2.03e-05  elapsed=6:05:35
+[10:02:13][rank0] --- Validation @ step 254000 ---
+[10:03:18][rank0]   val loss=0.9312  loss_e=0.0000  acc_e=0.00%  acc_l=61.92%
+[10:03:18][rank0]   No improvement count: 1/10
+[10:03:45][rank0] step=254500  epoch=28  loss=0.9348  acc_e=0.00%  lr=2.01e-05  elapsed=6:07:07
+[10:04:12][rank0] step=255000  epoch=28  loss=0.9361  acc_e=0.00%  lr=1.98e-05  elapsed=6:07:34
+[10:04:39][rank0] step=255500  epoch=28  loss=0.9375  acc_e=0.00%  lr=1.96e-05  elapsed=6:08:00
+[10:05:06][rank0] step=256000  epoch=28  loss=0.9371  acc_e=0.00%  lr=1.94e-05  elapsed=6:08:27
+[10:05:06][rank0] --- Validation @ step 256000 ---
+[10:06:11][rank0]   val loss=0.9308  loss_e=0.0000  acc_e=0.00%  acc_l=61.95%
+[10:06:11][rank0]   New best val loss=0.9308 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[10:06:38][rank0] step=256500  epoch=28  loss=0.9369  acc_e=0.00%  lr=1.92e-05  elapsed=6:09:59
+[10:07:05][rank0] step=257000  epoch=28  loss=0.9372  acc_e=0.00%  lr=1.90e-05  elapsed=6:10:26
+[10:07:31][rank0] step=257500  epoch=28  loss=0.9381  acc_e=0.00%  lr=1.89e-05  elapsed=6:10:52
+[10:07:58][rank0] step=258000  epoch=28  loss=0.9383  acc_e=0.00%  lr=1.87e-05  elapsed=6:11:19
+[10:07:58][rank0] --- Validation @ step 258000 ---
+[10:09:03][rank0]   val loss=0.9309  loss_e=0.0000  acc_e=0.00%  acc_l=61.94%
+[10:09:03][rank0]   No improvement count: 1/10
+[10:09:29][rank0] step=258500  epoch=28  loss=0.9389  acc_e=0.00%  lr=1.85e-05  elapsed=6:12:51
+[10:09:55][rank0] step=259000  epoch=28  loss=0.9395  acc_e=0.00%  lr=1.83e-05  elapsed=6:13:17
+[10:10:23][rank0] step=259500  epoch=28  loss=0.9392  acc_e=0.00%  lr=1.81e-05  elapsed=6:13:45
+[10:10:51][rank0] step=260000  epoch=28  loss=0.9387  acc_e=0.00%  lr=1.80e-05  elapsed=6:14:13
+[10:10:51][rank0] --- Validation @ step 260000 ---
+[10:11:56][rank0]   val loss=0.9316  loss_e=0.0000  acc_e=0.00%  acc_l=61.93%
+[10:11:56][rank0]   No improvement count: 2/10
+[10:11:56][rank0]   Checkpoint -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/ckpt_0260000.pt
+[10:12:22][rank0] step=260500  epoch=28  loss=0.9385  acc_e=0.00%  lr=1.78e-05  elapsed=6:15:44
+[10:12:49][rank0] step=261000  epoch=28  loss=0.9386  acc_e=0.00%  lr=1.77e-05  elapsed=6:16:11
+[10:13:17][rank0] step=261500  epoch=28  loss=0.9387  acc_e=0.00%  lr=1.75e-05  elapsed=6:16:39
+[10:13:43][rank0] step=262000  epoch=28  loss=0.9393  acc_e=0.00%  lr=1.74e-05  elapsed=6:17:05
+[10:13:43][rank0] --- Validation @ step 262000 ---
+[10:14:48][rank0]   val loss=0.9307  loss_e=0.0000  acc_e=0.00%  acc_l=61.94%
+[10:14:48][rank0]   New best val loss=0.9307 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[10:15:14][rank0] Epoch  28/30  loss=0.9391  acc_e=0.00%  acc_l=61.40%  elapsed=6:18:35
+[10:15:16][rank0] step=262500  epoch=29  loss=0.9332  acc_e=0.00%  lr=1.72e-05  elapsed=6:18:37
+[10:15:42][rank0] step=263000  epoch=29  loss=0.9384  acc_e=0.00%  lr=1.71e-05  elapsed=6:19:04
+[10:16:09][rank0] step=263500  epoch=29  loss=0.9377  acc_e=0.00%  lr=1.69e-05  elapsed=6:19:31
+[10:16:36][rank0] step=264000  epoch=29  loss=0.9349  acc_e=0.00%  lr=1.68e-05  elapsed=6:19:58
+[10:16:36][rank0] --- Validation @ step 264000 ---
+[10:17:41][rank0]   val loss=0.9310  loss_e=0.0000  acc_e=0.00%  acc_l=61.94%
+[10:17:41][rank0]   No improvement count: 1/10
+[10:18:08][rank0] step=264500  epoch=29  loss=0.9364  acc_e=0.00%  lr=1.67e-05  elapsed=6:21:30
+[10:18:34][rank0] step=265000  epoch=29  loss=0.9367  acc_e=0.00%  lr=1.66e-05  elapsed=6:21:56
+[10:19:02][rank0] step=265500  epoch=29  loss=0.9368  acc_e=0.00%  lr=1.64e-05  elapsed=6:22:23
+[10:19:29][rank0] step=266000  epoch=29  loss=0.9364  acc_e=0.00%  lr=1.63e-05  elapsed=6:22:50
+[10:19:29][rank0] --- Validation @ step 266000 ---
+[10:20:36][rank0]   val loss=0.9310  loss_e=0.0000  acc_e=0.00%  acc_l=61.95%
+[10:20:36][rank0]   No improvement count: 2/10
+[10:21:03][rank0] step=266500  epoch=29  loss=0.9372  acc_e=0.00%  lr=1.62e-05  elapsed=6:24:25
+[10:21:29][rank0] step=267000  epoch=29  loss=0.9379  acc_e=0.00%  lr=1.61e-05  elapsed=6:24:51
+[10:21:56][rank0] step=267500  epoch=29  loss=0.9383  acc_e=0.00%  lr=1.60e-05  elapsed=6:25:18
+[10:22:22][rank0] step=268000  epoch=29  loss=0.9388  acc_e=0.00%  lr=1.59e-05  elapsed=6:25:44
+[10:22:22][rank0] --- Validation @ step 268000 ---
+[10:23:28][rank0]   val loss=0.9305  loss_e=0.0000  acc_e=0.00%  acc_l=61.94%
+[10:23:28][rank0]   New best val loss=0.9305 -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[10:23:55][rank0] step=268500  epoch=29  loss=0.9390  acc_e=0.00%  lr=1.58e-05  elapsed=6:27:17
+[10:24:23][rank0] step=269000  epoch=29  loss=0.9389  acc_e=0.00%  lr=1.58e-05  elapsed=6:27:45
+[10:24:50][rank0] step=269500  epoch=29  loss=0.9383  acc_e=0.00%  lr=1.57e-05  elapsed=6:28:12
+[10:25:17][rank0] step=270000  epoch=29  loss=0.9382  acc_e=0.00%  lr=1.56e-05  elapsed=6:28:38
+[10:25:17][rank0] --- Validation @ step 270000 ---
+[10:26:22][rank0]   val loss=0.9308  loss_e=0.0000  acc_e=0.00%  acc_l=61.94%
+[10:26:22][rank0]   No improvement count: 1/10
+[10:26:22][rank0]   Checkpoint -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/ckpt_0270000.pt
+[10:26:49][rank0] step=270500  epoch=29  loss=0.9383  acc_e=0.00%  lr=1.55e-05  elapsed=6:30:10
+[10:27:16][rank0] step=271000  epoch=29  loss=0.9384  acc_e=0.00%  lr=1.55e-05  elapsed=6:30:37
+[10:27:42][rank0] step=271500  epoch=29  loss=0.9391  acc_e=0.00%  lr=1.54e-05  elapsed=6:31:04
+[10:28:01][rank0] Epoch  29/30  loss=0.9388  acc_e=0.00%  acc_l=61.41%  elapsed=6:31:22
+[10:28:09][rank0] step=272000  epoch=30  loss=0.9396  acc_e=0.00%  lr=1.53e-05  elapsed=6:31:31
+[10:28:09][rank0] --- Validation @ step 272000 ---
+[10:29:15][rank0]   val loss=0.9309  loss_e=0.0000  acc_e=0.00%  acc_l=61.95%
+[10:29:15][rank0]   No improvement count: 2/10
+[10:29:42][rank0] step=272500  epoch=30  loss=0.9376  acc_e=0.00%  lr=1.53e-05  elapsed=6:33:03
+[10:30:09][rank0] step=273000  epoch=30  loss=0.9358  acc_e=0.00%  lr=1.52e-05  elapsed=6:33:31
+[10:30:37][rank0] step=273500  epoch=30  loss=0.9351  acc_e=0.00%  lr=1.52e-05  elapsed=6:33:58
+[10:31:03][rank0] step=274000  epoch=30  loss=0.9366  acc_e=0.00%  lr=1.52e-05  elapsed=6:34:25
+[10:31:03][rank0] --- Validation @ step 274000 ---
+[10:32:08][rank0]   val loss=0.9309  loss_e=0.0000  acc_e=0.00%  acc_l=61.95%
+[10:32:08][rank0]   No improvement count: 3/10
+[10:32:35][rank0] step=274500  epoch=30  loss=0.9371  acc_e=0.00%  lr=1.51e-05  elapsed=6:35:57
+[10:33:03][rank0] step=275000  epoch=30  loss=0.9365  acc_e=0.00%  lr=1.51e-05  elapsed=6:36:24
+[10:33:30][rank0] step=275500  epoch=30  loss=0.9364  acc_e=0.00%  lr=1.51e-05  elapsed=6:36:51
+[10:33:56][rank0] step=276000  epoch=30  loss=0.9370  acc_e=0.00%  lr=1.50e-05  elapsed=6:37:18
+[10:33:56][rank0] --- Validation @ step 276000 ---
+[10:35:02][rank0]   val loss=0.9309  loss_e=0.0000  acc_e=0.00%  acc_l=61.93%
+[10:35:02][rank0]   No improvement count: 4/10
+[10:35:29][rank0] step=276500  epoch=30  loss=0.9378  acc_e=0.00%  lr=1.50e-05  elapsed=6:38:50
+[10:35:55][rank0] step=277000  epoch=30  loss=0.9381  acc_e=0.00%  lr=1.50e-05  elapsed=6:39:17
+[10:36:22][rank0] step=277500  epoch=30  loss=0.9389  acc_e=0.00%  lr=1.50e-05  elapsed=6:39:44
+[10:36:49][rank0] step=278000  epoch=30  loss=0.9389  acc_e=0.00%  lr=1.50e-05  elapsed=6:40:11
+[10:36:49][rank0] --- Validation @ step 278000 ---
+[10:37:55][rank0]   val loss=0.9308  loss_e=0.0000  acc_e=0.00%  acc_l=61.95%
+[10:37:55][rank0]   No improvement count: 5/10
+[10:38:23][rank0] step=278500  epoch=30  loss=0.9386  acc_e=0.00%  lr=1.50e-05  elapsed=6:41:45
+[10:38:50][rank0] step=279000  epoch=30  loss=0.9383  acc_e=0.00%  lr=1.50e-05  elapsed=6:42:11
+[10:39:16][rank0] step=279500  epoch=30  loss=0.9381  acc_e=0.00%  lr=1.50e-05  elapsed=6:42:38
+[10:39:44][rank0] step=280000  epoch=30  loss=0.9383  acc_e=0.00%  lr=1.50e-05  elapsed=6:43:05
+[10:39:44][rank0] --- Validation @ step 280000 ---
+[10:40:49][rank0]   val loss=0.9308  loss_e=0.0000  acc_e=0.00%  acc_l=61.94%
+[10:40:49][rank0]   No improvement count: 6/10
+[10:40:49][rank0]   Checkpoint -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/ckpt_0280000.pt
+[10:41:15][rank0] step=280500  epoch=30  loss=0.9384  acc_e=0.00%  lr=1.51e-05  elapsed=6:44:37
+[10:41:42][rank0] step=281000  epoch=30  loss=0.9390  acc_e=0.00%  lr=1.51e-05  elapsed=6:45:04
+[10:41:54][rank0] Epoch  30/30  loss=0.9387  acc_e=0.00%  acc_l=61.42%  elapsed=6:45:16
+[10:41:54][rank0] ======================================================================
+[10:41:54][rank0] Training complete — OOD evaluation
+[10:41:54][rank0] ======================================================================
+[10:41:54][rank0] Loaded best model from /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/model_best.pt
+[10:51:40][rank0] [OOD] global validation threshold (latency_loss) thr=0.849464 F1=0.6752 bal=197476/197476 full=197,476/646,822
+[10:51:40][rank0] [OOD] cpu     AUROC=0.6671  AUPR=0.6580  bal=197044/190902  full=197,044/190,902  F1=0.6532  P=0.5800  R=0.7476  thr=0.849464
+[10:51:40][rank0] [OOD] disk    AUROC=0.6437  AUPR=0.5954  bal=197044/123783  full=197,044/123,783  F1=0.5538  P=0.4570  R=0.7025  thr=0.849464
+[10:51:40][rank0] [OOD] mem     AUROC=0.7235  AUPR=0.7470  bal=197044/217461  full=197,044/217,461  F1=0.7069  P=0.6292  R=0.8064  thr=0.849464
+[10:51:40][rank0] [OOD] net     AUROC=0.7372  AUPR=0.6180  bal=197044/120006  full=197,044/120,006  F1=0.6180  P=0.4915  R=0.8321  thr=0.849464
+[10:51:40][rank0] OOD results -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_duration_cats7_seq512_382081/ood_results.json

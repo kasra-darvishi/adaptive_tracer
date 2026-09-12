@@ -1,0 +1,123 @@
+﻿Ms. Ref. No.: JSSOFTWARE-D-25-01126R1
+Title: LMAT: An Adaptive Tracing Approach Based on Efficient System Behavior Analysis Using Language Models
+The Journal of Systems & Software
+
+Dear Mr. Kasra Darvishi,
+
+Reviewers have now commented on your paper. You will see that they are advising that you revise your manuscript. If you are prepared to undertake the work required, I would be pleased to reconsider my decision. Please submit the revised version of your manuscript by Feb 04, 2026. If you want more time for revising, please don't hesitate to contact me.
+Please note that this journal is set to automatically withdraw revisions that have been inactive with authors (without being submitted to journal) for 70 days. In case of such a withdrawal, please submit your revised manuscript as a new submission, along with stating the Submission ID of the present/original manuscript in the Cover Letter of the new submission for the reference of journal editors.
+For your guidance, reviewers' comments are appended below.
+
+If you decide to revise the work, please submit a list of changes or a rebuttal against each point which is being raised when you submit the revised manuscript. Please use a different font color for changed text in your revised manuscript.
+
+To submit a revision, please go to https://www.editorialmanager.com/jssoftware/ and login as an Author.
+Your username is: kdarvishi
+If you need to retrieve password details, please go to:
+click here to reset your password
+
+NOTE: Upon submitting your revised manuscript, please upload the source files for your article. For additional details regarding acceptable file formats, please refer to the Guide for Authors at: http://www.elsevier.com/journals/the-journal-of-systems-&-software/0164-1212/guide-for-authors
+
+When submitting your revised paper, we ask that you include the following items:
+
+Manuscript and Figure Source Files (mandatory)
+
+We cannot accommodate PDF manuscript files for production purposes. We also ask that when submitting your revision you follow the journal formatting guidelines. Figures and tables may be embedded within the source file for the submission as long as they are of sufficient resolution for Production. For any figure that cannot be embedded within the source file (such as *.PSD Photoshop files), the original figure needs to be uploaded separately. Refer to the Guide for Authors for additional information.
+http://www.elsevier.com/journals/the-journal-of-systems-&-software/0164-1212/guide-for-authors
+
+Highlights (mandatory)
+
+Highlights consist of a short collection of bullet points that convey the core findings of the article and should be submitted in a separate file in the online submission system. Please use 'Highlights' in the file name and include 3 to 5 bullet points (maximum 85 characters, including spaces, per bullet point). See the following website for more information
+http://www.elsevier.com/highlights
+
+Graphical Abstract (optional)
+
+Graphical Abstracts should summarize the contents of the article in a concise, pictorial form designed to capture the attention of a wide readership online. Refer to the following website for more information: http://www.elsevier.com/graphicalabstracts
+
+On your Main Menu page is a folder entitled "Submissions Needing Revision". You will find your submission record there.
+
+Please note that this journal offers a new, free service called AudioSlides: brief, webcast-style presentations that are shown next to published articles on ScienceDirect (see also http://www.elsevier.com/audioslides). If your paper is accepted for publication, you will automatically receive an invitation to create an AudioSlides presentation.
+
+The Journal of Systems & Software features the Interactive Plot Viewer, see: http://www.elsevier.com/interactiveplots. Interactive Plots provide easy access to the data behind plots. To include one with your article, please prepare a .csv file with your plot data and test it online at http://authortools.elsevier.com/interactiveplots/verification before submission as supplementary material.
+
+Include interactive data visualizations in your publication and let your readers interact and engage more closely with your research. Follow the instructions here: https://www.elsevier.com/authors/author-services/data-visualization to find out about available data visualization options and how to include them with your article.
+
+Research Elements (optional)
+This journal encourages you to share research objects - including your raw data, methods, protocols, software, hardware and more – which support your original research article in a Research Elements journal. Research Elements are open access, multidisciplinary, peer-reviewed journals which make the objects associated with your research more discoverable, trustworthy and promote replicability and reproducibility. As open access journals, there may be an Article Publishing Charge if your paper is accepted for publication. Find out more about the Research Elements journals at https://www.elsevier.com/authors/tools-and-resources/research-elements-journals?dgcid=ec_em_research_elements_email.
+
+
+Yours sincerely,
+
+Raffaela Mirandola, PhD
+Special Issue Editor
+The Journal of Systems & Software
+
+Reviewers' comments:
+
+
+
+Meta-review:
+All reviewers remain concerned about the limited generalizability of the approach to distributed systems. However, both R1 and R2 appreciated the revised manuscript and appear comfortable with accepting it. To address the generalization issue, R2 suggests revising the text to make it clearer that the work specifically targets monolithic systems.
+On the other hand, R3 has more serious concerns about the manuscript. In particular, they request validation of the approach on different types of systems and a more careful quantification of the overhead introduced by the approach.
+Based on these reviews, I am again recommending a major revision to allow the authors to address the following two issues:
+- Either validate the approach on distributed systems or revise the paper to explicitly state that it targets monolithic systems.
+- Provide experimental results quantifying the impact of LMAT on the monitored application performance.
+
+
+Reviewer #1: The clarifications provided by the authors and adapted changes strengthen the work significantly. Even though the particular applicability in larger contexts, e.g., multi tenancy clusters with multiple layers of abstractions such as web applications running on a distributed Kubernetes cluster, is not clear. The work presents a convincing approach to improve anomaly detection on a single system.
+
+
+Reviewer #2: While I maintain the idea that this work is good, I think that the abstract is questionable, as authors point this work to DevOps. Traces under consideration in this paper concern a single system, as far as I can tell, even though the server has more than a single machine. Despite the authors' responses to reviewers and the new sections, such as "Single-host vs. distributed settings", ordering events in different machines is a major challenge and we find entire papers discussing distributed tracing. I am not sure if this work can so easily be extended to such settings. Therefore, I suggest making this clearer in the presentation of the work.
+
+
+
+Reviewer #3: ### Comments to the Authors
+
+Overview I have reviewed the revised manuscript "LMAT: An Adaptive Tracing Approach Based on Efficient System Behavior Analysis" (R1). I appreciate the authors' detailed response and the efforts made to address several of my previous concerns. Specifically, the expanded Related Work section (incorporating Sieve and TraStrainer), the clarification of the anomaly generation methodology (Section 4.1), and the discussion on the feedback loop significantly improve the clarity and positioning of the paper.
+
+However, I cannot recommend acceptance at this stage. The authors have failed to adequately address the most critical concern regarding experimental validation (Generalizability). Furthermore, the new Overhead Analysis (Section 5.6) reveals significant performance bottlenecks but fails to quantify the actual impact on the target system, which is a fundamental requirement for an adaptive tracing framework.
+
+
+### Major Unresolved Concerns
+
+1. Lack of Generalizability Validation (Previous Major Concern #2a - Not Addressed) In the previous review, I explicitly stated that evaluating the system solely on an Apache web server (a standard request-response workload) is insufficient to support claims of broad applicability. I suggested validating the approach on different types of systems, such as stream processing engines or distributed microservices.
+
+- Critique of Response: The authors' response—adding a second physical machine running the same LAMP stack (Apache + PHP + MySQL)—does not address the core issue. Replicating the experiment on a second machine only validates hardware portability, not architectural generalizability.
+
+- Why this matters: The authors argue that "kernel events are application-agnostic." This is a hypothesis, not a proven fact. Different architectural patterns (e.g., asynchronous message queues in Kafka, or complex service chains in microservices) generate vastly different kernel event interleavings and duration distributions compared to a web server.
+
+- Requirement: To prove the robustness of LMAT, the authors must evaluate the framework on a workload that is architecturally distinct from the current Web Server setup (e.g., a Redis/Kafka streaming setup, or a microservice benchmark like TrainTicket or Google Hipster Shop). Relegating this to "future work" is not acceptable for a paper claiming a generalized adaptive tracing framework.
+
+2. Missing Measurement of Impact on Target System Latency (New Major Concern based on Revision) The authors added Section 5.6 ("Overhead Analysis") and Table 12 to discuss latency. However, this analysis is fundamentally incomplete and misleading.
+
+- Critique: Table 12 reports the inference latency of the LMAT model itself (e.g., ~19.28 ms for the reduced model). It does not measure the performance penalty imposed on the target system (the Web Server).
+
+- The Problem: Adaptive tracing inevitably introduces overhead due to resource contention (CPU/Memory usage by the model) and context switching. The authors admit in Section 5.6 that "the model is unable to keep up with the stream of data" at 1,000 req/s. This implies that if LMAT runs synchronously, it will block user requests, causing massive latency spikes. If it runs asynchronously, it will cause CPU contention and data backpressure. The paper lacks a baseline comparison. What is the P95/P99 latency and maximum throughput of the Apache server without LMAT vs. with LMAT enabled?
+
+- Requirement: The authors must provide experimental results quantifying the impact of LMAT on the monitored application's performance (Response Time and Throughput). Proving that the model runs in 19ms is irrelevant if deploying it causes the web server's response time to degrade significantly.
+
+### Other Comments
+
+3. Cost-Benefit Analysis (Section 5.6.2) While the inclusion of the break-even formula is a positive addition, it relies heavily on the assumption that the model can run efficiently on "low-cost GPUs" or "CPUs". Given the finding in Point 2 (that the model cannot keep up with 1,000 req/s), the practical feasibility of the "CPU-only" tier is questionable. The cost analysis should be revisited once the actual system performance impact (Point 2) is measured.
+
+4. Minor Fixes
+
+Table 12: Thank you for adding the units (ms) and clarifying the "Reduced" column.
+
+Related Work: The inclusion of Sieve and TraStrainer is satisfactory.
+
+### Summary
+
+The paper has potential, but the experimental evaluation remains too narrow (single workload type) and the overhead analysis ignores the most important metric: the impact on the user's application. I strongly urge the authors to conduct the requested experiments to validate their claims.
+
+
+
+
+%ATTACH_FOR_REVIEWER_DEEP_LINK INSTRUCTIONS%
+
+For further assistance, please visit our customer support site at http://help.elsevier.com/app/answers/list/p/7923. Here you can search for solutions on a range of topics, find answers to frequently asked questions and learn more about EM via interactive tutorials. You will also find our 24/7 support contact details should you need any further assistance from one of our customer support representatives.
+
+At Elsevier, we want to help all our authors to stay safe when publishing. Please be aware of fraudulent messages requesting money in return for the publication of your paper. If you are publishing open access with Elsevier, bear in mind that we will never request payment before the paper has been accepted. We have prepared some guidelines (https://www.elsevier.com/connect/authors-update/seven-top-tips-on-stopping-apc-scams ) that you may find helpful, including a short video on Identifying fake acceptance letters (https://www.youtube.com/watch?v=o5l8thD9XtE ). Please remember that you can contact Elsevier s Researcher Support team (https://service.elsevier.com/app/home/supporthub/publishing/) at any time if you have questions about your manuscript, and you can log into Editorial Manager to check the status of your manuscript (https://service.elsevier.com/app/answers/detail/a_id/29155/c/10530/supporthub/publishing/kw/status/).
+
+#AU_JSSOFTWARE#
+
+To ensure this email reaches the intended recipient, please do not delete the above code

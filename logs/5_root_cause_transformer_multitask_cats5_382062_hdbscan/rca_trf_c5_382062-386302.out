@@ -1,0 +1,125 @@
+_trfThe following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) gentoo/2023
+============================================================
+Job ID       : 386302
+Node         : trig0042
+Mode         : Root Cause Eval | Transformer | Multitask | cats5
+Project      : /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer
+Data dir     : /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data/preprocessed_lmat_kernel_cats5_seq512
+Model        : /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_multitask_cats5_seq512_382062/model_best.pt
+Output dir   : /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/root_cause_transformer_multitask_cats5_382062_hdbscan
+============================================================
+[1/4] Module list
+
+Currently Loaded Modules:
+  1) CCconfig               8) pmix/4.2.4           15) cudacore/.12.6.2 (H,t)
+  2) gentoo/2023      (S)   9) ucc/1.2.0            16) gdrcopy/2.3.1
+  3) gcccore/.12.3    (H)  10) openmpi/4.1.5   (m)  17) ucx-cuda/1.14.1
+  4) gcc/12.3         (t)  11) flexiblas/3.3.1      18) nccl/2.26.2      (t)
+  5) hwloc/2.9.1           12) aocl-blas/5.1        19) ucc-cuda/1.2.0
+  6) ucx/1.14.1            13) aocl-lapack/5.1      20) cuda/12.6        (t)
+  7) libfabric/1.18.0      14) StdEnv/2023     (S)  21) python/3.11.5    (t)
+
+  Where:
+   H:  Hidden Module
+   S:  Module is Sticky, requires --force to unload or purge
+   m:  MPI implementations / Implémentations MPI
+   t:  Tools for development / Outils de développement
+
+ 
+
+[2/4] GPU sanity
+Sun Mar 29 04:47:23 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.172.08             Driver Version: 570.172.08     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 80GB HBM3          On  |   00000000:0C:00.0 Off |                    0 |
+| N/A   43C    P0             68W /  700W |       0MiB /  81559MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+[3/4] Python + torch sanity
+Python: 3.11.4
+Torch: 2.10.0
+CUDA available: True
+GPU: NVIDIA H100 80GB HBM3
+[4/4] Root-cause evaluation
+[RCA] device=cuda:0
+[RCA] loaded model from /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_multitask_cats5_seq512_382062/model_best.pt (175 syscall tokens)
+[RCA] threshold=-0.422771 val_f1=0.6934 valid_id=197476 valid_ood=646822
+[RCA] MAD event(median=0.232422, mad=0.0722656) latency(median=0.671875, mad=0.140625)
+[RCA] valid_ood_cpu: extracted 186473 sequences
+[RCA] valid_ood_disk: extracted 123240 sequences
+[RCA] valid_ood_mem: extracted 217032 sequences
+[RCA] valid_ood_net: extracted 120077 sequences
+[RCA] clusters cpu: total=186473 selected=186473 clustered=25000 vectors=24788 n_clusters=14 noise=20744
+[RCA] clusters disk: total=123240 selected=123240 clustered=25000 vectors=24896 n_clusters=17 noise=18000
+[RCA] clusters mem: total=217032 selected=217032 clustered=25000 vectors=24843 n_clusters=23 noise=18590
+[RCA] clusters net: total=120077 selected=120077 clustered=25000 vectors=24926 n_clusters=15 noise=19448
+[RCA] test_ood_cpu: extracted 190902 sequences
+[RCA] test_ood_disk: extracted 123783 sequences
+[RCA] test_ood_mem: extracted 217461 sequences
+[RCA] test_ood_net: extracted 120006 sequences
+[RCA] results -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/root_cause_transformer_multitask_cats5_382062_hdbscan/root_cause_results.json
+[RCA] predictions -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/root_cause_transformer_multitask_cats5_382062_hdbscan/root_cause_predictions.csv
+[RCA] centroids -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/root_cause_transformer_multitask_cats5_382062_hdbscan/root_cause_centroids.npz
+[RCA] overall detection_recall=0.8465 detected_only_acc=0.3838 end_to_end_acc=0.3249
+Root-cause evaluation finished with exit code: 0
+Results: /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/root_cause_transformer_multitask_cats5_382062_hdbscan/root_cause_results.json
+Predictions: /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/root_cause_transformer_multitask_cats5_382062_hdbscan/root_cause_predictions.csv
+
+scontrol show job 386302
+JobId=386302 JobName=rca_trf_c5_382062
+   UserId=yuvraj17(3154711) GroupId=yuvraj17(3154711) MCS_label=N/A
+   Priority=210275 Nice=0 Account=def-naser2 QOS=normal
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:29:22 TimeLimit=02:00:00 TimeMin=N/A
+   SubmitTime=2026-03-29T04:41:16 EligibleTime=2026-03-29T04:41:16
+   AccrueTime=2026-03-29T04:41:16
+   StartTime=2026-03-29T04:47:17 EndTime=2026-03-29T05:16:39 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-03-29T04:47:17 Scheduler=Backfill
+   Partition=compute AllocNode:Sid=trig-login01:3105400
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=trig0042
+   BatchHost=trig0042
+   NumNodes=1 NumCPUs=12 NumTasks=1 CPUs/Task=12 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=12,mem=192500M,node=1,billing=1,gres/gpu=1
+   AllocTRES=cpu=12,mem=192500M,node=1,billing=1,gres/gpu=1
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=12 MinMemoryNode=192500M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/compute-canada-new-trillium/final-preprocessing/step-4-root-cause-eval/run_root_cause_transformer_multitask_cats5_382062.sh
+   SubmitLine=SBATCH --comment /opt/slurm/bin/sbatch --export=NONE --get-user-env compute-canada-new-trillium/final-preprocessing/step-4-root-cause-eval/run_root_cause_transformer_multitask_cats5_382062.sh --export=NONE --get-user-env compute-canada-new-trillium/final-preprocessing/step-4-root-cause-eval/run_root_cause_transformer_multitask_cats5_382062.sh
+   WorkDir=/scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer
+   Comment=/opt/slurm/bin/sbatch --export=NONE --get-user-env compute-canada-new-trillium/final-preprocessing/step-4-root-cause-eval/run_root_cause_transformer_multitask_cats5_382062.sh
+   StdErr=
+   StdIn=/dev/null
+   StdOut=/scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/rca_trf_c5_382062-386302.out
+   TresPerNode=gres/gpu:1
+   TresPerTask=cpu=12
+   MailUser=yuvraj17@scinet.local MailType=BEGIN,END,FAIL
+
+sacct -j 386302
+JobID           JobName    Account    Elapsed  MaxVMSize     MaxRSS  SystemCPU    UserCPU ExitCode 
+------------ ---------- ---------- ---------- ---------- ---------- ---------- ---------- -------- 
+386302       rca_trf_c+ def-naser2   00:29:22                        00:01.280  00:00.945      0:0 
+386302.batch      batch def-naser2   00:29:22                         00:00:00   00:00:00      0:0 
+386302.exte+     extern def-naser2   00:29:22                         00:00:00   00:00:00      0:0 
+386302.0     nvidia-smi def-naser2   00:00:01          0     16372K  00:00.114  00:00.006      0:0 
+386302.1         python def-naser2   00:00:04          0    331220K  00:01.165  00:00.938      0:0 
+

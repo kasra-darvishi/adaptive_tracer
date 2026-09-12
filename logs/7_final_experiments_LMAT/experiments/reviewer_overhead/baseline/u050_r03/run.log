@@ -1,0 +1,46 @@
+🚀 BASELINE (no tracing, no LMAT): u050_r03 (100s, 50 users)
+   Host=http://localhost:80  think=0.2-1.0s  root=/home/sehgaluv17/experiments/reviewer_overhead
+🔇 Destroying any active LTTng sessions...
+🔇 Killing OTel relay (if running)...
+✅ LTTng is silent. Starting pure baseline run.
+
+======================================================================
+  SOCK SHOP TRAFFIC GENERATOR — RESULTS SUMMARY
+======================================================================
+  Total requests : 5042
+  Passed         : 4944  (98.1%)
+  Failed         : 98  (1.9%)
+  Avg latency    : 38 ms
+  Min latency    : 4 ms
+  Max latency    : 200 ms
+
+  Scenario                       Requests   Pass%   Avg(ms)
+  ------------------------------ -------- ------- ---------
+  add_to_cart                         322  100.0%        40
+  basket_page                         340  100.0%        41
+  browse_catalogue                    518  100.0%        29
+  browse_homepage                     520  100.0%         6
+  catalogue_size                      518  100.0%        37
+  checkout_add_to_cart                179  100.0%        39
+  checkout_view_item                  179  100.0%        39
+  delete_cart_item                    113  100.0%        43
+  detail_page                         372  100.0%        39
+  get_address                         103  100.0%        36
+  get_card                            129  100.0%        37
+  get_orders                          144  100.0%        33
+  get_tags                            518  100.0%        35
+  login                               236  100.0%        60
+  place_order                         179   45.3%        63
+  register                             50  100.0%       163
+  setup_address                        50  100.0%        69
+  setup_card                           50  100.0%        74
+  update_cart_item                     91  100.0%        41
+  view_item                           431  100.0%        38
+======================================================================
+
+
+✅ BASELINE u050_r03 COMPLETE
+📊 Requests    : 5042  (in 104s)
+📈 Throughput  : 48.4 req/s (approx)
+📁 Output      : /home/sehgaluv17/experiments/reviewer_overhead/baseline/u050_r03
+

@@ -1,0 +1,6 @@
+scenario,triggered_after_onset,trigger_delay_ms,trigger_delay_sequences,miss_rate_sequences,miss_rate_events,false_trigger_count_before_onset,trace_reduction_events,trace_reduction_sequences,recorded_event_fraction,controller_us_per_sequence
+pure_normal,False,,,,,0,1.0,1.0,0.0,0.35410157633374273
+cpu_abrupt_burst,False,,,1.0,1.0,0,1.0,1.0,0.0,0.3668809150983944
+disk_abrupt_burst,True,21875646.086791992,53647,0.4333955389673865,0.4450197617169776,0,0.9971675844485595,0.9964043566942655,0.002832415551440482,0.39020911963008925
+mem_abrupt_burst,False,,,1.0,1.0,0,1.0,1.0,0.0,0.37314372319272426
+net_abrupt_burst,False,,,1.0,1.0,0,1.0,1.0,0.0,0.3884088654804987

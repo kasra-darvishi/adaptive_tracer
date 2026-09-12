@@ -1,0 +1,86 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.6em}
+
+\begin{document}
+
+\section*{Response Letter}
+
+Dear Dr.\ Mirandola and Reviewers,
+
+We sincerely thank you for your thorough evaluation of our manuscript, \emph{``LMAT: An Adaptive Tracing Approach Based on Efficient System Behavior Analysis Using Language Models''} (Ms.\ Ref.\ No.\ JSSOFTWARE-D-25-01126R1), and for your constructive feedback. We have carefully revised the paper to address the key concerns raised in the meta-review: (1) extending validation beyond the original Apache-based workload, and (2) quantifying the impact of LMAT on the monitored system. All revisions are marked in red in the manuscript.
+
+In addition, we would like to inform the reviewers that a new contributor, Yuvraj Sehgal (ORCiD: 0009-0002-1980-604X), has been added to the research team during this revision. This addition reflects the need for additional expertise to support the expanded experimental design and analysis introduced in this version of the manuscript.
+
+To strengthen the empirical evaluation, we introduced a new study using the Sock Shop microservice benchmark, complementing the original Apache-based experiments. This dataset was collected using the same kernel-level LMAT methodology and includes controlled CPU, disk, memory, and network stress scenarios. The microservice application runs in a containerized, node-local deployment on a single VM. As a result, the revised manuscript now evaluates LMAT across two architecturally distinct environments---a traditional web-server stack and a containerized microservice system---addressing concerns regarding the limited scope of the original evaluation.
+
+We also added a deployment-oriented overhead analysis to quantify LMAT's impact on application performance. Specifically, we report throughput and latency (P50, P95, P99) under three configurations: baseline (no tracing), tracing-only, and LMAT with asynchronous replay-based inference. Comparing tracing-only to LMAT, we observe a 13.0\% increase in P95 latency and a 1.3\% reduction in throughput, with minimal change in error rate. This directly addresses the need to evaluate application-level overhead beyond model inference latency.
+
+In addition, we refined the scope and claims of the paper. While the inclusion of Sock Shop broadens architectural coverage, our experiments remain limited to single-host environments. Accordingly, we now explicitly state throughout the manuscript that our results demonstrate generalizability across distinct single-host systems, rather than full validation in distributed multi-host deployments. We highlight this as an important direction for future work.
+
+We further revised the deployment and cost-benefit discussion. The updated version frames LMAT as a node-local solution and replaces earlier simplified estimates with a fleet-aware cost model that incorporates trace volume, retention policies, backend amplification, and observed throughput overhead. This provides a more realistic and system-oriented analysis.
+
+Below, we summarize how the revision addresses the main review points.
+
+\subsection*{Response to the Meta-review}
+
+\begin{enumerate}[leftmargin=1.5em, itemsep=0.6em]
+\item \textbf{``Either validate the approach on distributed systems or revise the paper to explicitly state that it targets monolithic systems.''}
+
+We addressed this by (i) introducing a new evaluation on the Sock Shop microservice benchmark, which differs significantly from the Apache setup, and (ii) clarifying the manuscript's scope. The revised paper now demonstrates LMAT on two distinct single-host architectures while explicitly acknowledging that distributed multi-host validation remains future work.
+
+\item \textbf{``Provide experimental results quantifying the impact of LMAT on the monitored application performance.''}
+
+We added a comprehensive overhead study reporting throughput, latency percentiles, and error rates across baseline, tracing-only, and LMAT configurations. This directly quantifies the system-level impact of LMAT deployment.
+\end{enumerate}
+
+\subsection*{Response to Reviewer \#1}
+
+We appreciate the reviewer's positive feedback. To address concerns about broader deployment contexts, we expanded the evaluation with the Sock Shop microservice benchmark and clarified the scope of our claims. While the revised paper now includes a more diverse workload, it avoids overstating applicability to fully distributed environments.
+
+\subsection*{Response to Reviewer \#2}
+
+We thank the reviewer for emphasizing clarity of scope. The manuscript now explicitly states that LMAT operates on host-level kernel traces in single-host settings. The addition of a containerized microservice benchmark demonstrates applicability beyond traditional web-server workloads, while clearly identifying distributed multi-host tracing as an open challenge.
+
+\subsection*{Response to Reviewer \#3}
+
+\begin{enumerate}[leftmargin=1.5em, itemsep=0.6em]
+\item \textbf{Generalizability validation}
+
+We agree that the original Apache-only evaluation was limited. We addressed this by introducing a new Sock Shop microservice dataset with controlled anomaly scenarios. This significantly broadens the empirical basis while keeping the claims aligned with the evaluated setup.
+
+\item \textbf{Impact on target-system performance}
+
+We incorporated a new application-level overhead study comparing baseline, tracing-only, and LMAT configurations. The results are presented and interpreted conservatively, with emphasis on the incremental cost of LMAT beyond tracing.
+
+\item \textbf{Cost-benefit analysis}
+
+We revised this section to use a fleet-level cost model that accounts for trace volume, retention strategies, backend costs, and observed performance overhead. This makes the analysis more realistic and consistent with the system evaluation.
+\end{enumerate}
+
+\subsection*{Current Limitations}
+
+Despite the improvements, we explicitly acknowledge the following limitations:
+
+\begin{itemize}[leftmargin=1.5em, itemsep=0.4em]
+\item The microservice evaluation remains limited to a single-host deployment and does not yet capture distributed multi-host tracing.
+\item The overhead study uses asynchronous replay-based inference rather than a fully integrated live deployment.
+\item Performance evaluation is conducted at a single operating point (200 users), rather than across a full load spectrum.
+\item Root-cause analysis in microservice environments remains challenging for certain anomaly types.
+\item LMAT relies on models of normal behavior that require adaptation as workloads evolve.
+\end{itemize}
+
+We are grateful for the reviewers' feedback, which has significantly strengthened the manuscript. The revised version provides broader evaluation, clearer scope, improved system-level analysis, and a more transparent discussion of limitations.
+
+Sincerely,
+
+The Authors
+
+\end{document}

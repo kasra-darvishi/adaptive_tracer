@@ -1,0 +1,265 @@
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) gentoo/2023
+============================================================
+Job ID       : 388288
+Node         : trig0029
+Mode         : Adaptive Replay | Transformer | cats5 | w64 r0.95 l8 | q=0.97
+Project      : /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer
+Data dir     : /scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data/preprocessed_lmat_kernel_cats5_seq512
+Model        : /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_multitask_cats5_seq512_382062/model_best.pt
+Output dir   : /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/adaptive_trace_replay_transformer_multitask_cats5_382062_w64_r095_l8_q97
+============================================================
+[1/4] Module list
+
+Currently Loaded Modules:
+  1) CCconfig               8) pmix/4.2.4           15) cudacore/.12.6.2 (H,t)
+  2) gentoo/2023      (S)   9) ucc/1.2.0            16) gdrcopy/2.3.1
+  3) gcccore/.12.3    (H)  10) openmpi/4.1.5   (m)  17) ucx-cuda/1.14.1
+  4) gcc/12.3         (t)  11) flexiblas/3.3.1      18) nccl/2.26.2      (t)
+  5) hwloc/2.9.1           12) aocl-blas/5.1        19) ucc-cuda/1.2.0
+  6) ucx/1.14.1            13) aocl-lapack/5.1      20) cuda/12.6        (t)
+  7) libfabric/1.18.0      14) StdEnv/2023     (S)  21) python/3.11.5    (t)
+
+  Where:
+   H:  Hidden Module
+   S:  Module is Sticky, requires --force to unload or purge
+   m:  MPI implementations / Implémentations MPI
+   t:  Tools for development / Outils de développement
+
+ 
+
+[2/4] GPU sanity
+Sun Mar 29 22:05:50 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.172.08             Driver Version: 570.172.08     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 80GB HBM3          On  |   00000000:0C:00.0 Off |                    0 |
+| N/A   41C    P0             72W /  700W |       0MiB /  81559MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+[3/4] Python + torch sanity
+Python: 3.11.4
+Torch: 2.10.0
+CUDA available: True
+GPU: NVIDIA H100 80GB HBM3
+[4/4] Adaptive tracing replay
+[ATR] device=cuda:0
+[ATR] loaded model from /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/transformer_multitask_cats5_seq512_382062/model_best.pt (175 syscall tokens)
+[ATR] threshold=4.418713 (mode=normal_quantile) val_f1=0.8676 valid_id=197476 valid_ood=646822
+[ATR] threshold candidates: f1=-5.695194 normal_q(0.9700)=4.418713
+[ATR] MAD event(median=0.259766, mad=0.0878906) latency(median=0.832031, mad=0.222656)
+[ATR] test_id: starting score extraction
+[ATR] test_id: processed 100 batches | 6400 sequences | elapsed=2.3s | 2745.9 seq/s
+[ATR] test_id: processed 200 batches | 12688 sequences | elapsed=4.5s | 2816.6 seq/s
+[ATR] test_id: processed 300 batches | 19088 sequences | elapsed=6.6s | 2888.1 seq/s
+[ATR] test_id: processed 400 batches | 25376 sequences | elapsed=8.8s | 2890.8 seq/s
+[ATR] test_id: processed 500 batches | 31664 sequences | elapsed=10.9s | 2892.1 seq/s
+[ATR] test_id: processed 600 batches | 38064 sequences | elapsed=13.1s | 2915.7 seq/s
+[ATR] test_id: processed 700 batches | 44352 sequences | elapsed=15.2s | 2912.1 seq/s
+[ATR] test_id: processed 800 batches | 50640 sequences | elapsed=17.4s | 2912.2 seq/s
+[ATR] test_id: processed 900 batches | 57040 sequences | elapsed=19.5s | 2925.2 seq/s
+[ATR] test_id: processed 1000 batches | 63328 sequences | elapsed=21.7s | 2921.6 seq/s
+[ATR] test_id: processed 1100 batches | 69728 sequences | elapsed=23.8s | 2932.1 seq/s
+[ATR] test_id: processed 1200 batches | 76016 sequences | elapsed=26.0s | 2929.1 seq/s
+[ATR] test_id: processed 1300 batches | 82304 sequences | elapsed=28.1s | 2927.8 seq/s
+[ATR] test_id: processed 1400 batches | 88704 sequences | elapsed=30.2s | 2935.1 seq/s
+[ATR] test_id: processed 1500 batches | 94992 sequences | elapsed=32.4s | 2932.0 seq/s
+[ATR] test_id: processed 1600 batches | 101280 sequences | elapsed=34.6s | 2929.3 seq/s
+[ATR] test_id: processed 1700 batches | 107680 sequences | elapsed=36.7s | 2935.1 seq/s
+[ATR] test_id: processed 1800 batches | 113968 sequences | elapsed=38.9s | 2932.8 seq/s
+[ATR] test_id: processed 1900 batches | 120256 sequences | elapsed=41.0s | 2931.4 seq/s
+[ATR] test_id: processed 2000 batches | 126656 sequences | elapsed=43.1s | 2936.4 seq/s
+[ATR] test_id: processed 2100 batches | 132944 sequences | elapsed=45.3s | 2934.5 seq/s
+[ATR] test_id: processed 2200 batches | 139344 sequences | elapsed=47.4s | 2939.3 seq/s
+[ATR] test_id: processed 2300 batches | 145632 sequences | elapsed=49.6s | 2937.5 seq/s
+[ATR] test_id: processed 2400 batches | 151920 sequences | elapsed=51.8s | 2935.6 seq/s
+[ATR] test_id: processed 2500 batches | 158320 sequences | elapsed=53.9s | 2939.5 seq/s
+[ATR] test_id: processed 2600 batches | 164608 sequences | elapsed=56.0s | 2937.5 seq/s
+[ATR] test_id: processed 2700 batches | 170896 sequences | elapsed=58.2s | 2935.8 seq/s
+[ATR] test_id: processed 2800 batches | 177296 sequences | elapsed=60.3s | 2939.5 seq/s
+[ATR] test_id: processed 2900 batches | 183584 sequences | elapsed=62.3s | 2946.0 seq/s
+[ATR] test_id: processed 3000 batches | 189984 sequences | elapsed=64.0s | 2966.3 seq/s
+[ATR] test_id: processed 3100 batches | 196268 sequences | elapsed=65.7s | 2988.5 seq/s
+[ATR] test_id: scored 197044 sequences in 65.92s (0.3345 ms/seq)
+[ATR] test_ood_cpu: starting score extraction
+[ATR] test_ood_cpu: processed 100 batches | 6400 sequences | elapsed=2.3s | 2815.8 seq/s
+[ATR] test_ood_cpu: processed 200 batches | 12688 sequences | elapsed=4.4s | 2876.4 seq/s
+[ATR] test_ood_cpu: processed 300 batches | 19088 sequences | elapsed=6.5s | 2932.4 seq/s
+[ATR] test_ood_cpu: processed 400 batches | 25376 sequences | elapsed=8.6s | 2943.8 seq/s
+[ATR] test_ood_cpu: processed 500 batches | 31664 sequences | elapsed=10.8s | 2940.5 seq/s
+[ATR] test_ood_cpu: processed 600 batches | 38064 sequences | elapsed=12.8s | 2967.3 seq/s
+[ATR] test_ood_cpu: processed 700 batches | 44352 sequences | elapsed=15.0s | 2958.0 seq/s
+[ATR] test_ood_cpu: processed 800 batches | 50640 sequences | elapsed=17.2s | 2950.5 seq/s
+[ATR] test_ood_cpu: processed 900 batches | 57040 sequences | elapsed=19.2s | 2965.1 seq/s
+[ATR] test_ood_cpu: processed 1000 batches | 63328 sequences | elapsed=21.4s | 2958.6 seq/s
+[ATR] test_ood_cpu: processed 1100 batches | 69728 sequences | elapsed=23.5s | 2970.5 seq/s
+[ATR] test_ood_cpu: processed 1200 batches | 76016 sequences | elapsed=25.6s | 2967.1 seq/s
+[ATR] test_ood_cpu: processed 1300 batches | 82304 sequences | elapsed=27.8s | 2964.5 seq/s
+[ATR] test_ood_cpu: processed 1400 batches | 88704 sequences | elapsed=29.9s | 2970.7 seq/s
+[ATR] test_ood_cpu: processed 1500 batches | 94992 sequences | elapsed=32.0s | 2966.8 seq/s
+[ATR] test_ood_cpu: processed 1600 batches | 101280 sequences | elapsed=34.2s | 2965.0 seq/s
+[ATR] test_ood_cpu: processed 1700 batches | 107680 sequences | elapsed=36.2s | 2973.3 seq/s
+[ATR] test_ood_cpu: processed 1800 batches | 113968 sequences | elapsed=38.4s | 2969.6 seq/s
+[ATR] test_ood_cpu: processed 1900 batches | 120256 sequences | elapsed=40.5s | 2969.0 seq/s
+[ATR] test_ood_cpu: processed 2000 batches | 126656 sequences | elapsed=42.6s | 2973.4 seq/s
+[ATR] test_ood_cpu: processed 2100 batches | 132944 sequences | elapsed=44.8s | 2969.9 seq/s
+[ATR] test_ood_cpu: processed 2200 batches | 139344 sequences | elapsed=46.9s | 2973.0 seq/s
+[ATR] test_ood_cpu: processed 2300 batches | 145632 sequences | elapsed=49.0s | 2969.3 seq/s
+[ATR] test_ood_cpu: processed 2400 batches | 151920 sequences | elapsed=51.2s | 2966.1 seq/s
+[ATR] test_ood_cpu: processed 2500 batches | 158320 sequences | elapsed=53.3s | 2970.1 seq/s
+[ATR] test_ood_cpu: processed 2600 batches | 164608 sequences | elapsed=55.5s | 2968.0 seq/s
+[ATR] test_ood_cpu: processed 2700 batches | 170896 sequences | elapsed=57.6s | 2966.2 seq/s
+[ATR] test_ood_cpu: processed 2800 batches | 177296 sequences | elapsed=59.7s | 2968.2 seq/s
+[ATR] test_ood_cpu: processed 2900 batches | 183584 sequences | elapsed=61.7s | 2973.1 seq/s
+[ATR] test_ood_cpu: processed 3000 batches | 189984 sequences | elapsed=63.4s | 2996.3 seq/s
+[ATR] test_ood_cpu: scored 190902 sequences in 63.73s (0.3338 ms/seq)
+[ATR] test_ood_disk: starting score extraction
+[ATR] test_ood_disk: processed 100 batches | 6400 sequences | elapsed=2.2s | 2963.0 seq/s
+[ATR] test_ood_disk: processed 200 batches | 12688 sequences | elapsed=4.2s | 2988.3 seq/s
+[ATR] test_ood_disk: processed 300 batches | 19088 sequences | elapsed=6.3s | 3031.7 seq/s
+[ATR] test_ood_disk: processed 400 batches | 25376 sequences | elapsed=8.4s | 3004.8 seq/s
+[ATR] test_ood_disk: processed 500 batches | 31664 sequences | elapsed=10.5s | 3016.5 seq/s
+[ATR] test_ood_disk: processed 600 batches | 38064 sequences | elapsed=12.6s | 3031.3 seq/s
+[ATR] test_ood_disk: processed 700 batches | 44352 sequences | elapsed=14.4s | 3085.8 seq/s
+[ATR] test_ood_disk: processed 800 batches | 50640 sequences | elapsed=16.0s | 3163.7 seq/s
+[ATR] test_ood_disk: processed 900 batches | 57040 sequences | elapsed=17.9s | 3183.8 seq/s
+[ATR] test_ood_disk: processed 1000 batches | 63328 sequences | elapsed=20.0s | 3160.8 seq/s
+[ATR] test_ood_disk: processed 1100 batches | 69728 sequences | elapsed=22.1s | 3160.4 seq/s
+[ATR] test_ood_disk: processed 1200 batches | 76016 sequences | elapsed=24.1s | 3150.5 seq/s
+[ATR] test_ood_disk: processed 1300 batches | 82304 sequences | elapsed=26.2s | 3141.3 seq/s
+[ATR] test_ood_disk: processed 1400 batches | 88704 sequences | elapsed=27.8s | 3193.8 seq/s
+[ATR] test_ood_disk: processed 1500 batches | 94992 sequences | elapsed=29.7s | 3200.8 seq/s
+[ATR] test_ood_disk: processed 1600 batches | 101280 sequences | elapsed=31.7s | 3199.1 seq/s
+[ATR] test_ood_disk: processed 1700 batches | 107680 sequences | elapsed=33.6s | 3203.3 seq/s
+[ATR] test_ood_disk: processed 1800 batches | 113968 sequences | elapsed=35.7s | 3188.9 seq/s
+[ATR] test_ood_disk: processed 1900 batches | 120256 sequences | elapsed=37.6s | 3201.9 seq/s
+[ATR] test_ood_disk: scored 123783 sequences in 38.50s (0.3110 ms/seq)
+[ATR] test_ood_mem: starting score extraction
+[ATR] test_ood_mem: processed 100 batches | 6400 sequences | elapsed=2.3s | 2744.0 seq/s
+[ATR] test_ood_mem: processed 200 batches | 12688 sequences | elapsed=4.5s | 2823.2 seq/s
+[ATR] test_ood_mem: processed 300 batches | 19088 sequences | elapsed=6.6s | 2900.7 seq/s
+[ATR] test_ood_mem: processed 400 batches | 25376 sequences | elapsed=8.8s | 2889.2 seq/s
+[ATR] test_ood_mem: processed 500 batches | 31664 sequences | elapsed=10.9s | 2894.2 seq/s
+[ATR] test_ood_mem: processed 600 batches | 38064 sequences | elapsed=13.0s | 2921.7 seq/s
+[ATR] test_ood_mem: processed 700 batches | 44352 sequences | elapsed=15.2s | 2920.9 seq/s
+[ATR] test_ood_mem: processed 800 batches | 50640 sequences | elapsed=17.3s | 2922.5 seq/s
+[ATR] test_ood_mem: processed 900 batches | 57040 sequences | elapsed=19.4s | 2936.2 seq/s
+[ATR] test_ood_mem: processed 1000 batches | 63328 sequences | elapsed=21.5s | 2939.8 seq/s
+[ATR] test_ood_mem: processed 1100 batches | 69728 sequences | elapsed=23.6s | 2950.9 seq/s
+[ATR] test_ood_mem: processed 1200 batches | 76016 sequences | elapsed=25.8s | 2950.5 seq/s
+[ATR] test_ood_mem: processed 1300 batches | 82304 sequences | elapsed=27.9s | 2950.4 seq/s
+[ATR] test_ood_mem: processed 1400 batches | 88704 sequences | elapsed=30.0s | 2958.8 seq/s
+[ATR] test_ood_mem: processed 1500 batches | 94992 sequences | elapsed=32.1s | 2955.3 seq/s
+[ATR] test_ood_mem: processed 1600 batches | 101280 sequences | elapsed=34.3s | 2952.8 seq/s
+[ATR] test_ood_mem: processed 1700 batches | 107680 sequences | elapsed=36.4s | 2959.6 seq/s
+[ATR] test_ood_mem: processed 1800 batches | 113968 sequences | elapsed=38.5s | 2963.2 seq/s
+[ATR] test_ood_mem: processed 1900 batches | 120256 sequences | elapsed=40.4s | 2980.2 seq/s
+[ATR] test_ood_mem: processed 2000 batches | 126656 sequences | elapsed=42.3s | 2991.4 seq/s
+[ATR] test_ood_mem: processed 2100 batches | 132944 sequences | elapsed=44.3s | 2998.0 seq/s
+[ATR] test_ood_mem: processed 2200 batches | 139344 sequences | elapsed=46.4s | 3005.0 seq/s
+[ATR] test_ood_mem: processed 2300 batches | 145632 sequences | elapsed=48.5s | 3003.0 seq/s
+[ATR] test_ood_mem: processed 2400 batches | 151920 sequences | elapsed=50.6s | 3001.7 seq/s
+[ATR] test_ood_mem: processed 2500 batches | 158320 sequences | elapsed=52.7s | 3003.3 seq/s
+[ATR] test_ood_mem: processed 2600 batches | 164608 sequences | elapsed=54.9s | 2998.5 seq/s
+[ATR] test_ood_mem: processed 2700 batches | 170896 sequences | elapsed=57.1s | 2995.2 seq/s
+[ATR] test_ood_mem: processed 2800 batches | 177296 sequences | elapsed=59.1s | 2997.4 seq/s
+[ATR] test_ood_mem: processed 2900 batches | 183584 sequences | elapsed=61.3s | 2994.9 seq/s
+[ATR] test_ood_mem: processed 3000 batches | 189984 sequences | elapsed=63.4s | 2996.7 seq/s
+[ATR] test_ood_mem: processed 3100 batches | 196272 sequences | elapsed=65.6s | 2993.3 seq/s
+[ATR] test_ood_mem: processed 3200 batches | 202560 sequences | elapsed=67.8s | 2989.7 seq/s
+[ATR] test_ood_mem: processed 3300 batches | 208960 sequences | elapsed=69.9s | 2991.2 seq/s
+[ATR] test_ood_mem: processed 3400 batches | 215213 sequences | elapsed=71.7s | 3000.9 seq/s
+[ATR] test_ood_mem: scored 217461 sequences in 72.34s (0.3326 ms/seq)
+[ATR] test_ood_net: starting score extraction
+[ATR] test_ood_net: processed 100 batches | 6400 sequences | elapsed=2.3s | 2779.2 seq/s
+[ATR] test_ood_net: processed 200 batches | 12688 sequences | elapsed=4.5s | 2829.8 seq/s
+[ATR] test_ood_net: processed 300 batches | 19088 sequences | elapsed=6.6s | 2894.5 seq/s
+[ATR] test_ood_net: processed 400 batches | 25376 sequences | elapsed=8.8s | 2891.2 seq/s
+[ATR] test_ood_net: processed 500 batches | 31664 sequences | elapsed=11.0s | 2890.7 seq/s
+[ATR] test_ood_net: processed 600 batches | 38064 sequences | elapsed=13.1s | 2916.1 seq/s
+[ATR] test_ood_net: processed 700 batches | 44352 sequences | elapsed=15.2s | 2914.2 seq/s
+[ATR] test_ood_net: processed 800 batches | 50640 sequences | elapsed=17.4s | 2912.6 seq/s
+[ATR] test_ood_net: processed 900 batches | 57040 sequences | elapsed=19.5s | 2925.2 seq/s
+[ATR] test_ood_net: processed 1000 batches | 63328 sequences | elapsed=21.7s | 2922.6 seq/s
+[ATR] test_ood_net: processed 1100 batches | 69728 sequences | elapsed=23.8s | 2934.2 seq/s
+[ATR] test_ood_net: processed 1200 batches | 76016 sequences | elapsed=25.9s | 2931.0 seq/s
+[ATR] test_ood_net: processed 1300 batches | 82304 sequences | elapsed=28.1s | 2928.3 seq/s
+[ATR] test_ood_net: processed 1400 batches | 88704 sequences | elapsed=30.2s | 2935.4 seq/s
+[ATR] test_ood_net: processed 1500 batches | 94992 sequences | elapsed=32.4s | 2932.7 seq/s
+[ATR] test_ood_net: processed 1600 batches | 101280 sequences | elapsed=34.6s | 2930.2 seq/s
+[ATR] test_ood_net: processed 1700 batches | 107680 sequences | elapsed=36.7s | 2935.6 seq/s
+[ATR] test_ood_net: processed 1800 batches | 113968 sequences | elapsed=38.6s | 2949.6 seq/s
+[ATR] test_ood_net: scored 120006 sequences in 40.36s (0.3364 ms/seq)
+[ATR] pure_normal: simulating controller (window=64, ratio=0.950, linger=8)
+[ATR] pure_normal false_triggers=0 trace_reduction_events=1.0000
+[ATR] cpu_abrupt_burst: simulating controller (warmup=256, window=64, ratio=0.950, linger=8)
+[ATR] cpu_abrupt_burst: triggered=False delay_ms=None miss_rate_events=1.0000 trace_reduction_events=1.0000
+[ATR] disk_abrupt_burst: simulating controller (warmup=256, window=64, ratio=0.950, linger=8)
+[ATR] disk_abrupt_burst: triggered=True delay_ms=21875765.032447815 miss_rate_events=0.4450 trace_reduction_events=0.9978
+[ATR] mem_abrupt_burst: simulating controller (warmup=256, window=64, ratio=0.950, linger=8)
+[ATR] mem_abrupt_burst: triggered=False delay_ms=None miss_rate_events=1.0000 trace_reduction_events=1.0000
+[ATR] net_abrupt_burst: simulating controller (warmup=256, window=64, ratio=0.950, linger=8)
+[ATR] net_abrupt_burst: triggered=False delay_ms=None miss_rate_events=1.0000 trace_reduction_events=1.0000
+[ATR] results -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/adaptive_trace_replay_transformer_multitask_cats5_382062_w64_r095_l8_q97/adaptive_trace_replay_results.json
+[ATR] summary -> /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/adaptive_trace_replay_transformer_multitask_cats5_382062_w64_r095_l8_q97/adaptive_trace_replay_summary.csv
+[ATR] abrupt mean delay_ms=21875765.032447815 miss_rate_events=0.8612551483938065 trace_reduction_events=0.9994562333508614
+Adaptive replay finished with exit code: 0
+Results: /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/adaptive_trace_replay_transformer_multitask_cats5_382062_w64_r095_l8_q97/adaptive_trace_replay_results.json
+Summary: /scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/adaptive_trace_replay_transformer_multitask_cats5_382062_w64_r095_l8_q97/adaptive_trace_replay_summary.csv
+
+scontrol show job 388288
+JobId=388288 JobName=atr_trf_c5_w64r095l8q97
+   UserId=yuvraj17(3154711) GroupId=yuvraj17(3154711) MCS_label=N/A
+   Priority=207935 Nice=0 Account=def-naser2 QOS=normal
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:11:01 TimeLimit=00:15:00 TimeMin=N/A
+   SubmitTime=2026-03-29T22:05:18 EligibleTime=2026-03-29T22:05:18
+   AccrueTime=2026-03-29T22:05:18
+   StartTime=2026-03-29T22:05:44 EndTime=2026-03-29T22:16:45 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-03-29T22:05:44 Scheduler=Backfill
+   Partition=compute AllocNode:Sid=trig-login01:931093
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=trig0029
+   BatchHost=trig0029
+   NumNodes=1 NumCPUs=12 NumTasks=1 CPUs/Task=12 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=12,mem=192500M,node=1,billing=1,gres/gpu=1
+   AllocTRES=cpu=12,mem=192500M,node=1,billing=1,gres/gpu=1
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=12 MinMemoryNode=192500M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/compute-canada-new-trillium/final-preprocessing/step-6-replay/run_replay_transformer_multitask_cats5_w64_r095_l8_q97.sh
+   SubmitLine=SBATCH --comment /opt/slurm/bin/sbatch --export=NONE --get-user-env compute-canada-new-trillium/final-preprocessing/step-6-replay/run_replay_transformer_multitask_cats5_w64_r095_l8_q97.sh --export=NONE --get-user-env compute-canada-new-trillium/final-preprocessing/step-6-replay/run_replay_transformer_multitask_cats5_w64_r095_l8_q97.sh
+   WorkDir=/scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer
+   Comment=/opt/slurm/bin/sbatch --export=NONE --get-user-env compute-canada-new-trillium/final-preprocessing/step-6-replay/run_replay_transformer_multitask_cats5_w64_r095_l8_q97.sh
+   StdErr=
+   StdIn=/dev/null
+   StdOut=/scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/atr_trf_c5_w64r095l8q97-388288.out
+   TresPerNode=gres/gpu:1
+   TresPerTask=cpu=12
+   MailUser=yuvraj17@scinet.local MailType=BEGIN,END,FAIL
+
+sacct -j 388288
+JobID           JobName    Account    Elapsed  MaxVMSize     MaxRSS  SystemCPU    UserCPU ExitCode 
+------------ ---------- ---------- ---------- ---------- ---------- ---------- ---------- -------- 
+388288       atr_trf_c+ def-naser2   00:11:01                        00:01.277  00:00.889      0:0 
+388288.batch      batch def-naser2   00:11:01                         00:00:00   00:00:00      0:0 
+388288.exte+     extern def-naser2   00:11:01                         00:00:00   00:00:00      0:0 
+388288.0     nvidia-smi def-naser2   00:00:00          0     16372K  00:00.110  00:00.010      0:0 
+388288.1         python def-naser2   00:00:03          0    302392K  00:01.167  00:00.878      0:0 
+

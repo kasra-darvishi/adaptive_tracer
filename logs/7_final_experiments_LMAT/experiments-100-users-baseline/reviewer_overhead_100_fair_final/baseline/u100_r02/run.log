@@ -1,0 +1,47 @@
+🚀 BASELINE (no tracing, no LMAT): u100_r02 (100s, 100 users)
+   Host=http://localhost:80  think=0.2-1.0s  root=/home/sehgaluv17/experiments/reviewer_overhead_100_fair_final  warmup=30s
+🔇 Destroying any active LTTng sessions...
+🔇 Killing OTel relay (if running)...
+✅ LTTng is silent. Starting pure baseline run.
+🔥 Warm-up load for 30s before measured baseline run ...
+
+======================================================================
+  SOCK SHOP TRAFFIC GENERATOR — RESULTS SUMMARY
+======================================================================
+  Total requests : 10027
+  Passed         : 9819  (97.9%)
+  Failed         : 208  (2.1%)
+  Avg latency    : 38 ms
+  Min latency    : 3 ms
+  Max latency    : 147 ms
+
+  Scenario                       Requests   Pass%   Avg(ms)
+  ------------------------------ -------- ------- ---------
+  add_to_cart                         687  100.0%        30
+  basket_page                         613  100.0%        45
+  browse_catalogue                   1048  100.0%        32
+  browse_homepage                    1059  100.0%         6
+  catalogue_size                     1048  100.0%        41
+  checkout_add_to_cart                344  100.0%        30
+  checkout_view_item                  344  100.0%        40
+  delete_cart_item                    221  100.0%        44
+  detail_page                         757  100.0%        43
+  get_address                         186  100.0%        41
+  get_card                            215  100.0%        43
+  get_orders                          277  100.0%        36
+  get_tags                           1048  100.0%        40
+  login                               450  100.0%        59
+  place_order                         344   39.5%        65
+  register                            100  100.0%        73
+  setup_address                       100  100.0%        72
+  setup_card                          100  100.0%        71
+  update_cart_item                    234  100.0%        44
+  view_item                           852  100.0%        41
+======================================================================
+
+
+✅ BASELINE u100_r02 COMPLETE
+📊 Requests    : 10027  (in 103s)
+📈 Throughput  : 97.3 req/s (approx)
+📁 Output      : /home/sehgaluv17/experiments/reviewer_overhead_100_fair_final/baseline/u100_r02
+

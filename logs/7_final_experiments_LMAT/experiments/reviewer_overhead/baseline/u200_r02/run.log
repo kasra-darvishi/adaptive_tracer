@@ -1,0 +1,46 @@
+🚀 BASELINE (no tracing, no LMAT): u200_r02 (100s, 200 users)
+   Host=http://localhost:80  think=0.2-1.0s  root=/home/sehgaluv17/experiments/reviewer_overhead
+🔇 Destroying any active LTTng sessions...
+🔇 Killing OTel relay (if running)...
+✅ LTTng is silent. Starting pure baseline run.
+
+======================================================================
+  SOCK SHOP TRAFFIC GENERATOR — RESULTS SUMMARY
+======================================================================
+  Total requests : 16520
+  Passed         : 16231  (98.3%)
+  Failed         : 289  (1.7%)
+  Avg latency    : 241 ms
+  Min latency    : 5 ms
+  Max latency    : 1883 ms
+
+  Scenario                       Requests   Pass%   Avg(ms)
+  ------------------------------ -------- ------- ---------
+  add_to_cart                        1038  100.0%       315
+  basket_page                        1022  100.0%       214
+  browse_catalogue                   1731  100.0%       216
+  browse_homepage                    1754  100.0%       141
+  catalogue_size                     1731  100.0%       212
+  checkout_add_to_cart                576  100.0%       309
+  checkout_view_item                  576  100.0%       219
+  delete_cart_item                    339  100.0%       205
+  detail_page                        1123  100.0%       218
+  get_address                         376  100.0%       220
+  get_card                            362  100.0%       207
+  get_orders                          425  100.0%       214
+  get_tags                           1731  100.0%       205
+  login                               791  100.0%       398
+  place_order                         576   49.8%       358
+  register                            200  100.0%       518
+  setup_address                       200  100.0%       577
+  setup_card                          200  100.0%       514
+  update_cart_item                    361  100.0%       231
+  view_item                          1408  100.0%       215
+======================================================================
+
+
+✅ BASELINE u200_r02 COMPLETE
+📊 Requests    : 16520  (in 106s)
+📈 Throughput  : 155.8 req/s (approx)
+📁 Output      : /home/sehgaluv17/experiments/reviewer_overhead/baseline/u200_r02
+

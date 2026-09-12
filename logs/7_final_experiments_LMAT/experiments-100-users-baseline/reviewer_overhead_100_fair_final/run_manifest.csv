@@ -1,0 +1,10 @@
+condition,users,repeat,run_id,duration_s,warmup_s,frontend_host,status,started_utc,ended_utc
+baseline,100,1,u100_r01,100,30,http://localhost:80,ok,2026-03-31T23:36:03Z,2026-03-31T23:38:26Z
+lttng_only,100,1,u100_r01,100,30,http://localhost:80,ok,2026-03-31T23:38:46Z,2026-03-31T23:41:11Z
+lmat_async,100,1,u100_r01,100,30,http://localhost:80,ok,2026-03-31T23:41:31Z,2026-03-31T23:59:25Z
+lmat_async,100,2,u100_r02,100,30,http://localhost:80,ok,2026-03-31T23:59:45Z,2026-04-01T00:16:39Z
+baseline,100,2,u100_r02,100,30,http://localhost:80,ok,2026-04-01T00:16:59Z,2026-04-01T00:19:22Z
+lttng_only,100,2,u100_r02,100,30,http://localhost:80,ok,2026-04-01T00:19:42Z,2026-04-01T00:22:06Z
+lttng_only,100,3,u100_r03,100,30,http://localhost:80,ok,2026-04-01T00:22:26Z,2026-04-01T00:24:50Z
+lmat_async,100,3,u100_r03,100,30,http://localhost:80,ok,2026-04-01T00:25:10Z,2026-04-01T00:42:37Z
+baseline,100,3,u100_r03,100,30,http://localhost:80,ok,2026-04-01T00:42:57Z,2026-04-01T00:45:21Z

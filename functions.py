@@ -806,10 +806,14 @@ def generate_dataset_request_based(
             # Append return value
             if "entry" in event["name"]:
                 ret.append(0)  # start event (no return value)
-            elif event["ret"] >= 0:
-                ret.append(1)  # success
             else:
-                ret.append(2)  # failure
+                ret_val = event.get("ret", None)
+                if ret_val is None:
+                    ret.append(0)  # no return value available
+                elif ret_val >= 0:
+                    ret.append(1)  # success
+                else:
+                    ret.append(2)  # failure
 
             # append latency
             latency.append(event["latency"])

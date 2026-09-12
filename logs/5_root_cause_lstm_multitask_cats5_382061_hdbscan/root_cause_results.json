@@ -1,0 +1,2739 @@
+{
+  "config": {
+    "preprocessed_dir": "/scratch/yuvraj17/adaptive_tracing_scratch/micro-service-trace-data/preprocessed_lmat_kernel_cats5_seq512",
+    "load_model": "/scratch/yuvraj17/adaptive_tracing_scratch/adaptive_tracer/logs/lstm_multitask_cats5_seq512_382061/model_best.pt",
+    "model": "lstm",
+    "combine_strategy": "mean",
+    "centroid_source": "all",
+    "cluster_method": "hdbscan",
+    "cluster_metric": "euclidean",
+    "cluster_min_size": 128,
+    "cluster_min_samples": null,
+    "cluster_max_records_per_label": 25000,
+    "max_samples": null,
+    "train_event_model": true,
+    "train_latency_model": true
+  },
+  "calibration": {
+    "threshold": 0.12118736383442119,
+    "val_f1": 0.6869531538827175,
+    "n_val_normal": 197476,
+    "n_val_ood": 646822,
+    "mad_event": {
+      "median": 0.1357421875,
+      "mad": 0.06640625
+    },
+    "mad_latency": {
+      "median": 0.66796875,
+      "mad": 0.140625
+    }
+  },
+  "centroids": {
+    "cpu": {
+      "metadata": {
+        "n_records_total": 186473,
+        "n_records_selected": 186473,
+        "n_records_clustered": 25000,
+        "n_vectors_used": 24787,
+        "cluster_method": "hdbscan",
+        "cluster_metric": "euclidean",
+        "min_cluster_size": 128,
+        "min_samples": null,
+        "cluster_max_records_per_label": 25000,
+        "n_clusters": 17,
+        "noise_count": 19860,
+        "clusters": {
+          "0": 1001,
+          "1": 272,
+          "2": 233,
+          "3": 134,
+          "4": 161,
+          "5": 287,
+          "6": 354,
+          "7": 143,
+          "8": 275,
+          "9": 360,
+          "10": 235,
+          "11": 340,
+          "12": 390,
+          "13": 158,
+          "14": 205,
+          "15": 164,
+          "16": 215
+        },
+        "used_fallback_mean": false
+      },
+      "clusters": [
+        {
+          "key": "cpu::cluster_0",
+          "cluster_id": 0,
+          "n_records_used": 1001,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 5.043956279754639
+            },
+            {
+              "syscall_id": 22,
+              "syscall": "pselect6",
+              "weight": 0.3046953082084656
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.2682317793369293
+            },
+            {
+              "syscall_id": 31,
+              "syscall": "poll",
+              "weight": 0.017982017248868942
+            },
+            {
+              "syscall_id": 41,
+              "syscall": "newfstatat",
+              "weight": 0.009490509517490864
+            },
+            {
+              "syscall_id": 30,
+              "syscall": "sendto",
+              "weight": 0.001998001942411065
+            }
+          ]
+        },
+        {
+          "key": "cpu::cluster_12",
+          "cluster_id": 12,
+          "n_records_used": 390,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 2.742307662963867
+            },
+            {
+              "syscall_id": 22,
+              "syscall": "pselect6",
+              "weight": 0.41410255432128906
+            },
+            {
+              "syscall_id": 16,
+              "syscall": "getpid",
+              "weight": 0.0833333358168602
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.029487179592251778
+            },
+            {
+              "syscall_id": 13,
+              "syscall": "write",
+              "weight": 0.0051282052882015705
+            }
+          ]
+        },
+        {
+          "key": "cpu::cluster_9",
+          "cluster_id": 9,
+          "n_records_used": 360,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 6.5
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.47361111640930176
+            },
+            {
+              "syscall_id": 22,
+              "syscall": "pselect6",
+              "weight": 0.13472221791744232
+            },
+            {
+              "syscall_id": 31,
+              "syscall": "poll",
+              "weight": 0.03055555559694767
+            },
+            {
+              "syscall_id": 41,
+              "syscall": "newfstatat",
+              "weight": 0.009722222574055195
+            },
+            {
+              "syscall_id": 30,
+              "syscall": "sendto",
+              "weight": 0.0069444444961845875
+            },
+            {
+              "syscall_id": 42,
+              "syscall": "ioctl",
+              "weight": 0.0055555556900799274
+            }
+          ]
+        },
+        {
+          "key": "cpu::cluster_6",
+          "cluster_id": 6,
+          "n_records_used": 354,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 8.642655372619629
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.5
+            },
+            {
+              "syscall_id": 31,
+              "syscall": "poll",
+              "weight": 0.10875706374645233
+            },
+            {
+              "syscall_id": 22,
+              "syscall": "pselect6",
+              "weight": 0.10593220591545105
+            },
+            {
+              "syscall_id": 41,
+              "syscall": "newfstatat",
+              "weight": 0.012711863964796066
+            }
+          ]
+        },
+        {
+          "key": "cpu::cluster_11",
+          "cluster_id": 11,
+          "n_records_used": 340,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 3.779411792755127
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.2617647051811218
+            },
+            {
+              "syscall_id": 16,
+              "syscall": "getpid",
+              "weight": 0.14411765336990356
+            },
+            {
+              "syscall_id": 31,
+              "syscall": "poll",
+              "weight": 0.020588235929608345
+            },
+            {
+              "syscall_id": 22,
+              "syscall": "pselect6",
+              "weight": 0.0117647061124444
+            }
+          ]
+        },
+        {
+          "key": "cpu::cluster_5",
+          "cluster_id": 5,
+          "n_records_used": 287,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 7.554007053375244
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.4216027855873108
+            },
+            {
+              "syscall_id": 31,
+              "syscall": "poll",
+              "weight": 0.05749128758907318
+            },
+            {
+              "syscall_id": 41,
+              "syscall": "newfstatat",
+              "weight": 0.022648083046078682
+            },
+            {
+              "syscall_id": 42,
+              "syscall": "ioctl",
+              "weight": 0.005226480774581432
+            },
+            {
+              "syscall_id": 30,
+              "syscall": "sendto",
+              "weight": 0.005226480774581432
+            },
+            {
+              "syscall_id": 32,
+              "syscall": "recvfrom",
+              "weight": 0.003484320593997836
+            },
+            {
+              "syscall_id": 16,
+              "syscall": "getpid",
+              "weight": 0.001742160296998918
+            },
+            {
+              "syscall_id": 39,
+              "syscall": "sched_yield",
+              "weight": 0.001742160296998918
+            }
+          ]
+        },
+        {
+          "key": "cpu::cluster_8",
+          "cluster_id": 8,
+          "n_records_used": 275,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 4.814545631408691
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.5
+            },
+            {
+              "syscall_id": 32,
+              "syscall": "recvfrom",
+              "weight": 0.005454545374959707
+            },
+            {
+              "syscall_id": 13,
+              "syscall": "write",
+              "weight": 0.001818181830458343
+            },
+            {
+              "syscall_id": 42,
+              "syscall": "ioctl",
+              "weight": 0.001818181830458343
+            },
+            {
+              "syscall_id": 16,
+              "syscall": "getpid",
+              "weight": 0.001818181830458343
+            },
+            {
+              "syscall_id": 41,
+              "syscall": "newfstatat",
+              "weight": 0.001818181830458343
+            },
+            {
+              "syscall_id": 30,
+              "syscall": "sendto",
+              "weight": 0.001818181830458343
+            },
+            {
+              "syscall_id": 39,
+              "syscall": "sched_yield",
+              "weight": 0.001818181830458343
+            }
+          ]
+        },
+        {
+          "key": "cpu::cluster_1",
+          "cluster_id": 1,
+          "n_records_used": 272,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 6.0
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.4540441036224365
+            },
+            {
+              "syscall_id": 41,
+              "syscall": "newfstatat",
+              "weight": 0.016544118523597717
+            },
+            {
+              "syscall_id": 30,
+              "syscall": "sendto",
+              "weight": 0.007352941203862429
+            },
+            {
+              "syscall_id": 39,
+              "syscall": "sched_yield",
+              "weight": 0.005514706019312143
+            },
+            {
+              "syscall_id": 42,
+              "syscall": "ioctl",
+              "weight": 0.0036764706019312143
+            },
+            {
+              "syscall_id": 32,
+              "syscall": "recvfrom",
+              "weight": 0.0018382353009656072
+            }
+          ]
+        },
+        {
+          "key": "cpu::cluster_10",
+          "cluster_id": 10,
+          "n_records_used": 235,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 7.0
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.4553191363811493
+            },
+            {
+              "syscall_id": 13,
+              "syscall": "write",
+              "weight": 0.006382978521287441
+            },
+            {
+              "syscall_id": 42,
+              "syscall": "ioctl",
+              "weight": 0.006382978521287441
+            },
+            {
+              "syscall_id": 30,
+              "syscall": "sendto",
+              "weight": 0.0042553190141916275
+            },
+            {
+              "syscall_id": 32,
+              "syscall": "recvfrom",
+              "weight": 0.0042553190141916275
+            },
+            {
+              "syscall_id": 39,
+              "syscall": "sched_yield",
+              "weight": 0.0021276595070958138
+            }
+          ]
+        },
+        {
+          "key": "cpu::cluster_2",
+          "cluster_id": 2,
+          "n_records_used": 233,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 8.180257797241211
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.4742489159107208
+            },
+            {
+              "syscall_id": 22,
+              "syscall": "pselect6",
+              "weight": 0.2618025839328766
+            },
+            {
+              "syscall_id": 41,
+              "syscall": "newfstatat",
+              "weight": 0.08369098603725433
+            },
+            {
+              "syscall_id": 30,
+              "syscall": "sendto",
+              "weight": 0.010729613713920116
+            },
+            {
+              "syscall_id": 31,
+              "syscall": "poll",
+              "weight": 0.008583690971136093
+            }
+          ]
+        },
+        {
+          "key": "cpu::cluster_16",
+          "cluster_id": 16,
+          "n_records_used": 215,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.4976744055747986
+            },
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 0.004651162773370743
+            }
+          ]
+        },
+        {
+          "key": "cpu::cluster_14",
+          "cluster_id": 14,
+          "n_records_used": 205,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 1.5
+            },
+            {
+              "syscall_id": 22,
+              "syscall": "pselect6",
+              "weight": 0.502439022064209
+            }
+          ]
+        },
+        {
+          "key": "cpu::cluster_15",
+          "cluster_id": 15,
+          "n_records_used": 164,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 0.9878048896789551
+            },
+            {
+              "syscall_id": 22,
+              "syscall": "pselect6",
+              "weight": 0.4908536672592163
+            }
+          ]
+        },
+        {
+          "key": "cpu::cluster_4",
+          "cluster_id": 4,
+          "n_records_used": 161,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 7.335403919219971
+            },
+            {
+              "syscall_id": 22,
+              "syscall": "pselect6",
+              "weight": 0.5
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.40993788838386536
+            },
+            {
+              "syscall_id": 41,
+              "syscall": "newfstatat",
+              "weight": 0.059006210416555405
+            },
+            {
+              "syscall_id": 31,
+              "syscall": "poll",
+              "weight": 0.012422360479831696
+            }
+          ]
+        },
+        {
+          "key": "cpu::cluster_13",
+          "cluster_id": 13,
+          "n_records_used": 158,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 2.0
+            },
+            {
+              "syscall_id": 22,
+              "syscall": "pselect6",
+              "weight": 0.503164529800415
+            }
+          ]
+        },
+        {
+          "key": "cpu::cluster_7",
+          "cluster_id": 7,
+          "n_records_used": 143,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 6.860139846801758
+            },
+            {
+              "syscall_id": 22,
+              "syscall": "pselect6",
+              "weight": 0.5
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.4160839021205902
+            },
+            {
+              "syscall_id": 41,
+              "syscall": "newfstatat",
+              "weight": 0.04545454680919647
+            },
+            {
+              "syscall_id": 31,
+              "syscall": "poll",
+              "weight": 0.00699300691485405
+            }
+          ]
+        },
+        {
+          "key": "cpu::cluster_3",
+          "cluster_id": 3,
+          "n_records_used": 134,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 7.83582067489624
+            },
+            {
+              "syscall_id": 22,
+              "syscall": "pselect6",
+              "weight": 0.5
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.41417911648750305
+            },
+            {
+              "syscall_id": 41,
+              "syscall": "newfstatat",
+              "weight": 0.05970149114727974
+            },
+            {
+              "syscall_id": 30,
+              "syscall": "sendto",
+              "weight": 0.011194029822945595
+            },
+            {
+              "syscall_id": 31,
+              "syscall": "poll",
+              "weight": 0.0037313431967049837
+            }
+          ]
+        }
+      ]
+    },
+    "disk": {
+      "metadata": {
+        "n_records_total": 123240,
+        "n_records_selected": 123240,
+        "n_records_clustered": 25000,
+        "n_vectors_used": 24885,
+        "cluster_method": "hdbscan",
+        "cluster_metric": "euclidean",
+        "min_cluster_size": 128,
+        "min_samples": null,
+        "cluster_max_records_per_label": 25000,
+        "n_clusters": 20,
+        "noise_count": 19952,
+        "clusters": {
+          "0": 236,
+          "1": 318,
+          "2": 457,
+          "3": 527,
+          "4": 218,
+          "5": 231,
+          "6": 154,
+          "7": 258,
+          "8": 242,
+          "9": 287,
+          "10": 140,
+          "11": 215,
+          "12": 133,
+          "13": 215,
+          "14": 174,
+          "15": 328,
+          "16": 170,
+          "17": 295,
+          "18": 201,
+          "19": 134
+        },
+        "used_fallback_mean": false
+      },
+      "clusters": [
+        {
+          "key": "disk::cluster_3",
+          "cluster_id": 3,
+          "n_records_used": 527,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 96,
+              "syscall": "fsync",
+              "weight": 1.9971537590026855
+            },
+            {
+              "syscall_id": 72,
+              "syscall": "lseek",
+              "weight": 1.5018975734710693
+            },
+            {
+              "syscall_id": 13,
+              "syscall": "write",
+              "weight": 1.5
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.5
+            }
+          ]
+        },
+        {
+          "key": "disk::cluster_2",
+          "cluster_id": 2,
+          "n_records_used": 457,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 13,
+              "syscall": "write",
+              "weight": 2.0
+            },
+            {
+              "syscall_id": 96,
+              "syscall": "fsync",
+              "weight": 2.0
+            },
+            {
+              "syscall_id": 72,
+              "syscall": "lseek",
+              "weight": 1.5
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.5
+            }
+          ]
+        },
+        {
+          "key": "disk::cluster_15",
+          "cluster_id": 15,
+          "n_records_used": 328,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 22,
+              "syscall": "pselect6",
+              "weight": 0.5
+            },
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 0.5
+            }
+          ]
+        },
+        {
+          "key": "disk::cluster_1",
+          "cluster_id": 1,
+          "n_records_used": 318,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 96,
+              "syscall": "fsync",
+              "weight": 2.0
+            },
+            {
+              "syscall_id": 13,
+              "syscall": "write",
+              "weight": 1.5015723705291748
+            },
+            {
+              "syscall_id": 72,
+              "syscall": "lseek",
+              "weight": 1.0
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.5
+            }
+          ]
+        },
+        {
+          "key": "disk::cluster_17",
+          "cluster_id": 17,
+          "n_records_used": 295,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 1.0
+            },
+            {
+              "syscall_id": 22,
+              "syscall": "pselect6",
+              "weight": 0.5
+            }
+          ]
+        },
+        {
+          "key": "disk::cluster_9",
+          "cluster_id": 9,
+          "n_records_used": 287,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.5
+            }
+          ]
+        },
+        {
+          "key": "disk::cluster_7",
+          "cluster_id": 7,
+          "n_records_used": 258,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 2.8158915042877197
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.5
+            },
+            {
+              "syscall_id": 31,
+              "syscall": "poll",
+              "weight": 0.01937984488904476
+            },
+            {
+              "syscall_id": 41,
+              "syscall": "newfstatat",
+              "weight": 0.013565891422331333
+            },
+            {
+              "syscall_id": 42,
+              "syscall": "ioctl",
+              "weight": 0.011627906933426857
+            },
+            {
+              "syscall_id": 39,
+              "syscall": "sched_yield",
+              "weight": 0.0038759689778089523
+            },
+            {
+              "syscall_id": 32,
+              "syscall": "recvfrom",
+              "weight": 0.0038759689778089523
+            },
+            {
+              "syscall_id": 30,
+              "syscall": "sendto",
+              "weight": 0.0019379844889044762
+            },
+            {
+              "syscall_id": 10,
+              "syscall": "nanosleep",
+              "weight": 0.0019379844889044762
+            },
+            {
+              "syscall_id": 7,
+              "syscall": "epoll_pwait",
+              "weight": 0.0019379844889044762
+            },
+            {
+              "syscall_id": 13,
+              "syscall": "write",
+              "weight": 0.0019379844889044762
+            }
+          ]
+        },
+        {
+          "key": "disk::cluster_8",
+          "cluster_id": 8,
+          "n_records_used": 242,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 4.97520637512207
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.48140496015548706
+            },
+            {
+              "syscall_id": 22,
+              "syscall": "pselect6",
+              "weight": 0.0764462798833847
+            },
+            {
+              "syscall_id": 31,
+              "syscall": "poll",
+              "weight": 0.05991735681891441
+            },
+            {
+              "syscall_id": 30,
+              "syscall": "sendto",
+              "weight": 0.00826446246355772
+            },
+            {
+              "syscall_id": 41,
+              "syscall": "newfstatat",
+              "weight": 0.006198347080498934
+            }
+          ]
+        },
+        {
+          "key": "disk::cluster_0",
+          "cluster_id": 0,
+          "n_records_used": 236,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 72,
+              "syscall": "lseek",
+              "weight": 2.6843221187591553
+            },
+            {
+              "syscall_id": 12,
+              "syscall": "read",
+              "weight": 0.819915235042572
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.5
+            },
+            {
+              "syscall_id": 13,
+              "syscall": "write",
+              "weight": 0.0021186440717428923
+            },
+            {
+              "syscall_id": 96,
+              "syscall": "fsync",
+              "weight": 0.0021186440717428923
+            }
+          ]
+        },
+        {
+          "key": "disk::cluster_5",
+          "cluster_id": 5,
+          "n_records_used": 231,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 72,
+              "syscall": "lseek",
+              "weight": 3.0
+            },
+            {
+              "syscall_id": 13,
+              "syscall": "write",
+              "weight": 1.5
+            },
+            {
+              "syscall_id": 96,
+              "syscall": "fsync",
+              "weight": 1.5
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.5
+            }
+          ]
+        },
+        {
+          "key": "disk::cluster_4",
+          "cluster_id": 4,
+          "n_records_used": 218,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 72,
+              "syscall": "lseek",
+              "weight": 2.5
+            },
+            {
+              "syscall_id": 13,
+              "syscall": "write",
+              "weight": 1.5
+            },
+            {
+              "syscall_id": 96,
+              "syscall": "fsync",
+              "weight": 1.5
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.5
+            }
+          ]
+        },
+        {
+          "key": "disk::cluster_11",
+          "cluster_id": 11,
+          "n_records_used": 215,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.5
+            },
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 0.5
+            },
+            {
+              "syscall_id": 22,
+              "syscall": "pselect6",
+              "weight": 0.0023255813866853714
+            }
+          ]
+        },
+        {
+          "key": "disk::cluster_13",
+          "cluster_id": 13,
+          "n_records_used": 215,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 1.0
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.5
+            }
+          ]
+        },
+        {
+          "key": "disk::cluster_18",
+          "cluster_id": 18,
+          "n_records_used": 201,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 1.5
+            },
+            {
+              "syscall_id": 22,
+              "syscall": "pselect6",
+              "weight": 0.5
+            }
+          ]
+        },
+        {
+          "key": "disk::cluster_14",
+          "cluster_id": 14,
+          "n_records_used": 174,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 1.5
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.5
+            }
+          ]
+        },
+        {
+          "key": "disk::cluster_16",
+          "cluster_id": 16,
+          "n_records_used": 170,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 22,
+              "syscall": "pselect6",
+              "weight": 0.5
+            }
+          ]
+        },
+        {
+          "key": "disk::cluster_6",
+          "cluster_id": 6,
+          "n_records_used": 154,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 2.0
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.5
+            },
+            {
+              "syscall_id": 41,
+              "syscall": "newfstatat",
+              "weight": 0.009740259498357773
+            },
+            {
+              "syscall_id": 11,
+              "syscall": "epoll_wait",
+              "weight": 0.006493506487458944
+            },
+            {
+              "syscall_id": 42,
+              "syscall": "ioctl",
+              "weight": 0.006493506487458944
+            },
+            {
+              "syscall_id": 7,
+              "syscall": "epoll_pwait",
+              "weight": 0.006493506487458944
+            },
+            {
+              "syscall_id": 30,
+              "syscall": "sendto",
+              "weight": 0.006493506487458944
+            },
+            {
+              "syscall_id": 8,
+              "syscall": "splice",
+              "weight": 0.003246753243729472
+            }
+          ]
+        },
+        {
+          "key": "disk::cluster_10",
+          "cluster_id": 10,
+          "n_records_used": 140,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 1.0
+            }
+          ]
+        },
+        {
+          "key": "disk::cluster_19",
+          "cluster_id": 19,
+          "n_records_used": 134,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 2.007462739944458
+            },
+            {
+              "syscall_id": 22,
+              "syscall": "pselect6",
+              "weight": 0.5
+            }
+          ]
+        },
+        {
+          "key": "disk::cluster_12",
+          "cluster_id": 12,
+          "n_records_used": 133,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 1.0
+            },
+            {
+              "syscall_id": 13,
+              "syscall": "write",
+              "weight": 0.5
+            },
+            {
+              "syscall_id": 16,
+              "syscall": "getpid",
+              "weight": 0.003759398590773344
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.003759398590773344
+            }
+          ]
+        }
+      ]
+    },
+    "mem": {
+      "metadata": {
+        "n_records_total": 217032,
+        "n_records_selected": 217032,
+        "n_records_clustered": 25000,
+        "n_vectors_used": 24830,
+        "cluster_method": "hdbscan",
+        "cluster_metric": "euclidean",
+        "min_cluster_size": 128,
+        "min_samples": null,
+        "cluster_max_records_per_label": 25000,
+        "n_clusters": 24,
+        "noise_count": 18574,
+        "clusters": {
+          "0": 562,
+          "1": 393,
+          "2": 399,
+          "3": 152,
+          "4": 174,
+          "5": 193,
+          "6": 226,
+          "7": 302,
+          "8": 420,
+          "9": 439,
+          "10": 155,
+          "11": 454,
+          "12": 179,
+          "13": 154,
+          "14": 391,
+          "15": 157,
+          "16": 182,
+          "17": 186,
+          "18": 211,
+          "19": 287,
+          "20": 152,
+          "21": 157,
+          "22": 197,
+          "23": 134
+        },
+        "used_fallback_mean": false
+      },
+      "clusters": [
+        {
+          "key": "mem::cluster_0",
+          "cluster_id": 0,
+          "n_records_used": 562,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 9.414590835571289
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.4119217097759247
+            },
+            {
+              "syscall_id": 22,
+              "syscall": "pselect6",
+              "weight": 0.09430605173110962
+            },
+            {
+              "syscall_id": 31,
+              "syscall": "poll",
+              "weight": 0.04626334458589554
+            },
+            {
+              "syscall_id": 41,
+              "syscall": "newfstatat",
+              "weight": 0.022241992875933647
+            },
+            {
+              "syscall_id": 30,
+              "syscall": "sendto",
+              "weight": 0.0035587188322097063
+            }
+          ]
+        },
+        {
+          "key": "mem::cluster_11",
+          "cluster_id": 11,
+          "n_records_used": 454,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 6.0
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.49669602513313293
+            },
+            {
+              "syscall_id": 31,
+              "syscall": "poll",
+              "weight": 0.0044052861630916595
+            }
+          ]
+        },
+        {
+          "key": "mem::cluster_9",
+          "cluster_id": 9,
+          "n_records_used": 439,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 6.5
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.5
+            },
+            {
+              "syscall_id": 31,
+              "syscall": "poll",
+              "weight": 0.002277904422953725
+            },
+            {
+              "syscall_id": 41,
+              "syscall": "newfstatat",
+              "weight": 0.0011389522114768624
+            },
+            {
+              "syscall_id": 30,
+              "syscall": "sendto",
+              "weight": 0.0011389522114768624
+            }
+          ]
+        },
+        {
+          "key": "mem::cluster_8",
+          "cluster_id": 8,
+          "n_records_used": 420,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 7.0
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.5
+            },
+            {
+              "syscall_id": 31,
+              "syscall": "poll",
+              "weight": 0.004761904943734407
+            },
+            {
+              "syscall_id": 42,
+              "syscall": "ioctl",
+              "weight": 0.0023809524718672037
+            },
+            {
+              "syscall_id": 30,
+              "syscall": "sendto",
+              "weight": 0.0023809524718672037
+            }
+          ]
+        },
+        {
+          "key": "mem::cluster_2",
+          "cluster_id": 2,
+          "n_records_used": 399,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 7.5
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.5
+            },
+            {
+              "syscall_id": 41,
+              "syscall": "newfstatat",
+              "weight": 0.016290726140141487
+            },
+            {
+              "syscall_id": 30,
+              "syscall": "sendto",
+              "weight": 0.011278195306658745
+            },
+            {
+              "syscall_id": 42,
+              "syscall": "ioctl",
+              "weight": 0.008771929889917374
+            },
+            {
+              "syscall_id": 32,
+              "syscall": "recvfrom",
+              "weight": 0.003759398590773344
+            }
+          ]
+        },
+        {
+          "key": "mem::cluster_1",
+          "cluster_id": 1,
+          "n_records_used": 393,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 8.5
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.4134860038757324
+            },
+            {
+              "syscall_id": 22,
+              "syscall": "pselect6",
+              "weight": 0.1437658965587616
+            },
+            {
+              "syscall_id": 31,
+              "syscall": "poll",
+              "weight": 0.05343511328101158
+            },
+            {
+              "syscall_id": 41,
+              "syscall": "newfstatat",
+              "weight": 0.040712468326091766
+            },
+            {
+              "syscall_id": 30,
+              "syscall": "sendto",
+              "weight": 0.007633587811142206
+            },
+            {
+              "syscall_id": 32,
+              "syscall": "recvfrom",
+              "weight": 0.006361322943121195
+            },
+            {
+              "syscall_id": 42,
+              "syscall": "ioctl",
+              "weight": 0.005089058540761471
+            },
+            {
+              "syscall_id": 13,
+              "syscall": "write",
+              "weight": 0.0012722646351903677
+            }
+          ]
+        },
+        {
+          "key": "mem::cluster_14",
+          "cluster_id": 14,
+          "n_records_used": 391,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 5.5
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.49872124195098877
+            },
+            {
+              "syscall_id": 31,
+              "syscall": "poll",
+              "weight": 0.0025575447361916304
+            }
+          ]
+        },
+        {
+          "key": "mem::cluster_7",
+          "cluster_id": 7,
+          "n_records_used": 302,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 7.963576316833496
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.47516557574272156
+            },
+            {
+              "syscall_id": 22,
+              "syscall": "pselect6",
+              "weight": 0.03807947039604187
+            },
+            {
+              "syscall_id": 41,
+              "syscall": "newfstatat",
+              "weight": 0.0066225165501236916
+            },
+            {
+              "syscall_id": 31,
+              "syscall": "poll",
+              "weight": 0.004966887645423412
+            }
+          ]
+        },
+        {
+          "key": "mem::cluster_19",
+          "cluster_id": 19,
+          "n_records_used": 287,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 5.0
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.496515691280365
+            }
+          ]
+        },
+        {
+          "key": "mem::cluster_6",
+          "cluster_id": 6,
+          "n_records_used": 226,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 1.995575189590454
+            },
+            {
+              "syscall_id": 22,
+              "syscall": "pselect6",
+              "weight": 0.5132743120193481
+            },
+            {
+              "syscall_id": 31,
+              "syscall": "poll",
+              "weight": 0.013274336233735085
+            },
+            {
+              "syscall_id": 32,
+              "syscall": "recvfrom",
+              "weight": 0.006637168116867542
+            },
+            {
+              "syscall_id": 42,
+              "syscall": "ioctl",
+              "weight": 0.0044247787445783615
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.0044247787445783615
+            },
+            {
+              "syscall_id": 13,
+              "syscall": "write",
+              "weight": 0.0022123893722891808
+            },
+            {
+              "syscall_id": 30,
+              "syscall": "sendto",
+              "weight": 0.0022123893722891808
+            }
+          ]
+        },
+        {
+          "key": "mem::cluster_18",
+          "cluster_id": 18,
+          "n_records_used": 211,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 0.9952606558799744
+            },
+            {
+              "syscall_id": 22,
+              "syscall": "pselect6",
+              "weight": 0.5165876746177673
+            }
+          ]
+        },
+        {
+          "key": "mem::cluster_22",
+          "cluster_id": 22,
+          "n_records_used": 197,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 4.5
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.5
+            }
+          ]
+        },
+        {
+          "key": "mem::cluster_5",
+          "cluster_id": 5,
+          "n_records_used": 193,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 2.5
+            },
+            {
+              "syscall_id": 22,
+              "syscall": "pselect6",
+              "weight": 0.48704662919044495
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.01295336801558733
+            },
+            {
+              "syscall_id": 32,
+              "syscall": "recvfrom",
+              "weight": 0.0025906735099852085
+            }
+          ]
+        },
+        {
+          "key": "mem::cluster_17",
+          "cluster_id": 17,
+          "n_records_used": 186,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 1.4973118305206299
+            },
+            {
+              "syscall_id": 22,
+              "syscall": "pselect6",
+              "weight": 0.5
+            },
+            {
+              "syscall_id": 31,
+              "syscall": "poll",
+              "weight": 0.01344086043536663
+            },
+            {
+              "syscall_id": 13,
+              "syscall": "write",
+              "weight": 0.005376344081014395
+            },
+            {
+              "syscall_id": 32,
+              "syscall": "recvfrom",
+              "weight": 0.0026881720405071974
+            }
+          ]
+        },
+        {
+          "key": "mem::cluster_16",
+          "cluster_id": 16,
+          "n_records_used": 182,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.5
+            },
+            {
+              "syscall_id": 32,
+              "syscall": "recvfrom",
+              "weight": 0.010989011265337467
+            },
+            {
+              "syscall_id": 7,
+              "syscall": "epoll_pwait",
+              "weight": 0.008241758681833744
+            },
+            {
+              "syscall_id": 10,
+              "syscall": "nanosleep",
+              "weight": 0.005494505632668734
+            },
+            {
+              "syscall_id": 8,
+              "syscall": "splice",
+              "weight": 0.005494505632668734
+            },
+            {
+              "syscall_id": 11,
+              "syscall": "epoll_wait",
+              "weight": 0.002747252816334367
+            },
+            {
+              "syscall_id": 39,
+              "syscall": "sched_yield",
+              "weight": 0.002747252816334367
+            }
+          ]
+        },
+        {
+          "key": "mem::cluster_12",
+          "cluster_id": 12,
+          "n_records_used": 179,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 6.005586624145508
+            },
+            {
+              "syscall_id": 22,
+              "syscall": "pselect6",
+              "weight": 0.5
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.46648043394088745
+            },
+            {
+              "syscall_id": 41,
+              "syscall": "newfstatat",
+              "weight": 0.011173184029757977
+            },
+            {
+              "syscall_id": 31,
+              "syscall": "poll",
+              "weight": 0.002793296007439494
+            }
+          ]
+        },
+        {
+          "key": "mem::cluster_4",
+          "cluster_id": 4,
+          "n_records_used": 174,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 2.9913792610168457
+            },
+            {
+              "syscall_id": 22,
+              "syscall": "pselect6",
+              "weight": 0.5057471394538879
+            },
+            {
+              "syscall_id": 31,
+              "syscall": "poll",
+              "weight": 0.031609196215867996
+            },
+            {
+              "syscall_id": 32,
+              "syscall": "recvfrom",
+              "weight": 0.01149425283074379
+            }
+          ]
+        },
+        {
+          "key": "mem::cluster_15",
+          "cluster_id": 15,
+          "n_records_used": 157,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 0.506369411945343
+            },
+            {
+              "syscall_id": 22,
+              "syscall": "pselect6",
+              "weight": 0.46178343892097473
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.025477707386016846
+            }
+          ]
+        },
+        {
+          "key": "mem::cluster_21",
+          "cluster_id": 21,
+          "n_records_used": 157,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 3.5
+            },
+            {
+              "syscall_id": 22,
+              "syscall": "pselect6",
+              "weight": 0.5
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.006369426846504211
+            },
+            {
+              "syscall_id": 42,
+              "syscall": "ioctl",
+              "weight": 0.0031847134232521057
+            },
+            {
+              "syscall_id": 13,
+              "syscall": "write",
+              "weight": 0.0031847134232521057
+            }
+          ]
+        },
+        {
+          "key": "mem::cluster_10",
+          "cluster_id": 10,
+          "n_records_used": 155,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 6.5
+            },
+            {
+              "syscall_id": 22,
+              "syscall": "pselect6",
+              "weight": 0.5
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.5
+            },
+            {
+              "syscall_id": 41,
+              "syscall": "newfstatat",
+              "weight": 0.003225806402042508
+            }
+          ]
+        },
+        {
+          "key": "mem::cluster_13",
+          "cluster_id": 13,
+          "n_records_used": 154,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 5.5
+            },
+            {
+              "syscall_id": 22,
+              "syscall": "pselect6",
+              "weight": 0.5
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.4545454680919647
+            }
+          ]
+        },
+        {
+          "key": "mem::cluster_3",
+          "cluster_id": 3,
+          "n_records_used": 152,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 7.029605388641357
+            },
+            {
+              "syscall_id": 22,
+              "syscall": "pselect6",
+              "weight": 0.5
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.4868420958518982
+            },
+            {
+              "syscall_id": 41,
+              "syscall": "newfstatat",
+              "weight": 0.009868420660495758
+            },
+            {
+              "syscall_id": 30,
+              "syscall": "sendto",
+              "weight": 0.003289473708719015
+            }
+          ]
+        },
+        {
+          "key": "mem::cluster_20",
+          "cluster_id": 20,
+          "n_records_used": 152,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 4.0
+            },
+            {
+              "syscall_id": 22,
+              "syscall": "pselect6",
+              "weight": 0.4934210479259491
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.009868420660495758
+            },
+            {
+              "syscall_id": 32,
+              "syscall": "recvfrom",
+              "weight": 0.00657894741743803
+            }
+          ]
+        },
+        {
+          "key": "mem::cluster_23",
+          "cluster_id": 23,
+          "n_records_used": 134,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 4.0
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.5
+            }
+          ]
+        }
+      ]
+    },
+    "net": {
+      "metadata": {
+        "n_records_total": 120077,
+        "n_records_selected": 120077,
+        "n_records_clustered": 25000,
+        "n_vectors_used": 24953,
+        "cluster_method": "hdbscan",
+        "cluster_metric": "euclidean",
+        "min_cluster_size": 128,
+        "min_samples": null,
+        "cluster_max_records_per_label": 25000,
+        "n_clusters": 14,
+        "noise_count": 20729,
+        "clusters": {
+          "0": 172,
+          "1": 149,
+          "2": 284,
+          "3": 606,
+          "4": 131,
+          "5": 309,
+          "6": 487,
+          "7": 131,
+          "8": 510,
+          "9": 140,
+          "10": 743,
+          "11": 228,
+          "12": 171,
+          "13": 163
+        },
+        "used_fallback_mean": false
+      },
+      "clusters": [
+        {
+          "key": "net::cluster_10",
+          "cluster_id": 10,
+          "n_records_used": 743,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 0.9818304181098938
+            },
+            {
+              "syscall_id": 22,
+              "syscall": "pselect6",
+              "weight": 0.411843866109848
+            },
+            {
+              "syscall_id": 7,
+              "syscall": "epoll_pwait",
+              "weight": 0.017496636137366295
+            },
+            {
+              "syscall_id": 6,
+              "syscall": "pwrite64",
+              "weight": 0.014131898060441017
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.00538357999175787
+            },
+            {
+              "syscall_id": 10,
+              "syscall": "nanosleep",
+              "weight": 0.0033647376112639904
+            },
+            {
+              "syscall_id": 68,
+              "syscall": "clock_nanosleep",
+              "weight": 0.0013458949979394674
+            },
+            {
+              "syscall_id": 13,
+              "syscall": "write",
+              "weight": 0.0006729474989697337
+            }
+          ]
+        },
+        {
+          "key": "net::cluster_3",
+          "cluster_id": 3,
+          "n_records_used": 606,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 25.349834442138672
+            },
+            {
+              "syscall_id": 7,
+              "syscall": "epoll_pwait",
+              "weight": 17.668315887451172
+            },
+            {
+              "syscall_id": 13,
+              "syscall": "write",
+              "weight": 8.629537582397461
+            },
+            {
+              "syscall_id": 12,
+              "syscall": "read",
+              "weight": 8.491748809814453
+            },
+            {
+              "syscall_id": 36,
+              "syscall": "pread64",
+              "weight": 5.3399338722229
+            },
+            {
+              "syscall_id": 24,
+              "syscall": "recvmsg",
+              "weight": 3.202970266342163
+            },
+            {
+              "syscall_id": 10,
+              "syscall": "nanosleep",
+              "weight": 2.726897716522217
+            },
+            {
+              "syscall_id": 23,
+              "syscall": "sendmsg",
+              "weight": 2.1947195529937744
+            },
+            {
+              "syscall_id": 39,
+              "syscall": "sched_yield",
+              "weight": 0.19471947848796844
+            },
+            {
+              "syscall_id": 19,
+              "syscall": "epoll_ctl",
+              "weight": 0.18564356863498688
+            },
+            {
+              "syscall_id": 4,
+              "syscall": "[TRUNCATE]",
+              "weight": 0.12953795492649078
+            },
+            {
+              "syscall_id": 17,
+              "syscall": "socket",
+              "weight": 0.09735973924398422
+            },
+            {
+              "syscall_id": 34,
+              "syscall": "getsockname",
+              "weight": 0.059405941516160965
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.05363036319613457
+            },
+            {
+              "syscall_id": 35,
+              "syscall": "setsockopt",
+              "weight": 0.046204619109630585
+            }
+          ]
+        },
+        {
+          "key": "net::cluster_8",
+          "cluster_id": 8,
+          "n_records_used": 510,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.4950980246067047
+            },
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 0.10196078568696976
+            },
+            {
+              "syscall_id": 13,
+              "syscall": "write",
+              "weight": 0.05980392172932625
+            },
+            {
+              "syscall_id": 7,
+              "syscall": "epoll_pwait",
+              "weight": 0.0470588244497776
+            },
+            {
+              "syscall_id": 8,
+              "syscall": "splice",
+              "weight": 0.0235294122248888
+            },
+            {
+              "syscall_id": 32,
+              "syscall": "recvfrom",
+              "weight": 0.0058823530562222
+            },
+            {
+              "syscall_id": 16,
+              "syscall": "getpid",
+              "weight": 0.0049019609577953815
+            },
+            {
+              "syscall_id": 31,
+              "syscall": "poll",
+              "weight": 0.0029411765281111
+            },
+            {
+              "syscall_id": 11,
+              "syscall": "epoll_wait",
+              "weight": 0.0019607844296842813
+            },
+            {
+              "syscall_id": 38,
+              "syscall": "accept",
+              "weight": 0.0019607844296842813
+            },
+            {
+              "syscall_id": 63,
+              "syscall": "mprotect",
+              "weight": 0.0009803922148421407
+            },
+            {
+              "syscall_id": 60,
+              "syscall": "sched_getaffinity",
+              "weight": 0.0009803922148421407
+            }
+          ]
+        },
+        {
+          "key": "net::cluster_6",
+          "cluster_id": 6,
+          "n_records_used": 487,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 41,
+              "syscall": "newfstatat",
+              "weight": 1.045174479484558
+            },
+            {
+              "syscall_id": 22,
+              "syscall": "pselect6",
+              "weight": 0.5
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.5
+            },
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 0.4445585310459137
+            },
+            {
+              "syscall_id": 42,
+              "syscall": "ioctl",
+              "weight": 0.2843942642211914
+            },
+            {
+              "syscall_id": 30,
+              "syscall": "sendto",
+              "weight": 0.2689938545227051
+            },
+            {
+              "syscall_id": 31,
+              "syscall": "poll",
+              "weight": 0.17864476144313812
+            }
+          ]
+        },
+        {
+          "key": "net::cluster_5",
+          "cluster_id": 5,
+          "n_records_used": 309,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 25.498382568359375
+            },
+            {
+              "syscall_id": 12,
+              "syscall": "read",
+              "weight": 16.990291595458984
+            },
+            {
+              "syscall_id": 11,
+              "syscall": "epoll_wait",
+              "weight": 11.417475700378418
+            },
+            {
+              "syscall_id": 13,
+              "syscall": "write",
+              "weight": 3.2394821643829346
+            },
+            {
+              "syscall_id": 9,
+              "syscall": "select",
+              "weight": 0.6181229948997498
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.3025889992713928
+            },
+            {
+              "syscall_id": 39,
+              "syscall": "sched_yield",
+              "weight": 0.24757280945777893
+            }
+          ]
+        },
+        {
+          "key": "net::cluster_2",
+          "cluster_id": 2,
+          "n_records_used": 284,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 9,
+              "syscall": "select",
+              "weight": 30.617958068847656
+            },
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 18.181337356567383
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.5
+            },
+            {
+              "syscall_id": 39,
+              "syscall": "sched_yield",
+              "weight": 0.15845070779323578
+            }
+          ]
+        },
+        {
+          "key": "net::cluster_11",
+          "cluster_id": 11,
+          "n_records_used": 228,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 1.0
+            },
+            {
+              "syscall_id": 22,
+              "syscall": "pselect6",
+              "weight": 0.6337719559669495
+            },
+            {
+              "syscall_id": 13,
+              "syscall": "write",
+              "weight": 0.0021929824724793434
+            }
+          ]
+        },
+        {
+          "key": "net::cluster_0",
+          "cluster_id": 0,
+          "n_records_used": 172,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 15,
+              "syscall": "rt_sigprocmask",
+              "weight": 35.348838806152344
+            },
+            {
+              "syscall_id": 14,
+              "syscall": "ppoll",
+              "weight": 10.186046600341797
+            },
+            {
+              "syscall_id": 16,
+              "syscall": "getpid",
+              "weight": 6.3343024253845215
+            },
+            {
+              "syscall_id": 13,
+              "syscall": "write",
+              "weight": 4.9593024253845215
+            },
+            {
+              "syscall_id": 12,
+              "syscall": "read",
+              "weight": 3.822674512863159
+            },
+            {
+              "syscall_id": 4,
+              "syscall": "[TRUNCATE]",
+              "weight": 0.1889534890651703
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.05523255839943886
+            }
+          ]
+        },
+        {
+          "key": "net::cluster_12",
+          "cluster_id": 12,
+          "n_records_used": 171,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 13,
+              "syscall": "write",
+              "weight": 1.4941520690917969
+            },
+            {
+              "syscall_id": 16,
+              "syscall": "getpid",
+              "weight": 0.5
+            },
+            {
+              "syscall_id": 31,
+              "syscall": "poll",
+              "weight": 0.5
+            },
+            {
+              "syscall_id": 32,
+              "syscall": "recvfrom",
+              "weight": 0.5
+            },
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 0.002923976629972458
+            }
+          ]
+        },
+        {
+          "key": "net::cluster_13",
+          "cluster_id": 13,
+          "n_records_used": 163,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 13,
+              "syscall": "write",
+              "weight": 1.5
+            },
+            {
+              "syscall_id": 16,
+              "syscall": "getpid",
+              "weight": 1.0
+            },
+            {
+              "syscall_id": 31,
+              "syscall": "poll",
+              "weight": 0.5
+            },
+            {
+              "syscall_id": 32,
+              "syscall": "recvfrom",
+              "weight": 0.5
+            }
+          ]
+        },
+        {
+          "key": "net::cluster_1",
+          "cluster_id": 1,
+          "n_records_used": 149,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 10,
+              "syscall": "nanosleep",
+              "weight": 59.95973205566406
+            },
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 37.40604019165039
+            },
+            {
+              "syscall_id": 39,
+              "syscall": "sched_yield",
+              "weight": 0.26174497604370117
+            },
+            {
+              "syscall_id": 4,
+              "syscall": "[TRUNCATE]",
+              "weight": 0.26174497604370117
+            },
+            {
+              "syscall_id": 60,
+              "syscall": "sched_getaffinity",
+              "weight": 0.08724832534790039
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.06711409240961075
+            },
+            {
+              "syscall_id": 16,
+              "syscall": "getpid",
+              "weight": 0.033557046204805374
+            },
+            {
+              "syscall_id": 36,
+              "syscall": "pread64",
+              "weight": 0.01342281885445118
+            },
+            {
+              "syscall_id": 54,
+              "syscall": "tgkill",
+              "weight": 0.00671140942722559
+            }
+          ]
+        },
+        {
+          "key": "net::cluster_9",
+          "cluster_id": 9,
+          "n_records_used": 140,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 0.5857142806053162
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.13571429252624512
+            },
+            {
+              "syscall_id": 7,
+              "syscall": "epoll_pwait",
+              "weight": 0.04642857238650322
+            }
+          ]
+        },
+        {
+          "key": "net::cluster_4",
+          "cluster_id": 4,
+          "n_records_used": 131,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 7,
+              "syscall": "epoll_pwait",
+              "weight": 38.92366409301758
+            },
+            {
+              "syscall_id": 12,
+              "syscall": "read",
+              "weight": 14.645038604736328
+            },
+            {
+              "syscall_id": 13,
+              "syscall": "write",
+              "weight": 10.232824325561523
+            },
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 7.221374034881592
+            },
+            {
+              "syscall_id": 4,
+              "syscall": "[TRUNCATE]",
+              "weight": 0.21755725145339966
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.019083969295024872
+            },
+            {
+              "syscall_id": 19,
+              "syscall": "epoll_ctl",
+              "weight": 0.011450381949543953
+            },
+            {
+              "syscall_id": 39,
+              "syscall": "sched_yield",
+              "weight": 0.007633587811142206
+            }
+          ]
+        },
+        {
+          "key": "net::cluster_7",
+          "cluster_id": 7,
+          "n_records_used": 131,
+          "source": "hdbscan",
+          "top_features": [
+            {
+              "syscall_id": 10,
+              "syscall": "nanosleep",
+              "weight": 0.7977099418640137
+            },
+            {
+              "syscall_id": 3,
+              "syscall": "[END]",
+              "weight": 0.5
+            },
+            {
+              "syscall_id": 5,
+              "syscall": "futex",
+              "weight": 0.22519083321094513
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "metrics": {
+    "per_label": {
+      "cpu": {
+        "n_sequences": 190902,
+        "n_detected": 142720,
+        "detection_recall": 0.7476087207048643,
+        "isolated_accuracy_all": 0.16768813317827996,
+        "detected_only_accuracy": 0.19046384529147983,
+        "end_to_end_accuracy": 0.1423924317188924
+      },
+      "disk": {
+        "n_sequences": 123783,
+        "n_detected": 93597,
+        "detection_recall": 0.7561377572041394,
+        "isolated_accuracy_all": 0.4232325925207823,
+        "detected_only_accuracy": 0.4503669989422738,
+        "end_to_end_accuracy": 0.34053949249897
+      },
+      "mem": {
+        "n_sequences": 217461,
+        "n_detected": 175559,
+        "detection_recall": 0.8073125755882664,
+        "isolated_accuracy_all": 0.29349170655887724,
+        "detected_only_accuracy": 0.31169008709322793,
+        "end_to_end_accuracy": 0.2516313269965649
+      },
+      "net": {
+        "n_sequences": 120006,
+        "n_detected": 101867,
+        "detection_recall": 0.8488492242054564,
+        "isolated_accuracy_all": 0.660008666233355,
+        "detected_only_accuracy": 0.6704035654333592,
+        "end_to_end_accuracy": 0.5690715464226789
+      }
+    },
+    "overall": {
+      "n_sequences": 652152,
+      "n_detected": 513743,
+      "detection_recall": 0.7877657355953827,
+      "isolated_accuracy_all": 0.3487361842024559,
+      "detected_only_accuracy": 0.3744051013833765,
+      "end_to_end_accuracy": 0.2949435101019394
+    },
+    "confusion_detected_only": {
+      "cpu": {
+        "cpu": 27183,
+        "disk": 40638,
+        "mem": 21069,
+        "net": 53821,
+        "__unknown__": 9
+      },
+      "disk": {
+        "cpu": 7471,
+        "disk": 42153,
+        "mem": 7333,
+        "net": 36639,
+        "__unknown__": 1
+      },
+      "mem": {
+        "cpu": 30906,
+        "disk": 28436,
+        "mem": 54720,
+        "net": 61493,
+        "__unknown__": 4
+      },
+      "net": {
+        "cpu": 7993,
+        "disk": 18944,
+        "mem": 6634,
+        "net": 68292,
+        "__unknown__": 4
+      },
+      "__unknown__": {
+        "cpu": 0,
+        "disk": 0,
+        "mem": 0,
+        "net": 0,
+        "__unknown__": 0
+      }
+    },
+    "confusion_end_to_end": {
+      "cpu": {
+        "cpu": 27183,
+        "disk": 40638,
+        "mem": 21069,
+        "net": 53821,
+        "__missed__": 48182,
+        "__unknown__": 9
+      },
+      "disk": {
+        "cpu": 7471,
+        "disk": 42153,
+        "mem": 7333,
+        "net": 36639,
+        "__missed__": 30186,
+        "__unknown__": 1
+      },
+      "mem": {
+        "cpu": 30906,
+        "disk": 28436,
+        "mem": 54720,
+        "net": 61493,
+        "__missed__": 41902,
+        "__unknown__": 4
+      },
+      "net": {
+        "cpu": 7993,
+        "disk": 18944,
+        "mem": 6634,
+        "net": 68292,
+        "__missed__": 18139,
+        "__unknown__": 4
+      },
+      "__missed__": {
+        "cpu": 0,
+        "disk": 0,
+        "mem": 0,
+        "net": 0,
+        "__missed__": 0,
+        "__unknown__": 0
+      },
+      "__unknown__": {
+        "cpu": 0,
+        "disk": 0,
+        "mem": 0,
+        "net": 0,
+        "__missed__": 0,
+        "__unknown__": 0
+      }
+    }
+  }
+}

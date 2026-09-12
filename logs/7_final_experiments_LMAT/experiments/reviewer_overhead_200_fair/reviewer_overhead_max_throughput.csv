@@ -1,0 +1,4 @@
+condition,users,throughput_mean_req_s,p95_mean_ms,p99_mean_ms,error_rate_mean_pct
+baseline,200,178.7530,313.6822,718.6806,2.0530
+lmat_async,200,180.8912,225.4780,496.1502,2.1561
+lttng_only,200,183.3440,199.4805,645.0984,2.0273
