@@ -4,6 +4,7 @@
 import os
 import sys
 import random
+import traceback
 import numpy as np
 
 import torch
@@ -44,8 +45,10 @@ if __name__ == "__main__":
 
     # Get iteration number if necessary and create the corresponding folder
     if args.log_folder is None:
-        iter = [int(f) for f in next(os.walk("logs"))[1]]
-        args.log_folder = os.path.join("logs", max(iter) + 1 if iter else 0)
+        if not os.path.exists("logs"):
+            os.makedirs("logs")
+        run_ids = [int(f) for f in next(os.walk("logs"))[1] if f.isdigit()]
+        args.log_folder = os.path.join("logs", str(max(run_ids) + 1 if run_ids else 0))
     if not os.path.exists(args.log_folder):
         os.makedirs(args.log_folder)
 
@@ -281,9 +284,11 @@ if __name__ == "__main__":
                     args.continuous_latency,
                 ),
             )
-        except Exception as e:
-            # Print the error message
-            print(e)
+        except Exception:
+            # Print the full traceback. Without this, a failed training run falls
+            # through to loading a model that was never written.
+            traceback.print_exc(file=sys.stdout)
+            sys.exit(1)
 
     # Setting which GPU must be used as principal
     device = args.gpu[0]  # always the first in the list
@@ -344,7 +349,7 @@ if __name__ == "__main__":
     )
     with open(modelfile, "rb") as f:
         # Load the model on the GPU
-        model.load_state_dict(torch.load(f))
+        model.load_state_dict(torch.load(f, map_location=f"cuda:{device}"))
         print("Model loaded")
 
     # Evaluate the model

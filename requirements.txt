@@ -1,0 +1,11 @@
+# Versions this code has been verified to import against.
+# The published experiments were run on an older cluster stack; these pins are a
+# known-good starting point rather than the exact environment of the papers.
+torch==2.12.1
+numpy==2.2.4
+scipy==1.15.3
+scikit-learn==1.6.1
+matplotlib==3.10.3
+
+# n-gram baseline only (--model ngram)
+nltk==3.10.3

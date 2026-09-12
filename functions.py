@@ -76,23 +76,27 @@ def get_arguments():
     parser.add_argument(
         "--data_path",
         type=str,
+        required=True,
         help="path to the folder that contains the datasets",
     )
     parser.add_argument(
         "--train_folder",
         type=str,
+        required=True,
         help="name of the folder that contains the training set "
         "(format: 'Name to display:folder')",
     )
     parser.add_argument(
         "--valid_id_folder",
         type=str,
+        required=True,
         help="name of the folder that contains the in-distribution "
         "validation set (format: 'Name to display:folder')",
     )
     parser.add_argument(
         "--valid_ood_folders",
         type=str,
+        required=True,
         help="name of the folders that contains the out-of-distribution "
         "validation sets (format: 'Name to display:folder1,"
         "Name to display:folder2,')",
@@ -100,6 +104,7 @@ def get_arguments():
     parser.add_argument(
         "--test_id_folder",
         type=str,
+        required=True,
         help="name of the folder that contains the in-distribution "
         "test set (format: 'Name to display:folder1,"
         "Name to display:folder2,')",
@@ -107,6 +112,7 @@ def get_arguments():
     parser.add_argument(
         "--test_ood_folders",
         type=str,
+        required=True,
         help="name of the folders that contains the out-of-distribution "
         "test sets (format: 'Name to display:folder1,"
         "Name to display:folder2,')",
