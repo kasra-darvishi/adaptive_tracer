@@ -80,8 +80,13 @@ distributed system.
 - **Change detection** — per-request cross-entropy of both heads is combined and compared
   against a threshold chosen on validation data to maximize F1.
 - **Trigger and root cause** — detailed tracing starts once more than 80% of the requests
-  in a window are flagged (`functions.py:3005`), and the prediction-error vectors feed a
-  classifier that maps the deviation to a fault source.
+  in a window are flagged (`functions.py:3005`). The prediction-error vectors are then
+  matched against fault prototypes clustered from validation data with HDBSCAN, so
+  diagnosis costs a vector construction and a similarity lookup rather than a retrain.
+- **Operator feedback** — behavior that is novel but legitimate (a Black Friday traffic
+  surge, say) would otherwise be flagged forever. Traces marked anomalous and later
+  confirmed benign are fed back to update the model, so the working definition of normal
+  keeps up with the system.
 
 ## Repository layout
 
